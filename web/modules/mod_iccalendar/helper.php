@@ -299,7 +299,7 @@ class modiCcalendarHelper
 			//print_r($AllDates);
 			//$this -> vitito($AllDates);
 			rsort($AllDates);
-			$allEvents = array_merge($allEvents,$AllDates);
+			//$allEvents = array_merge($allEvents,$AllDates);
 			//liste dates next
 			$datemlist=$this->getmlist($r->dates, $next);
 			$dateplist=$this->getplist($r->period, $next);
@@ -842,6 +842,8 @@ class modiCcalendarHelper
 				$eventLang=$langTag;
 			}
 
+			//var i;
+
 			// Get List of Dates
 			if ($control == $access) {
 				if ($eventLang == $langTag) {
@@ -852,7 +854,9 @@ class modiCcalendarHelper
 								foreach ($days as $k=>$dy){
 									if($d==$dy['date']){
 										array_push ($days[$k]['events'], $event);
-									}
+									/*	array_push ($allEvents,$d);
+										array_push ($allEvents[0]['events'],$event);
+										/*i=i+1;							*/		}
 								}
 							}
 						}
@@ -862,7 +866,8 @@ class modiCcalendarHelper
 
 		}
 
-		$this -> vitito($allEvents);
+		//$this -> vitito($days);
+		cal:: days($allEvents);
 
 		$i='';
 
@@ -1446,9 +1451,10 @@ class cal
 			
 	}
 
-	function days ()
+	function days ($datesEvents)
 	{
 
+	echo 'DATA: '. print_r($datesEvents);
 
 	echo '<div class="'.$this->template.' iccalendar '.$this->moduleclass_sfx.'" style="background-color: '.$this->bgcolor.'; background-image: url(\''.$this->bgimage.'\'); background-repeat: '.$this->bgimagerepeat.'" id="'.$this->modid.'">';
 
@@ -1490,6 +1496,8 @@ class cal
 				echo '<tr><td colspan="'.($this->data[1]['week']-$this->firstday).'"></td>';
 				break;
 		}
+
+	
 	foreach ($this->data as $d){
 	
 			$stamp= new day($d);
@@ -1551,7 +1559,8 @@ class cal
 					break;
 			}
 		}*/
-//			rsort($stamp->events);
+		//rsort($stamp->events);
+		//print_r($stamp -> events);
 //			$RGB = '$RGB';
 			$bgcolor ='';
 			if (isset($stamp->events[0]['cat_color'])) { $RGB = explode(",",activeColor($stamp->events[0]['cat_color']));
