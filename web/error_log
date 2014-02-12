@@ -1,0 +1,5 @@
+[07-Jan-2014 23:56:07 America/Argentina/Buenos_Aires] PHP Fatal error:  Cannot redeclare class icagendaViewList in Unknown on line 0
+[08-Jan-2014 00:11:49 America/Argentina/Buenos_Aires] PHP Fatal error:  Class 'icagendaController' not found in /home/cinicos/public_html/web/modules/mod_iccalendar/mod_iccalendar.php on line 69
+[08-Jan-2014 00:16:39 America/Argentina/Buenos_Aires] PHP Parse error:  syntax error, unexpected $end, expecting T_VARIABLE or '$' in /home/cinicos/public_html/web/modules/mod_iccalendar/mod_iccalendar.php on line 46
+[08-Jan-2014 00:20:55 America/Argentina/Buenos_Aires] PHP Parse error:  syntax error, unexpected $end, expecting T_VARIABLE or '$' in /home/cinicos/public_html/web/modules/mod_iccalendar/mod_iccalendar.php on line 45
+[08-Jan-2014 00:20:58 America/Argentina/Buenos_Aires] PHP Parse error:  syntax error, unexpected $end, expecting T_VARIABLE or '$' in /home/cinicos/public_html/web/modules/mod_iccalendar/mod_iccalendar.php on line 45
