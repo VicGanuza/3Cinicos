@@ -91,7 +91,7 @@ $template = $params->get('template', 'default');
 if(!file_exists(JPATH_ROOT.'/components/com_icagenda/themes/packs/'.$template.'/'.$template.'_calendar.php')){
 	$template='default';
 }
-//$t_events_list = JPATH_BASE.'/components/com_icagenda/themes/packs/'.$template.'/'.$template.'_events_list.php';
+
 $t_calendar = JPATH_BASE.'/components/com_icagenda/themes/packs/'.$template.'/'.$template.'_calendar.php';
 $t_day = JPATH_BASE.'/components/com_icagenda/themes/packs/'.$template.'/'.$template.'_day.php';
 

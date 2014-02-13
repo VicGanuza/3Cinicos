@@ -213,6 +213,7 @@ class modiCcalendarHelper
 		$where='e.state = 1';
 		$where.=' AND e.approval = 0';
 
+
 		// ajout des filtres
 		if(isset($this->filter)){
 			foreach ($this->filter as $filter){
@@ -227,6 +228,7 @@ class modiCcalendarHelper
 		$db->setQuery($query);
 		$res = $db->loadObjectList();
 
+		//echo "hola!!!!: ".print_r($res); BORRAR
 //		$days=$this->getDays($this->date_start, $this->format);
 		$days=$this->getDays($this->date_start, 'Y-m-d H:i');
 
@@ -801,6 +803,8 @@ class modiCcalendarHelper
 				'no_image' => JTEXT::_('MOD_ICCALENDAR_NO_IMAGE'),
 			);
 
+			array_unshift($allEvents,$event);
+
 			$user = JFactory::getUser();
 			$userID = $user->id;
 			$userLevels = $user->getAuthorisedViewLevels();
@@ -866,7 +870,7 @@ class modiCcalendarHelper
 
 		}
 
-		//$this -> vitito($days);
+		//$this -> vitito($allEvents);
 		cal:: days($allEvents);
 
 		$i='';
@@ -1362,13 +1366,6 @@ class modiCcalendarHelper
 		echo "allevents antes del rsort:";
 
 		print_r($allevents);
-
-		arsort($allevents);
-		echo "allevents despues del rsort:";
-
-		print_r($allevents);
-
-
 	}
 
 
@@ -1498,9 +1495,13 @@ class cal
 		}
 
 	
-	foreach ($this->data as $d){
-	
-			$stamp= new day($d);
+	//foreach ($this->data as $d){
+
+	foreach ($datesEvents as $event) {
+		echo"en el foreach $event: ".print_r($event);
+		//	$stamp= new day($d);
+		//$stamp= new day($event -> next)
+		//echo "luego de crear day: " . print_r($stamp):
 
 	    /* if ($this->firstday=='0') {
 			switch($stamp->week){

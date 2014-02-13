@@ -35,10 +35,12 @@ defined('_JEXEC') or die();?>
 	<?php // List of Events ?>
 	<div class="items">
 		
-	<?php // Display for each event ?>
+	<?php // Display for each event 
+    // print_r($stamp->items); BORRAR
+	?>
     
 	<?php foreach ($stamp->items as $item){ ?>
-	
+
 		<?php // START Event ?>
 		<div class="event">
 

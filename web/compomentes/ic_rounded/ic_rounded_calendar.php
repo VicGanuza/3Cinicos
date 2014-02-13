@@ -34,7 +34,7 @@ defined('_JEXEC') or die(); ?>
 
 <?php // Calendar Template ?>
 <?php
-//$stamp->days();
+	   //$stamp->days();
 	 //$cal -> vitito();
      //$stamp->testVic();
 ?>

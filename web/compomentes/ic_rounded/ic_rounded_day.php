@@ -24,7 +24,7 @@ defined('_JEXEC') or die();
 <?php // Day with event ?>
 <?php 
 
-
+//print_r($stamp->events); BORRAR
 if ($stamp->events) {
 	echo '<div style="background-color: white; color:black;">'. print_r(events) . '</div>';
 ?>
