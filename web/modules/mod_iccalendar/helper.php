@@ -871,7 +871,8 @@ class modiCcalendarHelper
 		}
 
 		//$this -> vitito($allEvents);
-		cal:: days($allEvents);
+		//cal:: days($allEvents);
+		cal:: testVic($allEvents);
 
 		$i='';
 
@@ -1427,31 +1428,26 @@ class cal
 
 	}
 
-	function testVic () 
+	function testVic ($allEvents) 
 	{
-		echo "hello";
-		echo '<div style="background-color: white; color:black;">'. print_r($this->items_events) . '</div>';
-	/*	echo '<div class="items">';
-	    //foreach ($stamp->items as $item){ 
+		$text = '/home/cinicos/public_html/web/components/com_icagenda/themes/packs/ic_rounded/ic_rounded_day.php';
+				 
+		echo '<div class="ic_rounded iccalendar">';
 
-		echo '<div class="event">';
-		
-		 if ($item->next): echo 'a href="'. $url .'" alt="'. $item->title .'">';
-		 if (!$image): 
-		 	echo '<div class="box_date">
-
-				<span class="day">'. $item->day '</span><br/>'. $item->monthShort .'
-				<span class="noimage"´'. JTEXT::_('COM_ICAGENDA_EVENTS_NOIMAGE') .'</span>
-			</div>';
-
-			endif; */
+			foreach ($allEvents as $stamp) {
+			
+				require $text;
+				
+			}
+			
+		echo '</div>';
 			
 	}
 
 	function days ($datesEvents)
 	{
 
-	echo 'DATA: '. print_r($datesEvents);
+	//echo 'DATA: '. print_r($datesEvents);
 
 	echo '<div class="'.$this->template.' iccalendar '.$this->moduleclass_sfx.'" style="background-color: '.$this->bgcolor.'; background-image: url(\''.$this->bgimage.'\'); background-repeat: '.$this->bgimagerepeat.'" id="'.$this->modid.'">';
 
@@ -1494,12 +1490,23 @@ class cal
 				break;
 		}
 
+	/*foreach ($datesEvents as $value) {
+		$test = new eventList($value);
+		echo"Test: ".print_r($test);
+	}
+	*/
 	
-	//foreach ($this->data as $d){
 
-	foreach ($datesEvents as $event) {
-		echo"en el foreach $event: ".print_r($event);
-		//	$stamp= new day($d);
+	foreach ($this->data as $d){
+	//foreach ($datesEvents as $stamp) {
+	//	print_r($stamp);
+	//	require $this->t_day;
+		//echo("IMprimo d: "). print_r($d);
+	//foreach ($datesEvents as $event) {
+	//	echo"en el foreach $event: ".print_r($event);
+			$stamp= new day($d);
+		//$stamp = new eventList($value);
+			//echo("IMprimo stamp: ").print_r($stamp);
 		//$stamp= new day($event -> next)
 		//echo "luego de crear day: " . print_r($stamp):
 
@@ -1563,7 +1570,7 @@ class cal
 		//rsort($stamp->events);
 		//print_r($stamp -> events);
 //			$RGB = '$RGB';
-			$bgcolor ='';
+		$bgcolor ='';
 			if (isset($stamp->events[0]['cat_color'])) { $RGB = explode(",",activeColor($stamp->events[0]['cat_color']));
 			$c = array($RGB[0], $RGB[1], $RGB[2]);
 			$bgcolor = array_sum($c);
@@ -1579,6 +1586,7 @@ class cal
 
 			if (isset($stamp->events[1]['cat_color'])) { $multi_events = 'icmulti'; } else { $multi_events = ''; }
 
+			echo "URL: ".$this->t_day;
 			require $this->t_day;
 
 			switch('week'){
@@ -1589,6 +1597,7 @@ class cal
 					echo '</td>';
 					break;
 			}
+
 		}
 
 		switch ($stamp->week){
@@ -1624,4 +1633,15 @@ class day
 		}
 	}
 }
+
+class eventList
+{
+	public $events;
+
+	function __construct ($e)
+	{
+		$this->events=$e;
+	}
+}
+
 ?>

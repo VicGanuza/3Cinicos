@@ -22,32 +22,35 @@ defined('_JEXEC') or die();
 
 ?>
 <?php // Day with event ?>
-<?php 
 
-//print_r($stamp->events); BORRAR
-if ($stamp->events) {
-	echo '<div style="background-color: white; color:black;">'. print_r(events) . '</div>';
-?>
+<?php 
+//print_r($stamp);
+
+/*if ($stamp->events) {
+	?>
 	<?php // Main Background of a day ?>
-	<?php foreach($stamp->events as $e){ ?>
-	 <a href="<?php echo $e['url']; ?>">
-	    <div class="icevent <?php echo $multi_events; ?>" style="z-index:1000;">
+	<?php foreach($stamp->events as $e){ */?>
+	 <a href="<?php echo $stamp["url"]; ?>">
+	    <div class="icevent <?php //echo $multi_events; ?>" style="z-index:1000;">
 			<?php // Color of date text depending of the category color ?>
 			
 			<div class="calendar_day">
-				<?php echo $stamp->Days; ?>
+				<?php 
+					$date = strtotime($stamp["next"]);
+					$day = date("d",$date);
+					echo $day; 
+				?>
 			</div>
 			<div class="content">
 
-				<h6><?php echo $e['title']?></h6>
+				<h6><?php echo $stamp['title']?></h6>
 			</div>
 		</div><?php // end of the day ?>
 	 </a>
-	<?php } ?>
-
+	
 <?php // Day with no event ?>
-<?php }else{ ?>
+<?php /*}else{ ?>
 	<div class="no_event">
 		<?php echo $stamp->day; ?>
 	</div>
-<?php } ?>
+<?php } */?>
