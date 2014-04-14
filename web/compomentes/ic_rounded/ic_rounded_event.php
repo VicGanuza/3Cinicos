@@ -89,9 +89,9 @@ defined('_JEXEC') or die(); ?>
 		<div class="details">
 
 			<?php // Next Date ('next' 'today' or 'last date' if no next date) ?>
-			<div class="fecha_evento">
-			<strong class="left">Fecha:</strong><?php echo $item->nextDate; ?>
-			</div>
+			<span>
+			<strong>Fecha:</strong><?php echo $item->nextDate; ?>
+			</span>
 			<?php // Location (different display, depending on the fields filled) ?>
 			<p>
 

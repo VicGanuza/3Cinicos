@@ -169,7 +169,6 @@ class modiCcalendarHelper
 
 	}
 
-
 	// Class Method
 	function getStamp($params)
 	{	$allEvents = array();
@@ -228,7 +227,6 @@ class modiCcalendarHelper
 		$db->setQuery($query);
 		$res = $db->loadObjectList();
 
-		//echo "hola!!!!: ".print_r($res); BORRAR
 //		$days=$this->getDays($this->date_start, $this->format);
 		$days=$this->getDays($this->date_start, 'Y-m-d H:i');
 
@@ -267,7 +265,6 @@ class modiCcalendarHelper
 			}
 			else {
 				$arrayWeekDays = array(0,1,2,3,4,5,6);
-				//print_r($arrayWeekDays);
 			}
 			$WeeksDays = $arrayWeekDays;
 
@@ -298,11 +295,11 @@ class modiCcalendarHelper
 //					array_push($AllDates, $EnDate);
 				}
 			}
+		
 			//print_r($AllDates);
-			//$this -> vitito($AllDates);
 			rsort($AllDates);
-			//$allEvents = array_merge($allEvents,$AllDates);
-			//liste dates next
+		    
+		    //liste dates next
 			$datemlist=$this->getmlist($r->dates, $next);
 			$dateplist=$this->getplist($r->period, $next);
 			if ($dateplist) {
@@ -315,7 +312,7 @@ class modiCcalendarHelper
 
 			rsort($datelist);
 			rsort($datelistcal);
-			//$this -> vitito($datelistcal);
+			
 // Retrait 3.1.7
 //			if ($datelistcal > $todaytime) {
 //				$alldates=serialize($datelistcal);
@@ -701,8 +698,6 @@ class modiCcalendarHelper
 
 						// END iCthumb
 
-
-
 						// Set Thumbnail
 						$default_thumbnail = 'media/com_icagenda/images/nophoto.jpg';
 						if ($Invalid_Img_Format) {
@@ -803,8 +798,9 @@ class modiCcalendarHelper
 				'no_image' => JTEXT::_('MOD_ICCALENDAR_NO_IMAGE'),
 			);
 
-			array_unshift($allEvents,$event);
-
+			$is_menor = $this->ismenor($event["next"]);
+			if (!$is_menor) {array_unshift($allEvents,$event);}
+			
 			$user = JFactory::getUser();
 			$userID = $user->id;
 			$userLevels = $user->getAuthorisedViewLevels();
@@ -846,8 +842,7 @@ class modiCcalendarHelper
 				$eventLang=$langTag;
 			}
 
-			//var i;
-
+			
 			// Get List of Dates
 			if ($control == $access) {
 				if ($eventLang == $langTag) {
@@ -858,9 +853,7 @@ class modiCcalendarHelper
 								foreach ($days as $k=>$dy){
 									if($d==$dy['date']){
 										array_push ($days[$k]['events'], $event);
-									/*	array_push ($allEvents,$d);
-										array_push ($allEvents[0]['events'],$event);
-										/*i=i+1;							*/		}
+									}
 								}
 							}
 						}
@@ -868,11 +861,9 @@ class modiCcalendarHelper
 				}
 			}
 
-		}
-
-		//$this -> vitito($allEvents);
-		//cal:: days($allEvents);
-		cal:: testVic($allEvents);
+		}		
+	
+		cal:: nextEvents($allEvents);
 
 		$i='';
 
@@ -1362,14 +1353,34 @@ class modiCcalendarHelper
 	}
 	/***/
 
-	function vitito($allevents){
+	function ismenor($date){
+		$rta = false;
 		
-		echo "allevents antes del rsort:";
+		$today = date("d-m-Y");
+		$ex_today = explode('-',$today);
+		$d_today = $ex_today[0];
+		$m_today = $ex_today[1];
+		$y_today = $ex_today[2];
 
-		print_r($allevents);
+		$ex_date = explode(' ', $date);
+		$d_date = $ex_date[0];
+		$m_date = $ex_date[1];
+		$y_date = $ex_date[2];
+
+		if ($y_today > $y_date) { $rta = true; }
+		else {
+			if (($y_today == $y_date) && ($m_today > $m_date)) {  $rta=true; }
+			else {
+				if (($y_today == $y_date) && ($m_today == $m_date) && ($d_today > $d_date)) 
+					{	
+						$rta = true;
+					}
+			}
+		}
+		
+		return $rta;
+
 	}
-
-
 
 }
 
@@ -1428,31 +1439,33 @@ class cal
 
 	}
 
-	function testVic ($allEvents) 
+	function nextEvents ($allEvents) 
 	{
-		$text = '/home/cinicos/public_html/web/components/com_icagenda/themes/packs/ic_rounded/ic_rounded_day.php';
+
+		$text = '/home/cinicos/public_html/web/components/com_icagenda/themes/packs/ic_rounded/ic_rounded_proxEvent.php';
 				 
 		echo '<div class="ic_rounded iccalendar">';
+		echo '<h1>Pr&oacute;ximas fechas</h1>';
 
+		if (count($allEvents)==0){ 
+			echo '<p>Programando nuevas fechas...</p>';
+		}
+		else {
 			foreach ($allEvents as $stamp) {
-			
-				require $text;
-				
+			   require $text;
 			}
-			
+		}	
 		echo '</div>';
 			
 	}
 
-	function days ($datesEvents)
+	function days ()
 	{
-
-	//echo 'DATA: '. print_r($datesEvents);
 
 	echo '<div class="'.$this->template.' iccalendar '.$this->moduleclass_sfx.'" style="background-color: '.$this->bgcolor.'; background-image: url(\''.$this->bgimage.'\'); background-repeat: '.$this->bgimagerepeat.'" id="'.$this->modid.'">';
 
 
-		//if ($this->firstday=='0') {
+		if ($this->firstday=='0') {
 			echo '<div id="mod_iccalendar_'.$this->modid.'">'.$this->nav.'
 			<table id="icagenda_calendar" width="100%" cellspacing="0">
 				<!-- <thead>
@@ -1465,8 +1478,8 @@ class cal
 					<th width="15%" style="background:'.$this->sat.';">'.JText::_('SAT').'</th>
 				</thead> -->
 		';
-	//	}
-	/*	if ($this->firstday=='1') {
+		}
+		if ($this->firstday=='1') {
 			echo '<div id="mod_iccalendar_'.$this->modid.'">'.$this->nav.'
 			<table id="icagenda_calendar" width="100%" cellspacing="0">
 				<thead>
@@ -1479,8 +1492,7 @@ class cal
 					<th width="15%" style="background:'.$this->sun.';">'.JText::_('SUN').'</th>
 				</thead>
 		';
-		}*/
-//echo '<div style="background-color: white; color:black;">'. print_r($this->data) .'</div>';
+		}
 
 		switch ($this->data[1]['week']){
 			case $this->na:
@@ -1490,27 +1502,10 @@ class cal
 				break;
 		}
 
-	/*foreach ($datesEvents as $value) {
-		$test = new eventList($value);
-		echo"Test: ".print_r($test);
-	}
-	*/
-	
-
 	foreach ($this->data as $d){
-	//foreach ($datesEvents as $stamp) {
-	//	print_r($stamp);
-	//	require $this->t_day;
-		//echo("IMprimo d: "). print_r($d);
-	//foreach ($datesEvents as $event) {
-	//	echo"en el foreach $event: ".print_r($event);
-			$stamp= new day($d);
-		//$stamp = new eventList($value);
-			//echo("IMprimo stamp: ").print_r($stamp);
-		//$stamp= new day($event -> next)
-		//echo "luego de crear day: " . print_r($stamp):
-
-	    /* if ($this->firstday=='0') {
+		$stamp= new day($d);
+		
+		if ($this->firstday=='0') {
 			switch($stamp->week){
 				case $this->na:
 					echo '<tr><td style="background:'.$this->sun.';">';
@@ -1566,53 +1561,53 @@ class cal
 					echo '<td>';
 					break;
 			}
-		}*/
+		}
+
 		//rsort($stamp->events);
-		//print_r($stamp -> events);
+		
 //			$RGB = '$RGB';
 		$bgcolor ='';
-			if (isset($stamp->events[0]['cat_color'])) { $RGB = explode(",",activeColor($stamp->events[0]['cat_color']));
+		if (isset($stamp->events[0]['cat_color'])) { $RGB = explode(",",activeColor($stamp->events[0]['cat_color']));
 			$c = array($RGB[0], $RGB[1], $RGB[2]);
 			$bgcolor = array_sum($c);
-			 }
-			if ($bgcolor > '600') {
-				$bgcolor='bright';
-			} else {
-				$bgcolor='';
-			}
-			$order='first';
-			if (isset($stamp->events[0]['cat_color'])) { $bg_catcolor = $stamp->events[0]['cat_color']; $bg_day=$bg_catcolor; }
-			if (!isset($stamp->events[0]['cat_color'])) { $bg_day=''; }
-
-			if (isset($stamp->events[1]['cat_color'])) { $multi_events = 'icmulti'; } else { $multi_events = ''; }
-
-			echo "URL: ".$this->t_day;
-			require $this->t_day;
-
-			switch('week'){
-				case $this->ng:
-					echo '</td></tr>';
-					break;
-				default:
-					echo '</td>';
-					break;
-			}
-
 		}
+		if ($bgcolor > '600') {
+			$bgcolor='bright';
+		} else {
+			$bgcolor='';
+		    }
+		$order='first';
+		if (isset($stamp->events[0]['cat_color'])) { $bg_catcolor = $stamp->events[0]['cat_color']; $bg_day=$bg_catcolor; }
+		if (!isset($stamp->events[0]['cat_color'])) { $bg_day=''; }
 
-		switch ($stamp->week){
+		if (isset($stamp->events[1]['cat_color'])) { $multi_events = 'icmulti'; } else { $multi_events = ''; }
+
+		require $this->t_day;
+
+		switch('week'){
 			case $this->ng:
+				echo '</td></tr>';
 				break;
 			default:
-				echo '<td colspan="'.(7-$stamp->week).'"></td></tr>';
+				echo '</td>';
 				break;
 		}
 
-		echo '</table></div>';
-
-	echo '</div>';
-
 	}
+
+	switch ($stamp->week){
+		case $this->ng:
+			break;
+		default:
+			echo '<td colspan="'.(7-$stamp->week).'"></td></tr>';
+			break;
+	}
+
+	echo '</table></div>';
+
+    echo '</div>';
+
+}
 
 }
 
@@ -1631,16 +1626,6 @@ class day
 		foreach ($day as $k=>$v){
 			$this->$k=$v;
 		}
-	}
-}
-
-class eventList
-{
-	public $events;
-
-	function __construct ($e)
-	{
-		$this->events=$e;
 	}
 }
 

@@ -16,8 +16,7 @@
  */
 
 /* General Calendar */
-.ic_rounded.iccalendar {display:block; margin:auto !important; padding:3px !important; border:3px solid #ddd; border-radius:10px; color:#555555 !important;}
-.ic_rounded.iccalendar div {border:0px;}
+.ic_rounded.iccalendar {display:block; margin:auto !important; padding:3px !important; color:#555555 !important;}
 
 /* General Table */
 .ic_rounded.iccalendar table {padding:1% !important; margin:0px !important; border:0px;}
@@ -209,22 +208,23 @@
 
 /* End function clear <div> */
 #ictip .clr {clear:both; display:block;}
-.no_event {display:none;}
-.icevent {
+.icreci {
 	margin-bottom: 10px; 
-	height:50px;
-	background-color: #555555;
+	height:60px;
+	background-color: #3d6c7e;
 	border-radius: 6px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .calendar_day {
-	height: 40%;
-	width: 20%;
-	padding-top: 20px;
-	background-color: #555555;
+	height: 42px;
+	width: 43px;
+	padding-top: 7px;	
 	text-align: center;
-	background-image: url('http://www.3cinicos.com.ar/web/images/icagenda/calendar-icon.gif');
+	background-image: url('http://www.3cinicos.com.ar/web/images/icagenda/Calendario.png');
 	border-radius: 6px;
 	float:left;
+	font-size: 90%;
 }
 .iccalendar a:hover {
 	color: blue;
@@ -233,4 +233,7 @@
 .content {
 	padding-top: 1px;
 	margin-left: 44px;
+}
+.day_style{
+	margin-top: 5px;
 }
