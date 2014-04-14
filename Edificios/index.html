@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Edificios</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/style.css"> 
+        <link rel="stylesheet" href="css/foundation.css"> 
+        <link rel="stylesheet" href="css/demo.css"> 
+        <link rel="stylesheet" href="css/bootstrap.css"> 
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui/themes/base/jquery-ui.css">
+
+	</head>
+
+    <body>  
+				 
+        <section class="main-content" id="main-content"> 
+        	<section class="formulario">
+                <div class='div_input clearfix border_bottom'>
+                    <p> ¿Hay unidades funcionales en la PB?</p>
+                    <form class="clearfix">
+                        <input type="radio" name="unidades_PB" id="uni_PB" value="Si">Si
+                        <input type="radio" name="unidades_PB" id="no_uni_PB" value="No">No
+                    </form>
+                    <div class="cuantos">
+                        ¿Cuantos? 
+                        <input type="text" name="unid_pb" size="5" maxlength="50"><br>
+                    </div>
+                </div>
+
+        		<div class='div_input border_bottom'>
+        		<p>¿Cuantos pisos tiene el edificio? </p>
+        			<input type="text" name="cant_pisos" size="5" maxlength="50"><br>
+        		</div>
+        		<div class='div_input border_bottom'>
+        			<p>¿Todos los pisos tienen la misma cantidad de unidades funcionales?</p>
+                    <form class="clearfix">
+                        <input type="radio" name="igualesxpiso" value="Si">Si
+                        <input type="radio" name="igualesxpiso" value="No">No
+                    </form>
+        			<div class="cuantos">
+                        ¿Cuantos?
+        				<input type="text" name="cant_deptos" size="5" maxlength="50"><br>
+        			</div>
+        		</div>
+        	</section>
+        	<section id="dib_edif" class="dibujo">
+                <div id="dialog">
+                    <div class="uf">
+                    </div>
+            		<div class="row demo dibujo_edif">
+            			<div id="edificio" class='large-12 gutter-large columns'>
+            			</div>
+            		</div>
+        		</div>
+        	</section>
+			
+		</section> <!-- main-content --> 
+
+	<script type="text/javascript" src="js/jquery-ui/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery-ui/ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/funciones.js"></script>
+		
+    </body>
+</html>      

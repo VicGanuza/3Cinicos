@@ -1,0 +1,53 @@
+<div class="content-personal-info">
+  <div>
+    <h5>Overview</h5>
+  </div>
+  <div class="separator"></div>
+  <div class="cont_info">
+    <h5 class="name" data-bind="text: employerName"></h5>
+    <div class="column top">
+      <ul class="list_per_info">
+        <li><span class="des_tit">Level: </span><span data-bind="text: level"  class="descr"></span></li>
+        <li><span  class="des_tit">Office: </span><span data-bind="text: office" class="descr"></span></li>
+        <!--li><span  class="des_tit">Personnel area: </span><span data-bind="text: personnelArea" class="descr"></span></li-->
+      </ul>
+    </div>
+    <div class="column second">
+      <ul class="list_per_info">
+        <li><span class="des_tit">Person ID: </span><span data-bind="text: personId" class="descr"></span></li>
+        <li><span class="des_tit">Personnel number: </span><span data-bind="text: personnelNumber" class="descr"></span></li>
+        <li><span class="des_tit">Cost center: </span><span data-bind="text: postCenter" class="descr"></span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="cont_info">
+    <div class="column">
+      <h5 class="overview-sub-title">Organizational information</h5>
+      <ul class="list_per_info ">
+        <li><span class="des_tit">Legal entity: </span><span data-bind="text: legalEntity" class="descr"></span></li>
+        <li><span class="des_tit">Service area: </span><span data-bind="text: serviceArea" class="descr"></span></li>
+        <li><span class="des_tit" >Service line: </span><span data-bind="text: serviceLine"  class="descr"></span></li>
+        <li><span data-bind="visible: particularPersonnelAreaForMarket()" class="des_tit tooltip_startup" title="Contact Talent to change your Market Offering.">Market offering: </span><span data-bind="text: market, visible: particularPersonnelAreaForMarket()" class="descr"></span></li>
+        <li><span data-bind="visible: particularPersonnelAreaForFocus()" class="des_tit tooltip_startup" title="Contact Talent to change your Focus.">Focus: </span><span data-bind="text: focus, visible: particularPersonnelAreaForFocus()" class="descr"></span></li>
+        <li><span class="des_tit">Industry: </span><span  data-bind="text: industry" class="descr"></span></li>
+      </ul>
+    </div>
+    <div class="column second">
+      <h5 class="overview-sub-title">Employment status</h5>
+      <ul class="list_per_info_level ">
+        <li><span class="des_tit">Flexible work arrangement: </span><span data-bind="text: flexibleWorkArrangement"  class="descr"></span></li>
+        <li><span class="des_tit">Work schedule: </span><span data-bind="text: workSchedule" class="descr"></span></li>
+        <li><span class="des_tit">Hire date: </span><span data-bind="text: hireDate()" class="descr"></span></li>
+
+        <li><span data-bind="visible: mostRecentHireDate()!= '' " class="des_tit">Most recent hire date: </span><span data-bind="text: mostRecentHireDate()" class="descr"></span></li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="cont_info notice">
+    <h5>Is this information wrong or outdated? </h5>
+    <p class="des_tit">Do you have any personal updates you would like to make?</p>
+    <p class="des_tit">Please refer to the tabs at the left to access more of your personal information.</p>
+  </div>

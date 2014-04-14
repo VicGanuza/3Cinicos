@@ -1,0 +1,89 @@
+form{
+	width: 14%;
+}
+/*helpers*/
+.border_bottom{
+	border-bottom: 1px solid grey;
+}
+
+/*-----------------------*/
+.formulario form{
+	margin-top: 8px;
+	float: left;
+	border-right: 1px solid grey;
+	margin-right: 15px;
+}
+.input{
+	width: 20%;
+	display: block;
+	margin-left: 273px;
+	margin-top: -23px;
+}
+.main-content{
+	width: 100%;
+	height: 800px;
+}
+.formulario{
+	width: 50%;
+	height: 100%;
+	float: left;
+	padding-top: 30px;
+}
+.dibujo{
+	width: 50%;
+	float: right;
+	height: 100%;
+}
+.dibujo .row{
+	margin-left: 125px;
+	background-color: white;
+	width: 73%;
+}
+.div_input{
+	padding-left: 33px;
+    margin: 0;
+    float: left;
+    width: 100%;
+    height: 80px;
+    padding-top: 5px;
+}
+.demo .gutter-large.columns .column.piso{
+	margin:0;
+	padding: 0;
+}
+.gutter-large .column.piso .column.dpto{
+	margin: 0;
+	padding: 0;
+}
+#edificio {
+	padding: 0;
+}
+.cuantos{
+	width: 20%;
+	display: block;
+	margin-left: 95px;
+	margin-top: 19px;
+}
+.cuantos input[type="text"]{
+	margin-left: 105px;
+	margin-top: -68px;
+}
+.div_input input[type="radio"]{
+	margin: 0px 5px 0 6px;
+	-webkit-appearance: checkbox;
+}
+.div_input input[type="text"]{
+	width: 50px;
+	height: 30px;
+}
+#dialog {
+	margin-left: 50px;
+	padding-top: 50px;
+}
+.uf{
+	width: 10%;
+	height: 300px;
+	background-color: red;
+	float: left;
+}
+

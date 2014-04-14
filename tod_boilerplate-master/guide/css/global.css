@@ -1,0 +1,122 @@
+body {
+	background: url("../images/background.png") repeat ;
+}
+
+/*My information*/
+.main-content{
+	background-color: #FFFFFF;
+	border: 1px solid #C8C8C8;
+	border-top: 1px solid #FFF;
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px #818181;
+	overflow: hidden;
+	min-height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+
+	.main-content .title {
+		width: 100%;
+		margin: 20px 0 20px 0;
+	}
+		.main-content .title div{
+			float: left;
+		}
+		.main-content .title h2 {
+			font-family: 'frutiger-light';
+			font-size: 25pt;
+			color: #123380;
+			line-height: inherit;
+			display: inline-block;
+		}
+		.main-content .title .icon{
+			margin: 7px 10px 0 0;
+		}
+
+.header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background-image: -webkit-linear-gradient(bottom, rgb(16,32,74) 17%, rgb(0,38,115) 80%);
+  background-image: -ms-linear-gradient(bottom, rgb(16,32,74) 17%, rgb(0,38,115) 80%);
+  border-bottom-style: solid;
+  border-bottom-color: rgb(148,207,0);
+  border-bottom-width: 8px;
+  padding-right: 0;
+}
+
+.header .input-search {
+  height: 37px;
+}
+
+.header .header-search {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: -25px;
+}
+
+.logo-deloitte {
+  margin: 20px 0 0 10px;
+}
+
+.search-wrap {
+  margin: 20px 0 0 0;
+}
+
+.central-buttons {
+  width: 100px;
+  height: 128px;
+  display: inline-block;
+  margin: 0px -4px 0 0px;
+}
+
+.header .notification-number {
+  margin: 67% 0 0 70%;
+  font-family: 'montserrat-regular';
+  font-size: 15.5px;
+}
+
+.header .todo-button {
+  background: url(../images/header-todo-tab-normal.png);
+}
+
+.header .toknow-button {
+  background: url(../images/header-toknow-tab-normal.png);
+}
+
+.header .white-link {
+  color: #ffffff;
+}
+
+.header .user-info-section {
+  padding-right: 0;
+}
+
+.header .profile-section .column {
+  padding: 0;
+}
+
+.header .profile-section .user-name{
+  margin: 10% 0 0 0;
+}
+
+.header .profile-section .my-info {
+  margin: 10% 0 0 0;
+}
+
+.header .user-actions .column {
+  border-left: solid 1px gray;
+  text-align: center;
+  background-image: -webkit-linear-gradient(bottom, rgb(0,38,115) 17%, rgb(16,32,74) 80%);
+}
+
+.header .user-actions .column a {
+  margin: 10% 0 0 0;
+}
+
+.header .user-actions .column p {
+  margin: 0 0 5% 0;
+}
+

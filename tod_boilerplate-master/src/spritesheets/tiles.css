@@ -1,0 +1,13 @@
+.tiles{ background:url("tiles.png") top left no-repeat; }
+.dashboard-benefits{ width:274px; height:90px; background-position:-10px -10px; }
+.dashboard-careers{ width:274px; height:90px; background-position:-10px -110px; }
+.dashboard-recognition{ width:274px; height:90px; background-position:-10px -210px; }
+.dashboard-time{ width:274px; height:90px; background-position:-10px -310px; }
+.dashboard-wealth{ width:274px; height:90px; background-position:-10px -410px; }
+.dashboard-compliance{ width:274px; height:90px; background-position:-10px -510px; }
+.dashboard-wellness{ width:274px; height:90px; background-position:-10px -610px; }
+.settings-industrial{ width:274px; height:90px; background-position:-10px -710px; }
+.settings-todo{ width:274px; height:90px; background-position:-10px -810px; }
+.settings-toknow{ width:274px; height:90px; background-position:-10px -910px; }
+.settings-toolkit{ width:274px; height:90px; background-position:-10px -1010px; }
+
