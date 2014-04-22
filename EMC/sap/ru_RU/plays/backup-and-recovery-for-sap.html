@@ -1,0 +1,463 @@
+<!DOCTYPE html> <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--> <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--> <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--> <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="../../style/main.css"> <!--[if lt IE 9]>
+        	<link rel="stylesheet" href="../style/ie.css">
+        <![endif]--><script src="../../style/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body class="backup-and-recovery-for-sap">
+    <div class="page-wrap">
+		<nav id="main-nav" class="closed">
+			<div id="site-nav">
+				<ul>
+					<li id="playbooks-link"><a href="https://education.emc.com/sem/playbook/default.aspx" target="_blank">Все сценарии</a></li>
+					<li id="resources-link"><a href=""><div class="fs1" aria-hidden="true" data-icon="&#x73;"></div><span>Материалы</span></a></li>
+					<li id="menu-link"><a href=""><div class="fs1" aria-hidden="true" data-icon="&#x3d;"></div><span>Меню</span></a></li>
+					<li class="emc-link"><a href="">ЕМС</a></li>
+				</ul>
+			</div>
+			<div id="page-nav">
+				<ul>
+					<li class="emc-link"><a href="#landing">ЕМС</a></li>
+					<li class="pagenav-know-the-opportunity"><a href="#whats-in-it-for-me" class="playbook-section">О решении</a>
+						<ul class="subnav">
+							<li><a href="#whats-in-it-for-me">Решения для каждого</a></li>
+							<li class="last-child"><a href="#the-big-picture">Обзор</a></li>
+						</ul>
+					</li>
+					<li class="pagenav-get-prepared"><a href="#the-competition" class="playbook-section">Подготовка</a>
+						<ul class="subnav">
+							<li><a href="#the-competition">Конкуренция</a></li>
+							<li><a href="#the-right-audience">Целевая аудитория</a></li>
+							<li class="last-child"><a href="#best-practice-sharing">Совместное использование передовых практик</a></li>
+						</ul>
+					</li>
+					<li class="pagenav-engage-your-customer"><a href="#deliver-the-message" class="playbook-section">Привлечение заказчиков</a>
+						<ul class="subnav">
+							<li><a href="#deliver-the-message">Донесите нужную информацию до заказчика</a></li>
+						</ul>
+					</li>
+					<li class="pagenav-find-a-play last-child" id="play-link"><a href="#play-selector" class="playbook-section">Поиск сценария</a>
+						<ul class="subnav">
+							<li><a href="#play-selector">Выбор сценария</a></li>
+							<li><a href="#legacy-application-optimization" class="path-choice">Оптимизация устаревших приложений</a></li>
+							<li><a href="#cloud-enabled-infrastructure" class="path-choice">Облачная инфраструктура</a></li>
+							<li><a href="#data-center-ready-hana" class="path-choice">HANA для ЦОД</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+       <section class="main-content" id="main-content"> <!-- L a n d i n g -->
+        	<section class="module cover landing play-section" id="backup-and-recovery-for-sap-landing">
+        		<div class="frame">
+					<div class="panel-content">
+						<div class="play-nav left bottom">
+							<header>
+								<h3>Оптимизация устаревших приложений</h3>
+								<h2>Резервное копирование и восстановление для SAP</h2>
+							</header>
+							<ul>
+								<li class="plain">Использование баз данных SAP, объемы которых измеряются терабайтами, приводит к тому, что многим заказчикам приходится клонировать данные в системы хранения уровня 1, выгружать их на ленты и управлять инкрементными восстановлениями. Эта среда идеально подходит для решений следующего поколения EMC BRS с функцией дедупликации.</li>
+							</ul>
+							<select class="internal-nav">
+								<option value='default'>ПЕРЕЙТИ К РАЗДЕЛУ</option>
+								<option value='backup-and-recovery-for-sap-top-3-challenges'>Три основные проблемы</option>
+								<option value='backup-and-recovery-for-sap-emc-value'>Ценностное предложение EMC</option>
+								<option value='backup-and-recovery-for-sap-the-competition'>Конкуренция</option>
+								<option value='backup-and-recovery-for-sap-qualifying-questions'>Вопросы для выявления потенциальных клиентов</option>
+								<option value='backup-and-recovery-for-sap-objection-handling'>Ответы на возражения</option>
+								<option value='backup-and-recovery-for-sap-best-practices-sharing'>Совместное использование передовых практик</option>
+								<option value='backup-and-recovery-for-sap-deliver-the-message'>Донесите нужную информацию до заказчика</option>
+								<option value='backup-and-recovery-for-sap-play-resources'>Ресурсы для сценария</option>
+							</select>
+						</div>
+					</div>
+				</div>
+        	</section> <!-- T o p  3  C h a l l e n g e s -->
+        	<section class="module items-list play-section" id="backup-and-recovery-for-sap-top-3-challenges">
+        		<div class="frame">
+					<header>
+						<h2>Три основные проблемы</h2>
+					</header>
+					<div class="panel-content">
+						<ol>
+							<li>
+								<span></span>
+								<h3>Необходимость уменьшения окон резервного копирования для SAP</h3>
+								<p>Использование баз данных SAP, объемы которых измеряются терабайтами, приводит к тому, что многим предприятиям для ускорения резервного копирования приходится клонировать данные в дорогостоящую систему хранения уровня 1. Кроме того, эта стратегия клонирования несет с собой риск, поскольку недостаточное количество полных резервных копий требует координации инкрементных восстановлений. И наконец, для поиска и доставки лент, хранящихся на удаленных площадках, необходимо время.</p>
+								<p><strong>DataDomain отлично подходит для таких случаев. Предприятие Callaway Golf достигло коэффициента дедупликации 25:1 для SAP при производительности более 1 ТБ/ч, что позволяет создавать больше полных резервных копий дисков и обеспечить простое восстановление.</strong></p>
+							</li>
+							<li>
+								<span class="second"></span>
+								<h3>Стоимость: в SAP хранятся данные непроизводственных систем большого объема</h3>
+								<p>Непроизводственные среды SAP, включающие средства аварийного восстановления, поддержки производства, систему контроля качества, средства тестирования, разработки и обучения, используют больший объем пространства в системах хранения, чем производство, и их тоже необходимо защищать. Если для производственных целей необходимо 3 ТБ данных, то одна резервная копия может иметь размер 12 ТБ (в 3—4 раза больше, чем необходимо для производства).</p>
+								<p><strong>Преимущества дедуплицированного резервного копирования выходят за рамки непроизводственных сред и включают полное резервное копирование всего ландшафта SAP и быстрое восстановление на основе дисков.</strong></p>
+							</li>
+							<li class="last">
+								<span class="third"></span>
+								<h3>Администраторам SAP и баз данных необходима наглядность и средства управления</h3>
+								<p>Для Oracle: в SAP имеются средства для управления резервным копированием и восстановлением. Три программных продукта сертифицированы с помощью SAP BRTools для Oracle, что позволяет администраторам SAP управлять резервными копиями с помощью средств, интегрированных в централизованное ПО для резервного копирования. Средства резервного копирования сторонних поставщиков</p>
+								<p class="last"><strong>Продукт NetWorker интегрирован с API конкретных поставщиков, включая SAP BRtools для баз данных Oracle, благодаря чему нет необходимости разрабатывать и поддерживать пользовательские скрипты.</strong></p>
+							</li>
+						</ol>
+					</div>
+				</div>
+        	</section> <!-- E M C  V a l u e -->
+        	<section class="module accordion play-section emc-value" id="backup-and-recovery-for-sap-emc-value">
+        		<div class="frame">
+					<div class="panel-content">
+						<header>
+							<h2>Ценностное предложение EMC</h2>
+						</header>
+						<div class="accordion-box" id="backup-and-recovery-for-sap-emc-value-accordion">
+							<ul class="accordion-list">
+								<li class="open">
+									<div class="accordion-title">Дедупликация EMC Data Domain — это передовая практика для резервного копирования и восстановления SAP.</div>
+									<div class="accordion-content">
+										<p>Производственные базы данных SAP, объемы которых измеряются терабайтами, — обычное дело. Размеры таких баз данных увеличиваются в геометрической прогрессии, если к ним добавить непроизводственные среды (среды тестирования, разработки, систем контроля качества и аварийного восстановления). Дороговизна и сложность приводят к следующим результатам: а) для решения проблемы окон резервного копирования используются системы хранения уровня 1 и клонирование; б) из-за использования инкрементных резервных копий процесс восстановления становится долгим и сложным; в) непроизводственные среды увеличивают объем данных резервных копий в 3 или 4 раза.</p>
+										<p><strong>Аргументы.</strong> Предприятие Callaway Golf достигло коэффициента дедупликации 25:1 при производительности более 1 ТБ/ч для производственных систем, что позволяет создавать больше полных резервных копий. Теперь исключены расходы на управление ленточной средой.</p>
+									</div>
+								</li>
+								<li class="closed">
+									<div class="accordion-title">Унифицированное управление и администрирование базовыми системами SAP для администраторов баз данных и резервного копирования</div>
+									<div class="accordion-content">
+										<p>Интеграция NetWorker с SAP и SAP BRtools или базами данных Oracle обеспечивает полную наглядность и унифицированное управление для администраторов баз данных и SAP без необходимости разрабатывать и поддерживать пользовательские скрипты.</p>
+										<p><strong>Аргументы.</strong> Предприятие Sports Chalet использует дедупликацию EMC Avamar с EMC NetWorker для унификации управления восстановлением резервных копий. Благодаря Avamar резервное копирование SAP выполняется за 20 минут, а не за 16 часов. Благодаря NetWorker на администрирование резервного копирования уходит всего лишь 5—10 минут в день, а не несколько часов, как раньше.</p>
+										<p>ПРИМЕЧАНИЕ. Сведения об использовании NetWorker с SAP HANA см. в сценарии HANA.</p>
+									</div>
+								</li>
+								<li class="closed">
+									<div class="accordion-title">Упрощение аварийного восстановления для SAP</div>
+									<div class="accordion-content">
+										<p>Некоторым заказчикам SAP может потребоваться менее дорогостоящее решение для аварийного восстановления, предназначенное для асинхронных расстояний и использующее стратегию «холодного» перезапуска. Data Domain позволяет заказчикам SAP расширять локальные резервные копии для эффективного и масштабируемого аварийного восстановления с помощью технологий репликации, на 99% уменьшающих требования к полосе пропускания при перемещении данных на расстояние.</p>
+										<p><strong>Аргументы.</strong> Для упрощения аварийного восстановления предприятие Callaway Golf использует дедуплицированное резервное копирование Data Domain, реплицируя данные резервных копий из Сан-Диего в Карлсбад, Калифорния, по сниженной стоимости благодаря повторному использованию пропускной способности глобальной сети для других критически важных бизнес-процессов.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+        	</section> <!-- C o m p e t i t i o n -->
+        	<section class="module carousel desktop-only the-competition play-section" id="backup-and-recovery-for-sap-the-competition">
+        		<div class="frame">
+        			<header>
+						<h2>Конкуренция</h2>
+					</header>
+					<div class="panel-content">
+						<div class="carousel-box" id="backup-and-recovery-for-sap-competition-carousel">
+							<div class="slider">
+								<div class="slide bkg-grad">
+									<figure class="competitor-logo">
+										<img src="../images/logos-ibm-480x192-desktop.jpg" alt="IBM" />
+										<figcaption>
+											<h4>Tivoli Storage Manager</h4>
+										</figcaption>
+									</figure>
+									<div class="competitor-info">
+										<h4>Предложение конкурента</h4>
+										<p>Корпорация IBM предлагает Tivoli Storage Manager (TSM) для управления данными SAP, в том числе для резервного копирования и восстановления. Продукт TSM сертифицирован с помощью SAP BRtools для Oracle, НО НЕ с помощью SAP HANA.</p>
+										<h4>Ответ EMC</h4>
+										<p>Продукт EMC NetWorker также поддерживает DB2 и СУБД Oracle для SAP и сертифицирован с помощью SAP BRtools для Oracle. Используйте технические ресурсы EMC для обеспечения уверенной конкурентной дифференциации и достижения успеха.</p>
+									</div>
+								</div>
+								
+								<div class="slide bkg-grad">
+									<figure class="competitor-logo">
+										<img src="../images/logos-symantec-480x192-desktop.jpg" alt="Symantec" />
+										<figcaption>
+											<h4>Symantec NetBackup</h4>
+										</figcaption>
+									</figure>
+									<div class="competitor-info">
+										<h4>Предложение конкурента</h4>
+										<p>Продукт Symantec NetBackup сертифицирован с помощью SAP BRtools для Oracle и баз данных SAP HANA. Symantec может попытаться использовать имеющуюся у нее сертификацию HANA, которая сегодня уже не так важна для многих пользователей SAP.</p> 
+										<h4>Ответ EMC</h4>
+										<p>Продукт EMC NetWorker сертифицирован с помощью SAP BRtools для Oracle, НО НЕ с помощью SAP HANA. Используйте технические ресурсы EMC для обеспечения уверенной конкурентной дифференциации и достижения успеха.</p>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="carousel-nav" data-carousel="backup-and-recovery-for-sap-competition-carousel">
+					<li class="fs1 left-arrow" aria-hidden="true" data-icon="&#x3e;"><span>Назад</span></li>
+					<li class="dots two">
+						<ul data-callback="desktopCarousel">
+							<li class="pager first current">&bull;</li>
+							<li class="pager second">&bull;</li>
+						</ul>
+					</li>
+					<li class="fs1 right-arrow" aria-hidden="true" data-icon="&#x3c;"><span>Далее</span></li>
+				</ul>
+        	</section> <!-- Q u a l i f y i n g  Q u e s t i o n s -->
+			<section class="module accordion not-last play-section" id="backup-and-recovery-for-sap-qualifying-questions">
+        		<div class="frame">
+					<div class="panel-content">
+						<header>
+							<h2>Вопросы для выявления потенциальных клиентов</h2>
+						</header>
+						<div class="accordion-box" id="backup-and-recovery-for-sap-qualifying-questions-accordion">
+							<ul class="accordion-list">
+								<li class="open">
+									<div class="accordion-title">
+										<p><strong>ИТ.</strong> Как вы уменьшаете расходы на резервное копирование SAP? Используете ли вы достаточно гибкие инструменты, чтобы выполнять ежедневное полное резервное копирование?</p>
+									</div>
+									<div class="accordion-content">
+										<p>Обычно заказчики создают клоны в системах хранения уровня 1 с помощью инкрементных моментальных снимков. Полное резервное копирование может выполняться только в выходные дни. Для долгосрочного хранения данных используется лента. Обсудите альтернативные подходы, обеспечивающие возможность ежедневного полного резервного копирования.</p>
+										<p>Начните обсуждение с дедупликации и с того, как заказчик может увеличить количество полных резервных копий с возможностью ежедневного сохранения их на экономичных специализированных устройствах для резервного копирования. Аргументы. Предоставьте информацию о предприятиях Callaway Golf, Sports Chalet, Aramis и других заказчиках SAP.</p>
+									</div>
+								</li>
+								<li class="closed">
+									<div class="accordion-title">
+										<p><strong>ИТ.</strong> Запускаете ли вы SAP на Oracle и используете ли SAP BRtools?</p>
+									</div>
+									<div class="accordion-content">
+										<p>Если заказчик использует SAP на Oracle, то интеграция с BRtools может быть одним из требований для управления резервным копированием для SAP на основе Oracle.</p>
+										<p>Расскажите о том, что NetWorker интегрируется с API поставщиков, а также о том, что благодаря использованию SAP BRtools для Oracle нет необходимости разрабатывать и поддерживать пользовательские скрипты.</p>
+									</div>
+								</li>
+								<li class="closed">
+									<div class="accordion-title">
+										<strong>ИТ.</strong> Какова ваша стратегия аварийного восстановления для SAP? Что вы используете в настоящее время?
+									</div>
+									<div class="accordion-content">
+										<p>Функции аварийного восстановления важны для пользователей, хотя зачастую они плохо реализованы. Ищите заказчиков SAP, использующих ленту для аварийного восстановления. Некоторые заказчики SAP могут не иметь плана из-за затрат, особенно для асинхронных дистанций.</p> 
+										<p><strong>Аргументы.</strong> Предоставьте информацию о развертывании Data Domain в Callaway Golf.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+        	</section> <!-- O b j e c t  H a n d l i n g -->
+        	<section class="module accordion play-section" id="backup-and-recovery-for-sap-objection-handling">
+        		<div class="frame">
+					<div class="panel-content">
+						<header>
+							<h2>Ответы на возражения</h2>
+						</header>
+						<div class="accordion-box" id="backup-and-recovery-for-sap-objection-handling-accordion">
+							<ul class="accordion-list">
+								<li class="open">
+									<div class="accordion-title">Базы данных SAP быстро изменяются, а наличие журналов архивирования и операций затрудняет дедупликацию.</div>
+									<div class="accordion-content">
+										<p>В этой среде многие способы дедупликации не работают. Но в Data Domain используется дедупликация блоков переменной длины, которая обеспечивает ведущий в отрасли коэффициент дедупликации резервных копий баз данных. Заказчики, у которых ежедневный процент изменения данных составляет 10—15% и которым требуется срок хранения 4—6 недель, уменьшат объем данных в 7—10 раз.</p>
+										<p>Предприятие Callaway Golf — заказчик SAP с базой данных SAP, объем которого измеряется терабайтами — достигло коэффициента дедупликации 25:1 на своей основной площадке и площадке аварийного восстановления.</p>
+									</div>
+								</li>
+								<li class="closed">
+									<div class="accordion-title">Мои администраторы SAP и баз данных требуют непосредственной наглядности: они не хотят полагаться на средства администрирования резервного копирования.</div>
+									<div class="accordion-content">
+										<p> NetWorker предоставляет администраторам SAP и баз данных непосредственный контроль и наглядность. NetWorker также интегрируется с API конкретных поставщиков, включая SAP BRtools для баз данных Oracle, благодаря чему нет необходимости разрабатывать и поддерживать пользовательские скрипты.</p>
+										<p>Встроенные в Data Domain утилиты для работы с базами данных (Oracle RMAN, дампы SQL и т. д.) предоставляют полноценный контроль администраторам баз данных. Администраторы баз данных могут выполнять запись в систему Data Domain, которая служит консолидированной платформой защиты данных для всего предприятия.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+        	</section> <!-- B e s t  P r a c t i c e s  S h a r i n g -->
+        	<section class="module video carousel play-section" id="backup-and-recovery-for-sap-best-practices-sharing">
+        		<div class="frame">       		
+					<header>
+						<h2>Совместное использование передовых практик</h2>
+					</header>
+					<figure class="current-video" id="backup-and-recovery-for-sap-best-practices-sharing-video">
+						<div class="panel-content videobox" data-playerid="2686419986001" data-playerkey="AQ~~,AAACIJ2FTUE~,-Pws2uU1lnlknmuz9WHCCBRylPh_rA6J" data-video="2688433518001">	
+						</div>
+						<figcaption>
+							Резервное копирование и восстановление: призыв к действию для специалистов по продажам
+						</figcaption>
+					</figure>	
+        		</div>
+        		<ul class="carousel-nav" data-carousel="backup-and-recovery-for-sap-best-practices-sharing-video">
+					<li class="fs1 left-arrow" aria-hidden="true" data-icon="&#x3e;"><span>Назад</span></li>
+					<li class="dots four">
+						<ul data-callback="videoCarousel">
+							<li class="pager first current" data-video="2688433518001" data-subtitle="Backup and Recovery- Sales Call">&bull;</li>
+							<li class="pager second" data-video="2688454482001" data-subtitle="Backup and Recovery- Technical White Board">&bull;</li>
+						</ul>
+					</li>
+					<li class="fs1 right-arrow" aria-hidden="true" data-icon="&#x3c;"><span>Далее</span></li>
+				</ul>
+        	</section> <!-- D e l i v e r i n g  T h e  M e s s a g e -->
+        	<section class="module play-section message-chooser bkg-grad" id="backup-and-recovery-for-sap-deliver-the-message">
+        		<div class="frame">
+					<header>
+						<h2>Донесите нужную информацию до заказчика</h2>
+						<p>Хорошая презентация продукта — залог успешности продаж.</p>
+						<p>Начните с презентаций для специалистов по продажам или технических презентаций для заказчиков, ссылки на которые расположены ниже. Или, если хотите, начните с изучения ресурсов, предназначенных для специалистов по продажам и технических специалистов и доступных в разделе ресурсов для сценария, чтобы спланировать и донести нужную информацию EMC о SAP до заказчиков.</p>
+					</header>
+               <div class="panel-content">
+                  <ul class="message-choices">
+                     <li class="powerpoint-presentation"><a href="assets/public/Synopsis-EMC-BRS-for-SAP.pptx" target="_blank">Презентация для специалистов по продажам в формате PowerPoint</a></li>
+                     <li class="powerpoint-presentation"><a href="assets/public/NetWorkerModuleSAP-w-Oracle.pptx" target="_blank">Техническая презентация в формате PowerPoint</a></li>
+                  </ul>
+               </div>
+				</div>
+        	</section> <!--  P l a y  R e s o u r c e s -->
+        	<section class="module resources-form play-section" id="backup-and-recovery-for-sap-play-resources">
+        		<div class="frame"> <!--  White Box -->
+					<div class="panel-content">
+						<header>
+							<h2>РЕСУРСЫ ДЛЯ СЦЕНАРИЯ</h2>
+						</header>
+						<div class="resources-form-wrapper">
+							<p>Ресурсы сообщества. <a href="https://community.emc.com/community/connect/everything_sap" target="_blank">Все ресурсы EMC для SAP</a> | <a href="http://one.emc.com/clearspace/community/active/sapforum" target="_blank">Форум SAP</a></p>
+							<p>
+		                    	<a href="http://russia.emc.com/ppg/index.htm" target="_blank">Руководство по позиционированию продуктов EMC</a>
+		                    </p>
+							<p>Чтобы поделиться сведениями, выберите один или несколько пунктов и заполните форму под разделом ресурсов.</p>
+							<p class="note last">* Для доступа к некоторым материалам требуется подключение VPN</p>
+							<form class='share-form' name="play-resources" action="https://emcinformation.com/171401/POP/.ashx" method="post"> <!-- Left Side -->
+                                    <div class="panel-left">
+                                       <header>
+                                          <h3>ДЛЯ СПЕЦИАЛИСТОВ ПО ПРОДАЖАМ</h3> <span>Поделиться</span>
+                                       </header>
+                                       <ul class="resource-choices">
+                                          <li class="pr-lnk">
+                                             <a  href="https://community.emc.com/docs/DOC-30726" target="_blank">
+                                               Основные причины использовать EMC BRS для SAP 
+                                                <span>EMC BRS для SAP: убедительные аргументы (деловые и технические) для заказчиков.</span>
+                                             
+                                             </a>
+                                             <input type="checkbox" name="sales-presentation" value="">
+                                          </li>
+                                          <li class="pr-lnk">
+                                             <a  href="https://community.emc.com/docs/DOC-34284" target="_blank">
+                                               Обзор решения 
+                                                <span>EMC для SAP: обзор бизнес-проблем, предложений и ключевых преимуществ для заказчиков.</span>
+                                             
+                                             </a>
+                                             <input type="checkbox" name="sales-presentation" value="">
+                                          </li>
+                                          <li class="pr-pp">
+                                             <a  href="assets/public/Synopsis-EMC-BRS-for-SAP.pptx" target="_blank">
+                                               Презентация для специалистов по продажам
+                                                <span>Слайды, посвященные финансовым вопросам: BRS для SAP, а также проблемы заказчиков, решения и преимущества.</span>
+                                             
+                                             </a>
+                                             <input type="checkbox" name="sales-presentation" value="">
+                                          </li>
+                                          <li class="pr-pp">
+                                             <a  href="assets/public/70-SAP-BRS-Customers.pptx" target="_blank">
+                                               Достижения заказчиков 
+                                                <span>Профиль заказчика: BRS для SAP.</span>
+                                             
+                                             </a>
+                                             <input type="checkbox" name="sales-presentation" value="">
+                                          </li>
+                                          <li class="pr-pdf">
+                                             <a  href="assets/SAP-backup-services-synopsis-8-23-13.pdf" target="_blank">
+                                               Предложения услуг* 
+                                                <span>В этом внутреннем документе содержится информация для службы EMC GS и предложения услуг партнеров для сценария.</span>
+                                             
+                                             </a>
+                                          </li>
+                                          <li class="pr-lnk">
+                                             <a  href="https://pdg.emc.com/ts_pdg?appname=pdg" target="_blank">
+                                               Руководства по подготовке предложений
+                                                <span>Онлайн-инструмент для создания коммерческих предложений по продажам и их адаптации к потребностям заказчиков.</span>
+                                             
+                                             </a>
+                                          </li>
+                                       </ul>
+                                    
+                                    </div> <!-- Right Side -->
+                                    <div class="panel-right">
+                                       <header>
+                                          <h3>ДЛЯ ТЕХНИЧЕСКИХ СПЕЦИАЛИСТОВ</h3> <span>Поделиться</span>
+                                       </header>
+                                       <ul class="resource-choices">
+                                          <li class="pr-pp">
+                                             <a  href="assets/public/NetWorkerModuleSAP-w-Oracle.pptx" target="_blank">
+                                               Техническая презентация для заказчиков 
+                                                <span>Модуль EMC для SAP с ORACLE, DataDomain и Avamar.</span>
+                                             
+                                             </a>
+                                             <input type="checkbox" name="technical-customer-presentation" value="">
+                                          </li>
+                                          <li class="pr-lnk">
+                                             <a  href="https://community.emc.com/docs/DOC-30783" target="_blank">
+                                               Эталонная архитектура 
+                                                <span>Резервное копирование и восстановление для ландшафтов SAP, в которых используется EMC Data Domain и EMC NetWorker.</span>
+                                             
+                                             </a>
+                                             <input type="checkbox" name="technical-customer-presentation" value="">
+                                          </li>
+                                          <li class="pr-pdf">
+                                             <a  href="assets/SAP-EMC-BES-Technical-Training-BRS-April-9.pdf" target="_blank">
+                                                Обучение для системных инженеров*
+                                                <span>Технические обучающие курсы для специалистов по предпродажным мероприятиям и приложениям: резервное копирование и восстановление для SAP.</span>
+                                             
+                                             </a>
+                                          </li>
+                                          <li class="pr-lnk">
+                                             <a  href="http://powerlink.emc.com/km/live1/en_US/Sales_Support/Tool/BackupSystemSizer_Internal.zip?mtcs=ZXZlbnRUeXBlPUttQ2xpY2tDb250ZW50RXZlbnQsZG9jdW1lbnRJZD0wOTAxNDA2Nj%20gwNmNiMGRhLGRvY3VtZW50VHlwZT16aXAsbmF2ZU5vZGU9MGIwMTQwNjY4MDQ2NTI2Zl9Hcmlk" target="_blank">
+                                               Рекомендации по определению конфигурации* 
+                                                <span>Ссылка на средства определения конфигурации для SAP BRS.</span>
+                                             
+                                             </a>
+                                          </li>
+                                          <li class="pr-lnk">
+                                             <a  href="https://express.salire.com/signin.aspx?t=EMC&AspxAutoDetectCookieSupport=1" target="_blank">
+                                               Калькулятор совокупной стоимости владения 
+                                                <span>Портал EMC Business Value Portal: создание бизнес-обоснования BRS.</span>
+                                             
+                                             </a>
+                                          </li>
+                                       </ul>
+                                       
+                                    </div>
+                                    
+                                    <div class="lower-form-inputs hidden-form">
+                                       <header>
+                                          <h3>ПОДЕЛИТЕСЬ ВЫБРАННЫМИ РЕСУРСАМИ</h3>
+                                          <p>Вы выбрали следующее количество ресурсов: #.</p>
+                                       </header>
+                                       <div class="row name-row">
+                                          <span>Имя получателя:</span>
+                                          <input id="fieldrecipientFirstName" name="fieldrecipientFirstName" type="text"  placeholder="First name" value="">
+                                          <input id="fieldrecipientLastName" name="fieldrecipientLastName" type="text" placeholder="Last name" value="">
+                                       </div>
+                                       <div class="row email-row">
+                                          <span>Адрес электронной почты получателя:</span>
+                                          <input id="fieldrecipientEmail" name="fieldrecipientEmail" type="text" placeholder="Email" value="">
+                                       </div>
+                                       <div class="row textarea-row">
+                                          <span>Напишите небольшое сообщение:</span>
+                                          <textarea id="fieldbodyMessage" name="fieldbodyMessage" type="text" cols="57" rows="7">Вот документы, о которых мы с вами говорили. Обращайтесь, если у вас появятся вопросы.</textarea>
+                                       </div>
+                                       
+                                       <a class="btn-submit" href="#">ОТПРАВИТЬ</a>
+                                       
+                                       <div class="form-errors"></div>
+                                    </div>
+                                    
+                                 </form> 
+                        </div>
+					</div>
+				</div>
+        	</section> <!-- F o o t e r -->
+			<section class="module footer play-section">
+				<div class="frame">
+					<p class="boilerplate-links">
+						<a href="http://russia.emc.com/legal/emc-corporation-privacy-statement.htm" target="_blank" class="privacy">Политика конфиденциальности</a> | <a href="http://russia.emc.com/legal/legal-information.htm" target="_blank" class="legal">Юридическая информация</a>
+		            </p>
+					<p class="copyright">&copy; Корпорация EMC, 2013&nbsp;г. Все права защищены.</p>
+				</div>
+			</section>
+			
+		</section>
+		</div><script src="../../style/vendor/jquery-1.10.1.min.js"></script><script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script><script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/APIModules_all.js"></script><script src="../../style/vendor/hammer.min.js"></script><script src="../../style/vendor/jquery.hammer.min.js"></script><script src="../../style/vendor/jquery.uniform.min.js"></script> <!--  LAST MINIFIED 23 JULY 2013 <script src="script/min/main.min.js"></script> --><script src="../../style/main.js"></script><script src="../../style/main-nav.js"></script><script src="../../style/video.js"></script><script src="../../style/carousel.js"></script><script src="../../style/overlay.js"></script><script src="../../style/accordion.js"></script><script src="../../style/card-swap.js"></script><script src="../../style/briefcase.js"></script><script src="../../style/play.js"></script><script type="text/javascript">
+			window.EMC = window.EMC || {};
+		</script> 
+    </body>
+</html>
