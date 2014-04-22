@@ -11,7 +11,11 @@ body{
 form{
 	width: 14%;
 }
-
+.formulario select{
+	width:50px;
+	margin-top: 10px;
+	margin-left: 24px;
+}
 /*helpers*/
 .border_bottom{
 	border-bottom: 1px solid grey;
@@ -129,7 +133,7 @@ form{
 	margin-top: -2px;
 	margin-left: -29px;
 }
-.div_input input[type="radio"], #nombre_dpto input[type="radio"]{
+.div_input input[type="radio"], #nombre_dpto input[type="radio"], #denominacion_dpto input[type="radio"]{
 	margin: -3px 5px 0 6px;
 	-webkit-appearance: checkbox;
 }
@@ -212,11 +216,11 @@ form{
   position: relative;
   width: 100%; 
 }
-#nombre_dpto{
+#nombre_dpto, #denominacion_dpto{
 	padding:5px;
 	display: none;
 }
-#nombre_dpto header{
+#denominacion_dpto header{
 	background-color: #57ACCE;
 	color: #F7F7F7;
 	font-family: 'Helvetica Neue';
@@ -226,19 +230,19 @@ form{
 	padding-left: 9px;
 	margin-bottom: 10px;
 }
-#nombre_dpto select{
+#nombre_dpto select, #denominacion_dpto select{
 	width:50px;
 	margin-top: 10px;
 	margin-left: 24px;
 	margin-right: 124px;
 	float: left;
 }
-#ingr_pers{
+#ingr_pers_d2{
 	display: none;
 	width: 100px;
 	margin-left: 400px;
 }
-#ingr_pers input[type="text"]{
+#ingr_pers_d2 input[type="text"]{
 	border: 1px solid #57ACCE;
 	margin-top: 10px;
 	height: 30px;
@@ -266,7 +270,7 @@ form{
 	width: 30px;
 	height: 30px;
 }
-#dialog header{
+#nombre_dpto header{
 	background-color: #E6E6E6;
 	color: #57ACCE;
 	font-family: 'Helvetica Neue';
@@ -277,7 +281,7 @@ form{
 	margin-bottom: 10px;
 	margin-top: 10px;
 }
-#dialog #nombre_dpto.content_grey .content_whitegrey{
+#nombre_dpto.content_grey .content_whitegrey{
 	background-color: #FFFFFF;
 }
 

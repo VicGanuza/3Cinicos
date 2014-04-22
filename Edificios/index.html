@@ -61,7 +61,14 @@
                     </form>
                     <div class="cuantos">
                         ¿Cuantos? 
-                        <input type="text" name="locales_comerciales" size="5" maxlength="50"><br>
+                        <select id="locales_comerciales" disabled>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>  
                     </div>
                 </div>
                 <div class='div_input clearfix border_bottom'>
@@ -72,7 +79,14 @@
                     </form>
                     <div class="cuantos">
                         ¿Cuantos? 
-                        <input type="text" name="cocheras_cub" size="5" maxlength="50"><br>
+                        <select id="cocheras_cub" disabled>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>  
                     </div>
                 </div>
                 <div class='div_input clearfix border_bottom'>
@@ -83,7 +97,14 @@
                     </form>
                     <div class="cuantos">
                         ¿Cuantos? 
-                        <input type="text" name="cocheras_desc" size="5" maxlength="50"><br>
+                        <select id="cocheras_desc" disabled>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>  
                     </div>
                 </div>
                 <div class='div_input clearfix border_bottom'>
@@ -94,7 +115,14 @@
                     </form>
                     <div class="cuantos">
                         ¿Cuantos? 
-                        <input type="text" name="bauleras" size="5" maxlength="50"><br>
+                        <select id="bauleras" disabled>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>  
                     </div>
                 </div>
         	</section>
@@ -116,10 +144,10 @@
             <header id="title-1">Selecciona el tipo de denominacion para las unidades funcionales</header>
             <div id="content_nombre" class="content_grey">
              <div class="content_whitegrey">
-                <input type="radio" name="denominacion" value="letras" id="alfa"/>Alfanetico. A partir de:
+                <input type="radio" name="denominacion" value="letras" id="alfa" selected/>Alfanetico. A partir de:
                 <input type="radio" name="denominacion" value="nro" id="num"/>Numerico. A partir de:
                 <input type="radio" name="denominacion" value="personalizado" id="person" />Personalizada   
-                <select id="sel_alfa" disabled>
+                <select id="sel_alfa">
                     <option value="0">A</option>
                     <option value="1">B</option>
                     <option value="2">C</option>
@@ -136,6 +164,35 @@
                     <option value="6">6</option>
                 </select>  
                 <div id="ingr_pers">
+                </div>
+             </div> 
+            </div>
+            <header id="title-2" class="display_none">Ingresa la cantidad de Unidades Funcionales por piso</header>
+        </div>
+         <div id="denominacion_dpto" class="top_dialog">
+            <header id="title-1">Selecciona el tipo de denominacion para las unidades funcionales</header>
+            <div id="content_nombre" class="content_grey">
+             <div class="content_whitegrey">
+                <input type="radio" name="denom" value="letras" id="alfa_d2" checked/>Alfanetico. A partir de:
+                <input type="radio" name="denom" value="nro" id="num_d2"/>Numerico. A partir de:
+                <input type="radio" name="denom" value="personalizado" id="person_d2" />Personalizada   
+                <select id="sel_alfa_d2">
+                    <option value="0">A</option>
+                    <option value="1">B</option>
+                    <option value="2">C</option>
+                    <option value="3">D</option>
+                    <option value="4">E</option>
+                    <option value="5">F</option>
+                </select>    
+                <select id="sel_num_d2" disabled>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>  
+                <div id="ingr_pers_d2">
                     <input type="text" name="per" class="personal"/>
                 </div>
              </div> 
@@ -143,8 +200,8 @@
                 <!-- <img src=""/> -->
              </div>  
             </div>
-            <header id="title-2" class="display_none">Ingresa la cantidad de Unidades Funcionales por piso</header>
         </div>
+
 
 	<script type="text/javascript" src="js/jquery-ui/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="js/jquery-ui/ui/jquery-ui.js"></script>

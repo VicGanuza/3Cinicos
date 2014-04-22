@@ -70,7 +70,6 @@ $(document).ready(function(){
         $('#dialog').append($('#edif_dibujo'));
         $('#dialog').append($('#numeracion'));
         $('#uf').css({'display' : 'block'});
-        $('#checked').css({'display' : 'none'});
         $('.content_whitegrey').css({'background-color':'#FFFFFF', 'width' :'100%'});
         $('#title-2').removeClass('display_none');
 
@@ -84,8 +83,6 @@ $(document).ready(function(){
                 $('#inner_draw').append($('#numeracion'));
                 $('#uf').css({'display' : 'none'});
                 $('.content_whitegrey').css({'background-color':'#F7F7F7', 'width' : 'width: 550px;'});
-               $('#nombre_dpto').append($('#title-1'));
-                $('#nombre_dpto').append($('#content_nombre'));
                 $(this).dialog("close");
             },
             buttons: {
@@ -161,7 +158,7 @@ $(document).ready(function(){
 
     $('#img').on('click',function(){
 
-        $('#nombre_dpto').dialog({
+        $('#denominacion_dpto').dialog({
             width: 620,
             top: 267,
             left: 283
@@ -182,15 +179,33 @@ $(document).ready(function(){
     });
 
     $('#person').on('click',function(){
-        var cant_deptos = $('[name=cant_deptos]').val();
-        $('#ingr_pers').empty();
-        while (cant_deptos>0){
-            $('#ingr_pers').append('<input type="text" name="per" id="nom_depto_'+cant_deptos+'"/>');
-            cant_deptos=cant_deptos-1;
-        }
         $('#sel_alfa').prop( "disabled", true );
         $('#sel_num').prop("disabled",true);
         $('#ingr_pers').css({'display' : 'block'});
+    });
+
+    $('#alfa_d2').on('click',function(){
+        $('#sel_alfa_d2').prop( "disabled", false );
+        $('#sel_num_d2').prop("disabled",true);
+        $('#ingr_pers_d2').css({'display' : 'none'});
+    });
+
+    $('#num_d2').on('click',function(){
+        $('#sel_alfa_d2').prop( "disabled", true );
+        $('#sel_num_d2').prop("disabled",false);
+        $('#ingr_pers_d2').css({'display' : 'none'});
+    });
+
+    $('#person_d2').on('click',function(){
+        var cant_deptos = $('[name=cant_deptos]').val();
+        $('#ingr_pers_d2').empty();
+        while (cant_deptos>0){
+            $('#ingr_pers_d2').append('<input type="text" name="per" id="nom_depto_'+cant_deptos+'"/>');
+            cant_deptos=cant_deptos-1;
+        }
+        $('#sel_alfa_d2').prop( "disabled", true );
+        $('#sel_num_d2').prop("disabled",true);
+        $('#ingr_pers_d2').css({'display' : 'block'});
     });
 
     $('#checked').on('click',function(){
@@ -201,20 +216,20 @@ $(document).ready(function(){
         var dptos = $('[name=cant_deptos]').val();
         var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-        if ($('#alfa').is(':checked')){
+        if ($('#alfa_d2').is(':checked')){
             tipo = 1;
             inicio = parseInt($('#sel_alfa').val());
             fin = inicio + parseInt(dptos);
         }
         else 
             {
-                if ($('#num').is(':checked')){
+                if ($('#num_d2').is(':checked')){
                     tipo = 2;
                     inicio = parseInt($('#sel_num').val());
                     fin = inicio + parseInt(dptos-1);
                 }
                 else {
-                    if ($('#person').is(':checked')){
+                    if ($('#person_d2').is(':checked')){
                         tipo = 3;
                     }
             }
@@ -241,8 +256,31 @@ $(document).ready(function(){
                 k=k-1;
             }
         }
-        $('#nombre_dpto').dialog('close');
+        $('#denominacion_dpto').dialog('close');
     });
-
+    $('#loc_com').on('click',function(){
+        $('#locales_comerciales').prop('disabled',false);
+    });
+    $('#no_loc_com').on('click',function(){
+        $('#locales_comerciales').prop('disabled',true);
+    });
+    $('#coch_cub').on('click',function(){
+        $('#cocheras_cub').prop('disabled',false);
+    });
+    $('#no_coch_cub').on('click',function(){
+        $('#cocheras_cub').prop('disabled',true);
+    });
+    $('#coch_dec').on('click',function(){
+        $('#cocheras_desc').prop('disabled',false);
+    });
+    $('#no_coch_dec').on('click',function(){
+        $('#cocheras_desc').prop('disabled',true);
+    });
+    $('#tiene_bauleras').on('click',function(){
+        $('#bauleras').prop('disabled',false);
+    });
+    $('#no_tiene_bauleras').on('click',function(){
+        $('#bauleras').prop('disabled',true);
+    });
 });
  
