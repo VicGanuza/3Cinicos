@@ -22,6 +22,7 @@
 				 
         <section class="main-content" id="main-content"> 
         	<section class="formulario">
+                <h4>Pisos | unidades funcionales</h4>
                 <div class='div_input clearfix border_bottom'>
                     <p> ¿Hay unidades funcionales en la PB?</p>
                     <form class="clearfix">
@@ -38,30 +39,112 @@
         		<p>¿Cuantos pisos tiene el edificio? </p>
         			<input type="text" name="cant_pisos" size="5" maxlength="50"><br>
         		</div>
-        		<div class='div_input border_bottom'>
+        		<div id="ingr_deptos" class='div_input border_bottom'>
         			<p>¿Todos los pisos tienen la misma cantidad de unidades funcionales?</p>
                     <form class="clearfix">
-                        <input type="radio" name="igualesxpiso" value="Si">Si
-                        <input type="radio" name="igualesxpiso" value="No">No
+                        <input type="radio" name="igualesxpiso" id="ig_x_piso"value="Si">Si
+                        <input type="radio" name="igualesxpiso" id="no_ig_x_piso" value="No">No
                     </form>
         			<div class="cuantos">
                         ¿Cuantos?
-        				<input type="text" name="cant_deptos" size="5" maxlength="50"><br>
+            			<input type="text" name="cant_deptos" size="5" maxlength="50" id="cant_deptos">
+                        <img id="img" src="images/arrow-down.png"/>
+                        <div id="cargar_dptos" class="bottom" style="display:none">Cargar Departamentos</div>
         			</div>
-        		</div>
-        	</section>
-        	<section id="dib_edif" class="dibujo">
-                <div id="dialog">
-                    <div class="uf">
+                </div>
+                <h4>Otras unidades</h4>
+                 <div class='div_input clearfix border_bottom'>
+                    <p> ¿Tiene locales comerciales? (propiedad de terceros)</p>
+                    <form class="clearfix">
+                        <input type="radio" name="loc_com" id="loc_com" value="Si">Si
+                        <input type="radio" name="loc_com" id="no_loc_com" value="No">No
+                    </form>
+                    <div class="cuantos">
+                        ¿Cuantos? 
+                        <input type="text" name="locales_comerciales" size="5" maxlength="50"><br>
                     </div>
-            		<div class="row demo dibujo_edif">
-            			<div id="edificio" class='large-12 gutter-large columns'>
-            			</div>
-            		</div>
-        		</div>
+                </div>
+                <div class='div_input clearfix border_bottom'>
+                    <p> ¿Tiene cocheras cubiertas?</p>
+                    <form class="clearfix">
+                        <input type="radio" name="coch_cub" id="coch_cub" value="Si">Si
+                        <input type="radio" name="coch_cub" id="no_coch_cub" value="No">No
+                    </form>
+                    <div class="cuantos">
+                        ¿Cuantos? 
+                        <input type="text" name="cocheras_cub" size="5" maxlength="50"><br>
+                    </div>
+                </div>
+                <div class='div_input clearfix border_bottom'>
+                    <p> ¿Tiene cocheras descubiertas?</p>
+                    <form class="clearfix">
+                        <input type="radio" name="coch_dec" id="coch_dec" value="Si">Si
+                        <input type="radio" name="coch_dec" id="no_coch_dec" value="No">No
+                    </form>
+                    <div class="cuantos">
+                        ¿Cuantos? 
+                        <input type="text" name="cocheras_desc" size="5" maxlength="50"><br>
+                    </div>
+                </div>
+                <div class='div_input clearfix border_bottom'>
+                    <p> ¿Tiene bauleras?</p>
+                    <form class="clearfix">
+                        <input type="radio" name="tiene_bauleras" id="tiene_bauleras" value="Si">Si
+                        <input type="radio" name="tiene_bauleras" id="no_tiene_bauleras" value="No">No
+                    </form>
+                    <div class="cuantos">
+                        ¿Cuantos? 
+                        <input type="text" name="bauleras" size="5" maxlength="50"><br>
+                    </div>
+                </div>
         	</section>
-			
+        	<section id="dib_edif">
+                <div id="uf" class="row demo">
+                    <div id="uf_cant" class="largo-total gutter-large columns"></div>
+                </div>
+          		<div id="edif_dibujo" class="row demo dibujo_edif">
+           			<div id="edificio" class='largo-total gutter-large columns'></div>
+           		</div>
+                <div id="numeracion" class="row demo">
+                    <div id="pisos_num" class="largo-total gutter-large columns"></div>
+                </div>
+        	</section>
 		</section> <!-- main-content --> 
+        
+        <div id="dialog"  class="dibujo"></div>
+        <div id="nombre_dpto" class="top_dialog">
+            <header id="title-1">Selecciona el tipo de denominacion para las unidades funcionales</header>
+            <div id="content_nombre" class="content_grey">
+             <div class="content_whitegrey">
+                <input type="radio" name="denominacion" value="letras" id="alfa"/>Alfanetico. A partir de:
+                <input type="radio" name="denominacion" value="nro" id="num"/>Numerico. A partir de:
+                <input type="radio" name="denominacion" value="personalizado" id="person" />Personalizada   
+                <select id="sel_alfa" disabled>
+                    <option value="0">A</option>
+                    <option value="1">B</option>
+                    <option value="2">C</option>
+                    <option value="3">D</option>
+                    <option value="4">E</option>
+                    <option value="5">F</option>
+                </select>    
+                <select id="sel_num" disabled>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>  
+                <div id="ingr_pers">
+                    <input type="text" name="per" class="personal"/>
+                </div>
+             </div> 
+             <div id="checked">
+                <!-- <img src=""/> -->
+             </div>  
+            </div>
+            <header id="title-2" class="display_none">Ingresa la cantidad de Unidades Funcionales por piso</header>
+        </div>
 
 	<script type="text/javascript" src="js/jquery-ui/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="js/jquery-ui/ui/jquery-ui.js"></script>

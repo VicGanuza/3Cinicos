@@ -142,7 +142,7 @@ select {
   position: relative;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-  width: 100%;
+  /*width: 100%;*/
   float: left; }
 
 @media only screen {
