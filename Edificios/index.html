@@ -26,18 +26,46 @@
                 <div class='div_input clearfix border_bottom'>
                     <p> ¿Hay unidades funcionales en la PB?</p>
                     <form class="clearfix">
-                        <input type="radio" name="unidades_PB" id="uni_PB" value="Si">Si
-                        <input type="radio" name="unidades_PB" id="no_uni_PB" value="No">No
+                        <input type="radio" name="unidades_PB" id="uni_pb" value="Si">Si
+                        <input type="radio" name="unidades_PB" id="no_uni_pb" value="No">No
                     </form>
                     <div class="cuantos">
                         ¿Cuantos? 
-                        <input type="text" name="unid_pb" size="5" maxlength="50"><br>
+                        <select id="unidades_pb" disabled>
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
                     </div>
                 </div>
 
         		<div class='div_input border_bottom'>
         		<p>¿Cuantos pisos tiene el edificio? </p>
-        			<input type="text" name="cant_pisos" size="5" maxlength="50"><br>
+                       <select id="cant_pisos" disabled>
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
         		</div>
         		<div id="ingr_deptos" class='div_input border_bottom'>
         			<p>¿Todos los pisos tienen la misma cantidad de unidades funcionales?</p>
@@ -47,8 +75,24 @@
                     </form>
         			<div class="cuantos">
                         ¿Cuantos?
-            			<input type="text" name="cant_deptos" size="5" maxlength="50" id="cant_deptos">
-                        <img id="img" src="images/arrow-down.png"/>
+                         <select id="cant_deptos" disabled>
+                            <option value="0"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+            			<form class="clearfix denom_personal">
+                            <input type="radio" name="denominacion_pers" id="denom_perso">Personalizar denominacion
+                        </form>
                         <div id="cargar_dptos" class="bottom" style="display:none">Cargar Departamentos</div>
         			</div>
                 </div>
@@ -62,6 +106,7 @@
                     <div class="cuantos">
                         ¿Cuantos? 
                         <select id="locales_comerciales" disabled>
+                            <option value="0"></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -80,6 +125,7 @@
                     <div class="cuantos">
                         ¿Cuantos? 
                         <select id="cocheras_cub" disabled>
+                            <option value="0"></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -98,6 +144,7 @@
                     <div class="cuantos">
                         ¿Cuantos? 
                         <select id="cocheras_desc" disabled>
+                            <option value="0"></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -116,6 +163,7 @@
                     <div class="cuantos">
                         ¿Cuantos? 
                         <select id="bauleras" disabled>
+                            <option value="0"></option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -126,17 +174,43 @@
                     </div>
                 </div>
         	</section>
-        	<section id="dib_edif">
-                <div id="uf" class="row demo">
-                    <div id="uf_cant" class="largo-total gutter-large columns"></div>
-                </div>
-          		<div id="edif_dibujo" class="row demo dibujo_edif">
-           			<div id="edificio" class='largo-total gutter-large columns'></div>
-           		</div>
-                <div id="numeracion" class="row demo">
-                    <div id="pisos_num" class="largo-total gutter-large columns"></div>
-                </div>
-        	</section>
+            <div class="colum_dibujo">
+            	<section id="dib_edif">
+                    <div id="uf" class="row demo">
+                        <div id="uf_cant" class="largo-total gutter-large columns"></div>
+                    </div>
+              		<div id="edif_dibujo" class="row demo dibujo_edif">
+               			<div id="edificio" class='largo-total gutter-large columns'></div>
+               		</div>
+                    <div id="numeracion" class="row demo">
+                        <div id="pisos_num" class="largo-total gutter-large columns"></div>
+                    </div>
+            	</section>
+                <section id="dib_otras_uni">
+                        <div id="comercios" class="display_none">
+                            <hr>
+                            <div class="logo_com" >LOGO Com</div>
+                            <div id="list_com"></div>
+                            <hr>
+                        </div>
+                        <div id="cochera_cub" class="display_none">
+                            <div class="logo_cc" >LOGO CCub</div>
+                            <div id="list_cc"></div>
+                            <hr>
+                        </div>
+                        <div id="coch_desc" class="display_none">
+                            <div class="logo_cd" >LOGO CDesc</div>
+                            <div id="list_dc"></div>
+                            <hr>
+                        </div>
+                        <div id="baulera" class="display_none">
+                            <div class="logo_bau" >LOGO Baul </div>  
+                            <div id="list_b"></div>
+                            <hr>
+                        </div>
+                    </section>
+            </div>
+            
 		</section> <!-- main-content --> 
         
         <div id="dialog"  class="dibujo"></div>

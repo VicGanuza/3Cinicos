@@ -12,7 +12,7 @@ form{
 	width: 14%;
 }
 .formulario select{
-	width:50px;
+	width:65px;
 	margin-top: 10px;
 	margin-left: 24px;
 }
@@ -20,6 +20,9 @@ form{
 .border_bottom{
 	border-bottom: 1px solid grey;
 
+}
+.border_top{
+	border-top: 1px solid grey;
 }
 .display_none{
 	display: none;
@@ -55,7 +58,7 @@ form{
 	width: 550px;
 }
 /*-----------------------*/
-#dib_edif{
+.colum_dibujo{
 	/*float: right;
 	width: 50%;
 	padding-left: 102px;
@@ -64,6 +67,10 @@ form{
 	width: 30%;
 	padding-top: 53px;
 	margin-right: 57px;
+}
+#dib_edif{
+	margin-bottom: 50px;
+	min-height: 250px;
 }
 .formulario form{
 	margin-top: 8px;
@@ -99,7 +106,7 @@ form{
     margin: 0;
     float: left;
     width: 100%;
-    height: 80px;
+    min-height: 80px;
     padding-top: 5px;
 }
 
@@ -284,5 +291,52 @@ form{
 #nombre_dpto.content_grey .content_whitegrey{
 	background-color: #FFFFFF;
 }
-
+.logo_com{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.logo_cc{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.logo_cd{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.logo_bau{
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+.icono_com{
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+.icono_cc{
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+.icono_dc{
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+.icono_bau{
+	width: 20px;
+	height: 20px;
+	float: left;
+}
+form.denom_personal{
+	float: right;
+	margin-right: 242px;
+	border-left: 1px solid grey;
+	padding-left: 12px;
+	border-right: none;
+	width: initial;
+}
 }

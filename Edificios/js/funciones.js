@@ -1,11 +1,23 @@
 $(document).ready(function(){
 
-	$('[name=cant_pisos]').blur(function(){
+    $('#uni_pb').on('click',function(){
+        $('#unidades_pb').prop('disabled',false);
+        $('#cant_pisos').prop('disabled',false);
+
+    });
+
+    $('#no_uni_pb').on('click',function(){
+        $('#unidades_pb').prop('disabled',true);
+        $('#unidades_pb option[value="0"]').attr('selected',true);
+        $('#cant_pisos').prop('disabled',false);
+    });
+
+	$('#cant_pisos').on('change',function(){
 		$('#edificio').empty();
         $('#uf_cant').empty();
         $('#pisos_num').empty();
         var tiene_unidades = $('input:radio[name=unidades_PB]:checked').val();
-        var cant_uni = $('[name=unid_pb]').val();
+        var cant_uni = $('#unidades_pb').val();
         var cantidad_pisos= this.value;
         if (!cant_uni) {
             cant_uni = 0;
@@ -31,11 +43,11 @@ $(document).ready(function(){
         }
     });
 
-    $('[name=cant_deptos]').blur(function(){
-    	var cant_pisos= $('[name=cant_pisos]').val();
+    $('#cant_deptos').on('change',function(){
+    	var cant_pisos= $('#cant_pisos').val();
         var ig_por_piso=$('input:radio[name=igualesxpiso]:checked').val();
         var cp=cant_pisos;
-        var unid_pb = $('[name=unid_pb]').val();
+        var unid_pb = $('#unidades_pb').val();
     	var cant_deptos= this.value;
     	
     	while (cant_pisos>0){
@@ -57,9 +69,9 @@ $(document).ready(function(){
     });
 
     $('#cargar_dptos').on('click',function () {
-        var cant_pisos= $('[name=cant_pisos]').val();
+        var cant_pisos= $('#cant_pisos').val();
         var cp=cant_pisos;
-        var unid_pb = $('[name=unid_pb]').val();
+        var unid_pb = $('#unidades_pb').val();
 
          if (!unid_pb) {
             unid_pb = 0;
@@ -87,7 +99,7 @@ $(document).ready(function(){
             },
             buttons: {
                 "Ver": function () {
-                    var cp=$('[name=cant_pisos]').val();
+                    var cp=$('#cant_pisos').val();
                     var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
                     for (p=cp;p>0;p--){
                         $('#piso_nro_'+p).empty();
@@ -120,12 +132,11 @@ $(document).ready(function(){
                                         nombre=inicio;
                                     }
                                 }
-                                $('#piso_nro_'+cp).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" >'+nombre+'</div>');
+                                $('#piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" >'+nombre+'</div>');
                                 inicio++;
                             }
                             else {
-                               // $('#dpto_nro_'+p+'_'+d).empty();
-                                $('#piso_nro_'+cp).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" contenteditable="true"></div>');
+                                $('#piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" contenteditable="true"></div>');
                             }
                         }
                     }
@@ -141,7 +152,7 @@ $(document).ready(function(){
         $('#nombre_dpto').css({'display':'block'});
         $('.ui-draggable .ui-dialog-titlebar').css({'display':'none'});
     });
-
+/*Configuracion personalizada*/
     $('#no_ig_x_piso').on('click',function(){
         $('#cargar_dptos').css('display','block');
         $('#cant_deptos').prop('disabled',true);
@@ -156,7 +167,7 @@ $(document).ready(function(){
         $('#ingr_deptos').addClass('height_120');
     });
 
-    $('#img').on('click',function(){
+    $('#denom_perso').on('click',function(){
 
         $('#denominacion_dpto').dialog({
             width: 620,
@@ -197,7 +208,7 @@ $(document).ready(function(){
     });
 
     $('#person_d2').on('click',function(){
-        var cant_deptos = $('[name=cant_deptos]').val();
+        var cant_deptos = $('#cant_deptos').val();
         $('#ingr_pers_d2').empty();
         while (cant_deptos>0){
             $('#ingr_pers_d2').append('<input type="text" name="per" id="nom_depto_'+cant_deptos+'"/>');
@@ -212,20 +223,20 @@ $(document).ready(function(){
         var tipo=0;
         var inicio;
         var ini=0;
-        var pisos = $('[name=cant_pisos]').val();
-        var dptos = $('[name=cant_deptos]').val();
+        var pisos = $('#cant_pisos').val();
+        var dptos = $('#cant_deptos').val();
         var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
         if ($('#alfa_d2').is(':checked')){
             tipo = 1;
-            inicio = parseInt($('#sel_alfa').val());
+            inicio = parseInt($('#sel_alfa_d2').val());
             fin = inicio + parseInt(dptos);
         }
         else 
             {
                 if ($('#num_d2').is(':checked')){
                     tipo = 2;
-                    inicio = parseInt($('#sel_num').val());
+                    inicio = parseInt($('#sel_num_d2').val());
                     fin = inicio + parseInt(dptos-1);
                 }
                 else {
@@ -256,31 +267,80 @@ $(document).ready(function(){
                 k=k-1;
             }
         }
+        $('#denom_perso').attr('checked',false);
         $('#denominacion_dpto').dialog('close');
     });
+
+    /* Otras unidades*/
     $('#loc_com').on('click',function(){
         $('#locales_comerciales').prop('disabled',false);
     });
     $('#no_loc_com').on('click',function(){
         $('#locales_comerciales').prop('disabled',true);
+        $('#comercios').addClass('display_none');
+        $('#locales_comerciales option[value="0"]').attr('selected',true);
     });
     $('#coch_cub').on('click',function(){
         $('#cocheras_cub').prop('disabled',false);
     });
     $('#no_coch_cub').on('click',function(){
         $('#cocheras_cub').prop('disabled',true);
+         $('#cochera_cub').addClass('display_none');
+        $('#cocheras_cub option[value="0"]').attr('selected',true);
+
     });
     $('#coch_dec').on('click',function(){
         $('#cocheras_desc').prop('disabled',false);
     });
     $('#no_coch_dec').on('click',function(){
         $('#cocheras_desc').prop('disabled',true);
+         $('#coch_desc').addClass('display_none');
+        $('#cocheras_desc option[value="0"]').attr('selected',true);
+
     });
     $('#tiene_bauleras').on('click',function(){
         $('#bauleras').prop('disabled',false);
     });
     $('#no_tiene_bauleras').on('click',function(){
         $('#bauleras').prop('disabled',true);
+         $('#baulera').addClass('display_none');
+        $('#bauleras option[value="0"]').attr('selected',true);
+
+    });
+
+    $('#locales_comerciales').on('change',function(){
+       var cant= $('#locales_comerciales').val();
+       $('#comercios').removeClass('display_none');
+       $('#list_com').empty();
+       for (i=1;i<=cant;i++){
+        $('#list_com').append('<div class="icono_com">'+i+'</div>');
+       }
+    });
+
+    $('#cocheras_cub').on('change',function(){
+       var cant= $('#cocheras_cub').val();
+       $('#cochera_cub').removeClass('display_none');
+       $('#list_cc').empty();
+       for (i=1;i<=cant;i++){
+        $('#list_cc').append('<div class="icono_cc">'+i+'</div>');
+       }
+    });
+
+    $('#cocheras_desc').on('change',function(){
+       var cant= $('#cocheras_desc').val();
+       $('#coch_desc').removeClass('display_none');
+       $('#list_dc').empty();
+       for (i=1;i<=cant;i++){
+        $('#list_dc').append('<div class="icono_dc">'+i+'</div>');
+       }
+    });
+    $('#bauleras').on('change',function(){
+       var cant= $('#bauleras').val();
+       $('#baulera').removeClass('display_none');
+       $('#list_b').empty();
+       for (i=1;i<=cant;i++){
+        $('#list_b').append('<div class="icono_bau">'+i+'</div>');
+       }
     });
 });
  
