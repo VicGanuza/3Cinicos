@@ -1,5 +1,16 @@
 $(document).ready(function(){
 
+    /* Ingreso de formulario*/
+    $('#razon_social').on('click',function(){
+        if ($('input:checkbox[name=razon_social]:checked').val()){
+            $('input[name="raz_social"]').attr('disabled',false);
+        }
+        else{
+            $('input[name="raz_social"]').attr('disabled',true);
+        }
+    });
+
+    /* Funcionalidad formar edificio*/
     $('#uni_pb').on('click',function(){
         $('#unidades_pb').prop('disabled',false);
         $('#cant_pisos').prop('disabled',false);
@@ -341,6 +352,33 @@ $(document).ready(function(){
        for (i=1;i<=cant;i++){
         $('#list_b').append('<div class="icono_bau">'+i+'</div>');
        }
+    });
+    $('.logo_close').on('click',function(){
+        $(this).parent().css({'display': 'none' });
+    });
+    $('#espacio_comun_name').on('click',function(){
+        var texto="Ingrese un espacio comun...";
+        var espacio=$(this).val();
+        
+    if (espacio==texto) {
+            $(this).val("");
+        }
+    });
+    $('#espacio_comun_name').blur(function(){
+        var texto="Ingrese un espacio comun...";
+        var espacio=$('.espacio_comun').val();
+
+        if (espacio!=texto){
+           /* $('#esp_com').append('<div class="div_input" >' +
+                                 '<div class="logo_close">Close</div>' +
+                                 '<input type="text" class="espacio_comun" value="Ingrese un espacio comun...">' +
+                                 '<input type="checkbox" name="con_reserva" id="con_reserva"> Uso con reserva' +
+                                 '</div>');
+           // $(this).val('Ingrese en espacio comun...');*/
+           $('espac_comunes').css({'display':'bock'});
+           $('list_esp').append('<div class="number">1</div>' +
+                                '<div class="nonbre_espacio">'+espacio+'</div>' );
+        }
     });
 });
  

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Edificios</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/styleLu.css"> 
+        <link rel="stylesheet" href="css/foundation.css"> 
+        <link rel="stylesheet" href="css/demo.css"> 
+        <link rel="stylesheet" href="css/bootstrap.css"> 
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui/themes/base/jquery-ui.css">
+
+	</head>
+
+    <body>  
+		<header>
+            <img src=""/> <!-- Aca iria el logo del Consorcio Abierto -->
+            <div class="header">
+                Alta de Administrador
+            </div>      
+        </header>		 
+        <section class="main-content" id="main-content"> 
+            <div class="menu_pasos">
+                <div class="pasos" title="Alta de administrador">
+                    Paso 1
+                </div>
+                <div class="pasos paso_grey" title="Alta de consorcio">
+                    Paso 2
+                </div>
+                <div class="pasos paso_grey" title="Estructura del consorsio">
+                    Paso 3
+                </div>
+                <div class="pasos paso_grey" title="Identificador de UF">
+                    Paso 4
+                </div>
+            </div>
+            <div class="title">
+                <h1>Bienvenido a <span class="blue">Consorcio</span> abierto.</h1>
+                <h3>Ingresa tus datos y empeza a optimizar tu manera de trabajar.</h3>
+            </div>
+        	<div class="formulario border_xl">
+               <div class="notes">
+                   <div class="coment1">
+                       <span class="orange">*</span>
+                       Datos oligatorios a ser expuestos en reportes del consorcio
+                   </div>
+                   <div class="coment2">
+                       Tus datos no seran compartidos bajo ningun concepto.
+                   </div>
+               </div>
+               <div id="body_form">
+                <div class="dato_input">
+                  <span class="orange">*</span> Nombre
+                  <input type="text" name="nombre">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span> Apellido
+                  <input type="text" name="apellido">
+                </div>
+                <div class="dato_input">
+                  <input type="checkbox" name="razon_social" id="razon_social">
+                  <div class="dato_razonSoc">
+                      Razon social
+                      <input type="text" name="raz_social" disabled>
+                  </div>
+                </div>
+                <div class="dato_input">
+                  <div id="foto">Aqui la foto </div>
+                  <span class="orange">Editar Foto</span>
+                </div>
+                <div class="dato_mail">
+                  <span class="orange">*</span> e-mail (sera tu nombre de usuario)
+                  <input type="text" name="email">
+                </div>
+                <div class="dato_mail">
+                  <span class="orange">*</span> Contraseña (minimo 6 caracteres)
+                  <input type="password" name="contrasena">
+                  <span class="grey left">La contraseña debe contener letras y numeros</span>
+                </div>
+                <div class="dato_mail button_20">
+                  <span class="orange">*</span> Repetir contraseña
+                  <input type="password" name="rep_contra">
+                </div>
+                <div class="dato_input">
+                  <div class="orange">Domicilio</div>
+                  Calle
+                  <input type="text" name="calle">
+                </div>
+                <div class="dato_input small_input">
+                  Nro.
+                  <input type="text" name="nro_calle">
+                </div>
+                <div class="dato_input small_input">
+                  Piso
+                  <input type="text" name="piso">
+                </div>
+                <div class="dato_input small_input">
+                  Dpto.
+                  <input type="text" name="departamento">
+                </div>
+                <div class="dato_input top_20">
+                  <span class="orange">*</span> Provincia
+                  <select id="provincia">
+                    <option value=""></option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Rio Negro">Rio Negro</option>
+                  </select>
+                </div>
+                <div class="dato_input top_20">
+                  <span class="orange">*</span> Localidad
+                  <select id="localidad">
+                    <option value=""></option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Viedma">Viedma</option>
+                  </select>
+                </div>
+                <div class="dato_input">
+                  Telefono fijo
+                  <input type="text" name="fijo">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span> Telefono de emergencias
+                  <input type="text" name="emergencia">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span> Cuit
+                  <input type="text" name="Cuit">
+                </div>
+                 <div class="dato_input large_input button_50">
+                  Matricula RPA
+                  <input type="text" name="mat_rpa">
+                </div>
+               </div>
+           </div>
+           <div class="terminos">
+             <input type="checkbox" name="terminos_condiciones">
+             <span class="grey">He leido y acepto los <a href="">Terminos y Condiciones</a></span>
+           </div>
+           <div class="confirmar"></div>
+           <div class="footer">
+
+           </div>
+		</section> <!-- main-content --> 
+       
+	<script type="text/javascript" src="js/jquery-ui/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery-ui/ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
+
+    </body>
+</html>      
