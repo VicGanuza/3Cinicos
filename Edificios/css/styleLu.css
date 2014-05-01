@@ -32,6 +32,12 @@ header{
 .button_50{
 	margin-bottom: 50px;
 }
+.display_none{
+	display: none;
+}
+.display_block{
+	display: block;
+}
 /*-----------------------------------------------------------------------------------------------*/
 .header{
 	background-color: #57ACCE;
@@ -122,12 +128,12 @@ header{
 .dato_input{
 	width: 20%;
 	float: left;
-	margin-right: 50px;
+	margin-right: 3%;
 }
 .dato_mail{
 	width: 27%;
 	float: left;
-	margin-right: 50px;
+	margin-right: 3%;
 }
 .dato_input input[type="text"],.dato_mail input[type="text"]{
 	height: 30px;
@@ -160,14 +166,12 @@ input[name="raz_social"]{
 }
 .small_input{
 	width: 5%;
-	margin-top: 20px;
 }
 .large_input{
 	width: 30%;
 }
 .terminos{
 	float: left;
-	margin-top: 20px;
 	padding-left: 30px;
 }
 .terminos input[type="checkbox"]{

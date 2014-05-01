@@ -10,6 +10,13 @@ $(document).ready(function(){
         }
     });
 
+    $('#confirmar_paso1').on('click',function(){
+        alert('confirma paso1');
+        $('#body_form').html($('#form_2'));
+        $('#form_2').removeClass('display_none');
+        $('#form_2').addClass('display_block');
+    });
+
     /* Funcionalidad formar edificio*/
     $('#uni_pb').on('click',function(){
         $('#unidades_pb').prop('disabled',false);

@@ -27,16 +27,16 @@
         </header>		 
         <section class="main-content" id="main-content"> 
             <div class="menu_pasos">
-                <div class="pasos" title="Alta de administrador">
+                <div id="paso_1" class="pasos" title="Alta de administrador">
                     Paso 1
                 </div>
-                <div class="pasos paso_grey" title="Alta de consorcio">
+                <div id="paso_2" class="pasos paso_grey" title="Alta de consorcio">
                     Paso 2
                 </div>
-                <div class="pasos paso_grey" title="Estructura del consorsio">
+                <div id="paso_3" class="pasos paso_grey" title="Estructura del consorsio">
                     Paso 3
                 </div>
-                <div class="pasos paso_grey" title="Identificador de UF">
+                <div id="paso_4" class="pasos paso_grey" title="Identificador de UF">
                     Paso 4
                 </div>
             </div>
@@ -55,102 +55,180 @@
                    </div>
                </div>
                <div id="body_form">
-                <div class="dato_input">
-                  <span class="orange">*</span> Nombre
-                  <input type="text" name="nombre">
-                </div>
-                <div class="dato_input">
-                  <span class="orange">*</span> Apellido
-                  <input type="text" name="apellido">
-                </div>
-                <div class="dato_input">
-                  <input type="checkbox" name="razon_social" id="razon_social">
-                  <div class="dato_razonSoc">
-                      Razon social
-                      <input type="text" name="raz_social" disabled>
+                <div id="form_1">
+                  <div class="dato_input">
+                    <span class="orange">*</span> Nombre
+                    <input type="text" name="nombre">
                   </div>
-                </div>
-                <div class="dato_input">
-                  <div id="foto">Aqui la foto </div>
-                  <span class="orange">Editar Foto</span>
-                </div>
-                <div class="dato_mail">
-                  <span class="orange">*</span> e-mail (sera tu nombre de usuario)
-                  <input type="text" name="email">
-                </div>
-                <div class="dato_mail">
-                  <span class="orange">*</span> Contraseña (minimo 6 caracteres)
-                  <input type="password" name="contrasena">
-                  <span class="grey left">La contraseña debe contener letras y numeros</span>
-                </div>
-                <div class="dato_mail button_20">
-                  <span class="orange">*</span> Repetir contraseña
-                  <input type="password" name="rep_contra">
-                </div>
-                <div class="dato_input">
-                  <div class="orange">Domicilio</div>
-                  Calle
-                  <input type="text" name="calle">
-                </div>
-                <div class="dato_input small_input">
-                  Nro.
-                  <input type="text" name="nro_calle">
-                </div>
-                <div class="dato_input small_input">
-                  Piso
-                  <input type="text" name="piso">
-                </div>
-                <div class="dato_input small_input">
-                  Dpto.
-                  <input type="text" name="departamento">
-                </div>
-                <div class="dato_input top_20">
-                  <span class="orange">*</span> Provincia
-                  <select id="provincia">
-                    <option value=""></option>
-                    <option value="Buenos Aires">Buenos Aires</option>
-                    <option value="Cordoba">Cordoba</option>
-                    <option value="Neuquen">Neuquen</option>
-                    <option value="Rio Negro">Rio Negro</option>
-                  </select>
-                </div>
-                <div class="dato_input top_20">
-                  <span class="orange">*</span> Localidad
-                  <select id="localidad">
-                    <option value=""></option>
-                    <option value="Buenos Aires">Buenos Aires</option>
-                    <option value="Cordoba">Cordoba</option>
-                    <option value="Neuquen">Neuquen</option>
-                    <option value="Viedma">Viedma</option>
-                  </select>
-                </div>
-                <div class="dato_input">
-                  Telefono fijo
-                  <input type="text" name="fijo">
-                </div>
-                <div class="dato_input">
-                  <span class="orange">*</span> Telefono de emergencias
-                  <input type="text" name="emergencia">
-                </div>
-                <div class="dato_input">
-                  <span class="orange">*</span> Cuit
-                  <input type="text" name="Cuit">
-                </div>
-                 <div class="dato_input large_input button_50">
-                  Matricula RPA
-                  <input type="text" name="mat_rpa">
+                  <div class="dato_input">
+                    <span class="orange">*</span> Apellido
+                    <input type="text" name="apellido">
+                  </div>
+                  <div class="dato_input">
+                    <input type="checkbox" name="razon_social" id="razon_social">
+                    <div class="dato_razonSoc">
+                        Razon social
+                        <input type="text" name="raz_social" disabled>
+                    </div>
+                  </div>
+                  <div class="dato_input">
+                    <div id="foto">Aqui la foto </div>
+                    <span class="orange">Editar Foto</span>
+                  </div>
+                  <div class="dato_mail">
+                    <span class="orange">*</span> e-mail (sera tu nombre de usuario)
+                    <input type="text" name="email">
+                  </div>
+                  <div class="dato_mail">
+                    <span class="orange">*</span> Contraseña (minimo 6 caracteres)
+                    <input type="password" name="contrasena">
+                    <span class="grey left">La contraseña debe contener letras y numeros</span>
+                  </div>
+                  <div class="dato_mail button_20">
+                    <span class="orange">*</span> Repetir contraseña
+                    <input type="password" name="rep_contra">
+                  </div>
+                  <div class="dato_input">
+                    <div class="orange">Domicilio</div>
+                    Calle
+                    <input type="text" name="calle">
+                  </div>
+                  <div class="dato_input small_input top_20">
+                    Nro.
+                    <input type="text" name="nro_calle">
+                  </div>
+                  <div class="dato_input small_input top_20">
+                    Piso
+                    <input type="text" name="piso">
+                  </div>
+                  <div class="dato_input small_input top_20">
+                    Dpto.
+                    <input type="text" name="departamento">
+                  </div>
+                  <div class="dato_input top_20">
+                    <span class="orange">*</span> Provincia
+                    <select id="provincia">
+                      <option value=""></option>
+                      <option value="Buenos Aires">Buenos Aires</option>
+                      <option value="Cordoba">Cordoba</option>
+                      <option value="Neuquen">Neuquen</option>
+                      <option value="Rio Negro">Rio Negro</option>
+                    </select>
+                  </div>
+                  <div class="dato_input top_20">
+                    <span class="orange">*</span> Localidad
+                    <select id="localidad">
+                      <option value=""></option>
+                      <option value="Buenos Aires">Buenos Aires</option>
+                      <option value="Cordoba">Cordoba</option>
+                      <option value="Neuquen">Neuquen</option>
+                      <option value="Viedma">Viedma</option>
+                    </select>
+                  </div>
+                  <div class="dato_input">
+                    Telefono fijo
+                    <input type="text" name="fijo">
+                  </div>
+                  <div class="dato_input">
+                    <span class="orange">*</span> Telefono de emergencias
+                    <input type="text" name="emergencia">
+                  </div>
+                  <div class="dato_input">
+                    <span class="orange">*</span> Cuit
+                    <input type="text" name="Cuit">
+                  </div>
+                  <div class="dato_input large_input button_50">
+                    Matricula RPA
+                    <input type="text" name="mat_rpa">
+                  </div>
                 </div>
                </div>
            </div>
-           <div class="terminos">
+           <div class="terminos top_20">
              <input type="checkbox" name="terminos_condiciones">
              <span class="grey">He leido y acepto los <a href="">Terminos y Condiciones</a></span>
            </div>
-           <div class="confirmar"></div>
-           <div class="footer">
-
-           </div>
+           <div id="confirmar_paso1" class="confirmar"></div>
+           <div class="footer"></div>
 		</section> <!-- main-content --> 
+                    <div id="form_2" class="display_none">
+                  <div class="dato_input">
+                    <span class="orange">*</span>
+                    <span class="blue">**</span> Nombre del consorcio
+                    <input type="text" name="nombre_consorcio">
+                  </div>
+                  <div class="dato_input">
+                    <span class="orange">*</span>
+                    <span class="blue">**</span> Razon social
+                    <input type="text" name="razon_soc_consorcio">
+                  </div>
+                  <div class="dato_input">
+                     <span class="orange">*</span>
+                    <span class="blue">**</span> Calle
+                    <input type="text" name="calle_consorcio">
+                  </div>
+                  <div class="dato_input small_input">
+                    <span class="orange">*</span>
+                    <span class="blue">**</span> Nro.
+                    <input type="text" name="nro_calle_consorcio">
+                  </div>
+                  <div class="dato_input">
+                    <span class="orange">*</span>
+                    <span class="blue">**</span> Categoria
+                    <select id="categoria" disabled>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                  </div>
+                  <div class="dato_input top_20">
+                    <span class="orange">*</span> Localidad
+                    <select id="localidad_consorcio">
+                      <option value=""></option>
+                      <option value="Buenos Aires">Buenos Aires</option>
+                      <option value="Cordoba">Cordoba</option>
+                      <option value="Neuquen">Neuquen</option>
+                      <option value="Viedma">Viedma</option>
+                    </select>
+                  </div>
+                  <div class="dato_input top_20">
+                    <span class="orange">*</span> Provincia
+                    <select id="provincia_consorcio">
+                      <option value=""></option>
+                      <option value="Buenos Aires">Buenos Aires</option>
+                      <option value="Cordoba">Cordoba</option>
+                      <option value="Neuquen">Neuquen</option>
+                      <option value="Rio Negro">Rio Negro</option>
+                    </select>
+                  </div>
+                  <div class="dato_input">
+                    Codigo Postal
+                    <input type="text" name="cp_consorcio">
+                  </div>
+                  <div class="dato_input">
+                    <span class="orange">*</span>
+                    <span class="blue">**</span> Cuit
+                    <input type="text" name="Cuit">
+                  </div>
+                  <div class="dato_mail">
+                    <span class="orange">*</span>IVA
+                    <select id="iva">
+                      <option value=""></option>
+                      <option value=""></option>
+                    </select>
+                    <span class="grey left">A efecto de la facturacion de CA</span>
+                  </div>
+                  <div class="dato_input large_input button_50">
+                    <span class="blue">**</span>Matricula F.A.T.E.R.Y.H.
+                    <input type="text" name="mat_fat">
+                  </div>
+                  <div class="dato_input large_input button_50">
+                    <span class="blue">**</span>Matricula S.U.T.E.R.H.
+                    <input type="text" name="mat_sut">
+                  </div>
+                </div>
        
 	<script type="text/javascript" src="js/jquery-ui/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="js/jquery-ui/ui/jquery-ui.js"></script>
