@@ -11,23 +11,72 @@ $(document).ready(function(){
     });
 
     $('#confirmar_paso1').on('click',function(){
-        alert('confirma paso1');
+        $('#titulo_header').html('Configuraci&oacute;n de la estructura f&iacute;sica del consorcio');
+        $('#paso_1').addClass('paso_done');
+        $('#paso_2').removeClass('paso_grey');
+        $('#titulo').html('<h1 class="titles">Diagram&aacute; la estructura f&iacute;sica del edificio.</h1>');
+        $('.coment1').append('<div><span class="blue">**</span>Datos a ser expuestos en reportes del consorcio</div>');
+        $('.coment2').append('<div>Podrás dar de baja el consorcio cuando quieras.</div>');
+        $('.notes').css({'height':'60'});
+        $('.terminos').addClass('display_none');
+        $('#confirmar_paso1').addClass('display_none');
+        $('#confirmar_paso2').removeClass('display_none');
+        /*Falta validar formulario uno*/
         $('#body_form').html($('#form_2'));
         $('#form_2').removeClass('display_none');
         $('#form_2').addClass('display_block');
+
     });
 
+    $('#confirmar_paso2').on('click',function(){
+        $('#titulo_header').html('ALTA DE CONSORCIO');
+        $('#paso_2').addClass('paso_done');
+        $('#paso_3').removeClass('paso_grey');
+        $('#titulo').html('<h1 class="titles">Ingres&aacute; los datos del consorcio a configurar</h1>');
+        $('.notes').addClass('display_none');
+        $('#encabezado_consorcio').removeClass('display_none');
+        $('#title_torres').removeClass('display_none');
+        $('.terminos').addClass('display_none');
+        $('#confirmar_paso1').addClass('display_none');
+        $('#confirmar_paso2').removeClass('display_none');
+        /*Falta validar formulario dos*/
+        $('#body_form').html($('#form_edificios'));
+        $('#form_2').addClass('display_none');
+        $('#form_edificios').removeClass('display_none');
+    });
+
+    $('#torres_tabs').tabs();
+
+    
+    
+
     /* Funcionalidad formar edificio*/
+   
+
     $('#uni_pb').on('click',function(){
+        $('#cant_pisos').empty();
         $('#unidades_pb').prop('disabled',false);
         $('#cant_pisos').prop('disabled',false);
-
+        $('#cant_pisos').append('<option value="0"></option>');
+        $('#unidades_pb').append('<option value="0"></option>');
+        for (i=1;i<11;i++) {
+           $('#unidades_pb').append('<option value="'+i+'">'+i+'</option>');
+        }
+        for (i=1;i<31;i++) {
+           $('#cant_pisos').append('<option value="'+i+'">'+i+'</option>');
+        }
     });
 
     $('#no_uni_pb').on('click',function(){
         $('#unidades_pb').prop('disabled',true);
         $('#unidades_pb option[value="0"]').attr('selected',true);
         $('#cant_pisos').prop('disabled',false);
+        $('#unidades_pb').empty();
+        $('#cant_pisos').empty();
+        $('#cant_pisos').append('<option value="0"></option>');
+        for (i=1;i<31;i++) {
+           $('#cant_pisos').append('<option value="'+i+'">'+i+'</option>');
+        }
     });
 
 	$('#cant_pisos').on('change',function(){
@@ -40,6 +89,9 @@ $(document).ready(function(){
         if (!cant_uni) {
             cant_uni = 0;
         }
+        $('.mensaje').addClass('display_none');
+        $('#edif_dibujo').removeClass('display_none');
+        $('#numeracion').removeClass('display_none');
 
 		while (cantidad_pisos>0){
             $('#uf_cant').append('<input type="text" name="piso_'+cantidad_pisos+'" size="5" maxlength="50" class="largo-total column piso"></div>');
@@ -90,6 +142,7 @@ $(document).ready(function(){
         var cant_pisos= $('#cant_pisos').val();
         var cp=cant_pisos;
         var unid_pb = $('#unidades_pb').val();
+        var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
          if (!unid_pb) {
             unid_pb = 0;
@@ -169,6 +222,14 @@ $(document).ready(function(){
         });
         $('#nombre_dpto').css({'display':'block'});
         $('.ui-draggable .ui-dialog-titlebar').css({'display':'none'});
+        $('#sel_num').empty();
+        $('#sel_alfa').empty();
+        for(i=1;i<50;i++){
+            $('#sel_num').append('<option value="'+i+'">'+i+'</option>');
+        }
+        for(i=0;i<26;i++){
+            $('#sel_alfa').append('<option value="'+i+'">'+Abc.charAt(i)+'</option>');
+        }
     });
 /*Configuracion personalizada*/
     $('#no_ig_x_piso').on('click',function(){
@@ -176,6 +237,7 @@ $(document).ready(function(){
         $('#cant_deptos').prop('disabled',true);
         $('#img').prop('disabled',true);
         $('#ingr_deptos').addClass('height_120');
+        $('#cant_deptos').empty();
     });
 
     $('#ig_x_piso').on('click',function(){
@@ -183,16 +245,30 @@ $(document).ready(function(){
         $('#cant_deptos').prop('disabled',false);
         $('#img').prop('disabled',false);
         $('#ingr_deptos').addClass('height_120');
+        $('#cant_deptos').append('<option value="0"></option>');
+        for(i=1;i<13;i++){
+            $('#cant_deptos').append('<option value="'+i+'">'+i+'</option>');
+        }
     });
 
     $('#denom_perso').on('click',function(){
-
+        var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $('#denominacion_dpto').dialog({
             width: 620,
             top: 267,
-            left: 283
+            left: 283,
+            padding: 0,
+            modal: true
         });
         $('.ui-draggable .ui-dialog-titlebar').css({'display':'none'});
+        $('#sel_num_d2').empty();
+        $('#sel_alfa_d2').empty();
+        for(i=1;i<50;i++){
+            $('#sel_num_d2').append('<option value="'+i+'">'+i+'</option>');
+        }
+        for(i=0;i<26;i++){
+            $('#sel_alfa_d2').append('<option value="'+i+'">'+Abc.charAt(i)+'</option>');
+        }
     });
 
     $('#alfa').on('click',function(){
@@ -245,6 +321,8 @@ $(document).ready(function(){
         var dptos = $('#cant_deptos').val();
         var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+      //  alert($('#sel_alfa_d2').val());
+
         if ($('#alfa_d2').is(':checked')){
             tipo = 1;
             inicio = parseInt($('#sel_alfa_d2').val());
@@ -292,6 +370,11 @@ $(document).ready(function(){
     /* Otras unidades*/
     $('#loc_com').on('click',function(){
         $('#locales_comerciales').prop('disabled',false);
+        $('#locales_comerciales').empty();
+        $('#locales_comerciales').append('<option value="0"></option>');
+        for(i=1;i<31;i++){
+            $('#locales_comerciales').append('<option value="'+i+'">'+i+'</option<');
+        }
     });
     $('#no_loc_com').on('click',function(){
         $('#locales_comerciales').prop('disabled',true);
@@ -300,6 +383,11 @@ $(document).ready(function(){
     });
     $('#coch_cub').on('click',function(){
         $('#cocheras_cub').prop('disabled',false);
+        $('#cocheras_cub').empty();
+        $('#cocheras_cub').append('<option value="0"></option>');
+        for(i=1;i<31;i++){
+            $('#cocheras_cub').append('<option value="'+i+'">'+i+'</option<');
+        }
     });
     $('#no_coch_cub').on('click',function(){
         $('#cocheras_cub').prop('disabled',true);
@@ -309,6 +397,11 @@ $(document).ready(function(){
     });
     $('#coch_dec').on('click',function(){
         $('#cocheras_desc').prop('disabled',false);
+        $('#cocheras_desc').empty();
+        $('#cocheras_desc').append('<option value="0"></option>');
+        for(i=1;i<31;i++){
+            $('#cocheras_desc').append('<option value="'+i+'">'+i+'</option<');
+        }
     });
     $('#no_coch_dec').on('click',function(){
         $('#cocheras_desc').prop('disabled',true);
@@ -318,6 +411,11 @@ $(document).ready(function(){
     });
     $('#tiene_bauleras').on('click',function(){
         $('#bauleras').prop('disabled',false);
+        $('#bauleras').empty();
+        $('#bauleras').append('<option value="0"></option>');
+        for(i=1;i<31;i++){
+            $('#bauleras').append('<option value="'+i+'">'+i+'</option<');
+        }
     });
     $('#no_tiene_bauleras').on('click',function(){
         $('#bauleras').prop('disabled',true);

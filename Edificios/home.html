@@ -21,11 +21,11 @@
     <body>  
 		<header>
             <img src=""/> <!-- Aca iria el logo del Consorcio Abierto -->
-            <div class="header">
+            <div id="titulo_header" class="header">
                 Alta de Administrador
             </div>      
         </header>		 
-        <section class="main-content" id="main-content"> 
+        <div class="main-content" id="main-content"> 
             <div class="menu_pasos">
                 <div id="paso_1" class="pasos" title="Alta de administrador">
                     Paso 1
@@ -40,195 +40,474 @@
                     Paso 4
                 </div>
             </div>
-            <div class="title">
-                <h1>Bienvenido a <span class="blue">Consorcio</span> abierto.</h1>
-                <h3>Ingresa tus datos y empeza a optimizar tu manera de trabajar.</h3>
+            <div id="titulo" class="title">
+                <h1 class="titles">Bienvenido a <span class="blue">Consorcio</span>abierto.</h1>
+                <h3 class="titles">Ingresa tus datos y empeza a optimizar tu manera de trabajar.</h3>
             </div>
-        	<div class="formulario border_xl">
-               <div class="notes">
-                   <div class="coment1">
-                       <span class="orange">*</span>
-                       Datos oligatorios a ser expuestos en reportes del consorcio
-                   </div>
-                   <div class="coment2">
-                       Tus datos no seran compartidos bajo ningun concepto.
-                   </div>
-               </div>
-               <div id="body_form">
-                <div id="form_1">
-                  <div class="dato_input">
-                    <span class="orange">*</span> Nombre
-                    <input type="text" name="nombre">
+            <div class="notes">
+              <div class="coment1">
+                <div>
+                  <span class="orange">*</span>
+                  Datos oligatorios a ser expuestos en reportes del consorcio
+                </div>
+              </div>
+              <div class="coment2">
+                <div>
+                  Tus datos no seran compartidos bajo ningun concepto.
+                </div>
+              </div>
+            </div>
+            <div id="encabezado_consorcio" class="display_none">
+              <img src=""> 
+              <div id="nombre_edif">pepito</div>
+              <div> elegir color</div>              
+            </div>
+            <div id="title_torres" class="display_none franja_gris_claro">
+              <img src="">
+              <div> Torres</div>
+            </div>
+            <div id="body_form" class="formulario_altas">
+              <!-- Formulario Alta Administrador-->
+              <div id="form_1">
+                <div class="dato_input">
+                  <span class="orange">*</span> Nombre
+                  <input type="text" name="nombre">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span> Apellido
+                  <input type="text" name="apellido">
+                </div>
+                <div class="dato_input">
+                  <input type="checkbox" name="razon_social" id="razon_social">
+                  <div class="dato_razonSoc">
+                    Razon social
+                    <input type="text" name="raz_social" disabled>
                   </div>
-                  <div class="dato_input">
-                    <span class="orange">*</span> Apellido
-                    <input type="text" name="apellido">
+                </div>
+                <div class="dato_input">
+                  <div id="foto">Aqui la foto </div>
+                  <span class="orange">Editar Foto</span>
+                </div>
+                <div class="dato_mail">
+                  <span class="orange">*</span> e-mail (sera tu nombre de usuario)
+                  <input type="text" name="email">
+                </div>
+                <div class="dato_mail">
+                  <span class="orange">*</span> Contraseña (minimo 6 caracteres)
+                  <input type="password" name="contrasena">
+                  <span class="grey left">La contraseña debe contener letras y numeros</span>
+                </div>
+                <div class="dato_mail button_20">
+                  <span class="orange">*</span> Repetir contraseña
+                  <input type="password" name="rep_contra">
+                </div>
+                <div class="dato_input">
+                  <div class="orange">Domicilio</div>
+                  Calle
+                  <input type="text" name="calle">
+                </div>
+                <div class="dato_input small_input top_40">
+                  Nro.
+                  <input type="text" name="nro_calle">
+                </div>
+                <div class="dato_input small_input top_40">
+                  Piso
+                  <input type="text" name="piso">
+                </div>
+                <div class="dato_input small_input top_40">
+                  Dpto.
+                  <input type="text" name="departamento">
+                </div>
+                <div class="dato_input top_40">
+                  <span class="orange">*</span> Provincia
+                  <select id="provincia">
+                    <option value=""></option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Rio Negro">Rio Negro</option>
+                  </select>
+                </div>
+                <div class="dato_input top_40">
+                  <span class="orange">*</span> Localidad
+                  <select id="localidad">
+                    <option value=""></option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Viedma">Viedma</option>
+                  </select>
+                </div>
+                <div class="dato_input">
+                  Telefono fijo
+                  <input type="text" name="fijo">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span> Telefono de emergencias
+                  <input type="text" name="emergencia">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span> Cuit
+                  <input type="text" name="Cuit">
+                </div>
+                <div class="dato_input large_input">
+                  Matricula RPA
+                  <input type="text" name="mat_rpa">
+                </div>
+              </div>
+              
+              <!-- Footer -->
+              </div><!-- body_form -->
+              <div class="footer">
+                <div class="terminos">
+                  <input type="checkbox" name="terminos_condiciones">
+                  <span class="grey">He leido y acepto los <a href="">Terminos y Condiciones</a></span>
+                </div>
+                <div>
+                  
+                </div>
+                <div id="confirmar_paso1" class="confirmar" title="Confirmar"></div>
+                <div id="confirmar_paso2" class="confirmar display_none" title="Seguir con la estructura física del edificio"></div>
+                <div id="confirmar_paso3" class="confirmar display_none" title="Seguir"></div>
+                <div class="legales">
+                 <div class="left">
+                  Términos y condiciones | Políticas de privacidad | Preguntas frecuentes (FAQ)
+                 </div>
+                 <div class="right">
+                  Copyright © 2013 ConsorcioAbierto. Todos los derechos reservados.
+                 </div>
+                </div>
+              </div>
+		</div> <!-- main-content --> 
+    
+              <!-- Formulario Alta consorcio -->
+              <div id="form_2" class="display_none">
+                <div class="dato_input">
+                  <span class="orange">*</span>
+                  <span class="blue">**</span> Nombre del consorcio
+                  <input type="text" name="nombre_consorcio">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span>
+                  <span class="blue">**</span> Razon social
+                  <input type="text" name="razon_soc_consorcio">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span>
+                  <span class="blue">**</span> Calle
+                  <input type="text" name="calle_consorcio">
+                </div>
+                <div class="dato_input small_input">
+                  <span class="orange">*</span>
+                  <span class="blue">**</span> Nro.
+                  <input type="text" name="nro_calle_consorcio">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span>
+                  <span class="blue">**</span> Categoria
+                  <select id="categoria" disabled>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span> Localidad
+                  <select id="localidad_consorcio">
+                     <option value=""></option>
+                     <option value="Buenos Aires">Buenos Aires</option>
+                     <option value="Cordoba">Cordoba</option>
+                     <option value="Neuquen">Neuquen</option>
+                     <option value="Viedma">Viedma</option>
+                  </select>
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span> Provincia
+                  <select id="provincia_consorcio">
+                    <option value=""></option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Cordoba">Cordoba</option>
+                    <option value="Neuquen">Neuquen</option>
+                    <option value="Rio Negro">Rio Negro</option>
+                  </select>
+                </div>
+                <div class="dato_input right_15">
+                  Codigo Postal
+                  <input type="text" name="cp_consorcio">
+                </div>
+                <div class="dato_input">
+                  <span class="orange">*</span>
+                  <span class="blue">**</span> Cuit
+                  <input type="text" name="Cuit">
+                </div>
+                <div class="dato_input right_30">
+                  <span class="orange">*</span>IVA
+                  <select id="iva">
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                  <span class="grey left">A efecto de la facturacion de CA</span>
+                </div>
+                <div class="dato_input large_input button_50">
+                  <span class="blue">**</span>Matricula F.A.T.E.R.Y.H.
+                  <input type="text" name="mat_fat">
+                </div>
+                <div class="dato_input large_input button_50">
+                  <span class="blue">**</span>Matricula S.U.T.E.R.H.
+                  <input type="text" name="mat_sut">
+                </div>
+              </div>
+
+              <!-- Configuracion del edificio -->
+              <div id="form_edificios" class="display_none">
+                <div class="ing_torres">
+                  <div class="dato_input small_input">
+                    Cant. de torres
+                    <select id="cant_torres">
+                      <option value="0"></option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
                   </div>
-                  <div class="dato_input">
-                    <input type="checkbox" name="razon_social" id="razon_social">
-                    <div class="dato_razonSoc">
-                        Razon social
-                        <input type="text" name="raz_social" disabled>
+                  <div class="dato_input sin_form bordesDI">
+                    <span class="blue left margin_right-12">¿Tienen la misma estructura?</span>
+                    <form class="clearfix">
+                       Si <input type="radio" name="estruc_torre" id="torres_iguales" value="Si">
+                       No <input type="radio" name="estruc_torre" id="no_torres_iguales" value="No">
+                    </form>
+                  </div>
+                  <div class="dato_input sin_form">
+                    <span>Personalizar denominaci&oacute;n</span>
+                    <input type="checkbox" name="torre_personalizada" id="torres_person">
+                  </div>
+                </div>  
+                <div class="columna_ingreso">
+                  <h3 class="titles orange"> > Seleccion&aacute; la torre que queres configurar</h3>
+                  <div id="torres_tabs">
+                    <ul>
+                      <li><a href="#torre-1">Torre 1</a></li>
+                      <li><a href="#ver_todas">ver todas</a></li>
+                    </ul>
+                    <div id="torre_1" class="formulario">
+                      <div class="franja_gris_claro">
+                        <img src="">
+                        Pisos | unidades funcionales
+                      </div>
+                      <div class='div_input clearfix'>
+                          <p class="blue"> ¿Hay unidades funcionales en la PB?</p>
+                          <form class="clearfix">
+                              Si<input type="radio" name="unidades_PB" id="uni_pb" value="Si">
+                              No<input type="radio" name="unidades_PB" id="no_uni_pb" value="No">
+                          </form>
+                          <div class="cuantos">
+                              ¿Cuantos? 
+                              <select id="unidades_pb" disabled>
+                              </select>
+                          </div>
+                      </div>
+                      <div class='div_input'>
+                        <p> <span  class="blue">¿Cuantos pisos tiene el edificio?</span> (sin incluir planta baja)</p>
+                        <select id="cant_pisos" disabled>
+                          <option value="0"></option>
+                        </select>
+                      </div>
+                      <div id="ingr_deptos" class='div_input'>
+                        <p class="blue">¿Todos los pisos tienen la misma cantidad de unidades funcionales?</p>
+                        <form class="clearfix">
+                            Si<input type="radio" name="igualesxpiso" id="ig_x_piso"value="Si">
+                            No<input type="radio" name="igualesxpiso" id="no_ig_x_piso" value="No">
+                        </form>
+                        <div class="cuantos">
+                          ¿Cuantos?
+                          <select id="cant_deptos" disabled>
+                          </select>
+                        </div>
+                        <form class="clearfix denom_personal">
+                          Personalizar denominacion<input type="checkbox" name="denominacion_pers" id="denom_perso">
+                        </form>
+                        <form id="cargar_dptos" class="clearfix carga_dptos" style="display:none">
+                          Cargar departamentos<input type="checkbox" name="carga_departamentos" id="carga_dptos">
+                        </form>
+                      </div>
+                      <div class="franja_gris_claro">
+                        <img src="">
+                        Otras unidades
+                      </div>
+                      <div class='div_input clearfix border_bottom'>
+                        <p><span class="blue"> ¿Tiene locales comerciales? </span>(propiedad de terceros)</p>
+                        <form class="clearfix">
+                            Si<input type="radio" name="loc_com" id="loc_com" value="Si">
+                            No<input type="radio" name="loc_com" id="no_loc_com" value="No">
+                        </form>
+                        <div class="cuantos">
+                            ¿Cuantos? 
+                            <select id="locales_comerciales" disabled>
+                            </select>  
+                        </div>
+                        <form class="clearfix denom_personal">
+                          <input type="checkbox" name="denominacion_lc" id="denom_lc">Personalizar denominacion
+                        </form>
+                      </div>
+                      <div class='div_input clearfix border_bottom'>
+                        <p class="blue"> ¿Tiene cocheras cubiertas?</p>
+                         <form class="clearfix">
+                          Si<input type="radio" name="coch_cub" id="coch_cub" value="Si">
+                          No<input type="radio" name="coch_cub" id="no_coch_cub" value="No">
+                        </form>
+                        <div class="cuantos">
+                          ¿Cuantos? 
+                          <select id="cocheras_cub" disabled>
+                          </select>  
+                        </div>
+                        <form class="clearfix denom_personal">
+                          <input type="checkbox" name="denominacion_cc" id="denom_cc">Personalizar denominacion
+                        </form>
+                      </div>
+                      <div class='div_input clearfix border_bottom'>
+                        <p class="blue"> ¿Tiene cocheras descubiertas?</p>
+                        <form class="clearfix">
+                          Si<input type="radio" name="coch_dec" id="coch_dec" value="Si">
+                          No<input type="radio" name="coch_dec" id="no_coch_dec" value="No">
+                        </form>
+                        <div class="cuantos">
+                          ¿Cuantos? 
+                          <select id="cocheras_desc" disabled>
+                          </select>  
+                        </div>
+                        <form class="clearfix denom_personal">
+                          <input type="checkbox" name="denominacion_cd" id="denom_cd">Personalizar denominacion
+                        </form>
+                      </div>
+                      <div class='div_input clearfix border_bottom'>
+                        <p class="blue"> ¿Tiene bauleras?</p>
+                        <form class="clearfix">
+                          Si<input type="radio" name="tiene_bauleras" id="tiene_bauleras" value="Si">
+                          No<input type="radio" name="tiene_bauleras" id="no_tiene_bauleras" value="No">
+                        </form>
+                        <div class="cuantos">
+                          ¿Cuantos? 
+                          <select id="bauleras" disabled>
+                          </select>  
+                        </div>
+                        <form class="clearfix denom_personal">
+                          <input type="checkbox" name="denominacion_b" id="denom_b">Personalizar denominacion
+                        </form>
+                      </div>
+                    </div> <!-- torre 1 -->
+                    
+                   
+                    <div id="ver_todas">
+                     
                     </div>
                   </div>
-                  <div class="dato_input">
-                    <div id="foto">Aqui la foto </div>
-                    <span class="orange">Editar Foto</span>
-                  </div>
-                  <div class="dato_mail">
-                    <span class="orange">*</span> e-mail (sera tu nombre de usuario)
-                    <input type="text" name="email">
-                  </div>
-                  <div class="dato_mail">
-                    <span class="orange">*</span> Contraseña (minimo 6 caracteres)
-                    <input type="password" name="contrasena">
-                    <span class="grey left">La contraseña debe contener letras y numeros</span>
-                  </div>
-                  <div class="dato_mail button_20">
-                    <span class="orange">*</span> Repetir contraseña
-                    <input type="password" name="rep_contra">
-                  </div>
-                  <div class="dato_input">
-                    <div class="orange">Domicilio</div>
-                    Calle
-                    <input type="text" name="calle">
-                  </div>
-                  <div class="dato_input small_input top_20">
-                    Nro.
-                    <input type="text" name="nro_calle">
-                  </div>
-                  <div class="dato_input small_input top_20">
-                    Piso
-                    <input type="text" name="piso">
-                  </div>
-                  <div class="dato_input small_input top_20">
-                    Dpto.
-                    <input type="text" name="departamento">
-                  </div>
-                  <div class="dato_input top_20">
-                    <span class="orange">*</span> Provincia
-                    <select id="provincia">
-                      <option value=""></option>
-                      <option value="Buenos Aires">Buenos Aires</option>
-                      <option value="Cordoba">Cordoba</option>
-                      <option value="Neuquen">Neuquen</option>
-                      <option value="Rio Negro">Rio Negro</option>
-                    </select>
-                  </div>
-                  <div class="dato_input top_20">
-                    <span class="orange">*</span> Localidad
-                    <select id="localidad">
-                      <option value=""></option>
-                      <option value="Buenos Aires">Buenos Aires</option>
-                      <option value="Cordoba">Cordoba</option>
-                      <option value="Neuquen">Neuquen</option>
-                      <option value="Viedma">Viedma</option>
-                    </select>
-                  </div>
-                  <div class="dato_input">
-                    Telefono fijo
-                    <input type="text" name="fijo">
-                  </div>
-                  <div class="dato_input">
-                    <span class="orange">*</span> Telefono de emergencias
-                    <input type="text" name="emergencia">
-                  </div>
-                  <div class="dato_input">
-                    <span class="orange">*</span> Cuit
-                    <input type="text" name="Cuit">
-                  </div>
-                  <div class="dato_input large_input button_50">
-                    Matricula RPA
-                    <input type="text" name="mat_rpa">
-                  </div>
+                
                 </div>
-               </div>
-           </div>
-           <div class="terminos top_20">
-             <input type="checkbox" name="terminos_condiciones">
-             <span class="grey">He leido y acepto los <a href="">Terminos y Condiciones</a></span>
-           </div>
-           <div id="confirmar_paso1" class="confirmar"></div>
-           <div class="footer"></div>
-		</section> <!-- main-content --> 
-                    <div id="form_2" class="display_none">
-                  <div class="dato_input">
-                    <span class="orange">*</span>
-                    <span class="blue">**</span> Nombre del consorcio
-                    <input type="text" name="nombre_consorcio">
+                <!--*********************************Area de dibujo****************************-->
+                <div class="column_dibujo">
+                 <div class="encabezado_dibujo">
+                  <div class="ver_torre">
+                    torre1
                   </div>
-                  <div class="dato_input">
-                    <span class="orange">*</span>
-                    <span class="blue">**</span> Razon social
-                    <input type="text" name="razon_soc_consorcio">
+                  <div class="ver_todas">
+                    ver todas
+                    <img src="">
                   </div>
-                  <div class="dato_input">
-                     <span class="orange">*</span>
-                    <span class="blue">**</span> Calle
-                    <input type="text" name="calle_consorcio">
                   </div>
-                  <div class="dato_input small_input">
-                    <span class="orange">*</span>
-                    <span class="blue">**</span> Nro.
-                    <input type="text" name="nro_calle_consorcio">
+                  <div id="dib_edif">
+                    <div class="mensaje">
+                    En este panel se irá diagramando la estructura física del edificio a medida que vayas contestando las preguntas del panel izquierdo.
+                    </div>
+                    <div id="uf" class="row demo display_none">
+                      <div id="uf_cant" class="largo-total gutter-large columns"></div>
+                    </div>
+                    <div id="edif_dibujo" class="row demo dibujo_edif display_none">
+                      <div id="edificio" class='largo-total gutter-large columns'></div>
+                    </div>
+                    <div id="numeracion" class="row demo display_none">
+                      <div id="pisos_num" class="largo-total gutter-large columns"></div>
+                    </div>
                   </div>
-                  <div class="dato_input">
-                    <span class="orange">*</span>
-                    <span class="blue">**</span> Categoria
-                    <select id="categoria" disabled>
-                      <option value=""></option>
-                      <option value=""></option>
-                      <option value=""></option>
-                      <option value=""></option>
-                      <option value=""></option>
-                    </select>
+                  <div id="dib_otras_uni">
+                    <div id="comercios" class="display_none">
+                      <hr>
+                      <div class="logo_com" >LOGO Com</div>
+                      <h6>Locales Comerciales</h6>
+                      <div id="list_com" class="vista_comercios"></div>
+                      <hr>
+                    </div>
+                    <div id="cochera_cub" class="display_none">
+                      <div class="logo_cc" >LOGO CCub</div>
+                      <h6>Cocheras Cubiertas</h6>
+                      <div id="list_cc" class="vista_comercios"></div>
+                      <hr>
+                    </div>
+                    <div id="coch_desc" class="display_none">
+                      <div class="logo_cd" >LOGO CDesc</div>
+                      <h6>Cocheras Descubiertas</h6>
+                      <div id="list_dc" class="vista_comercios"></div>
+                      <hr>
+                    </div>
+                    <div id="baulera" class="display_none">
+                      <div class="logo_bau" >LOGO Baul </div>  
+                      <h6>Bauleras</h6>
+                      <div id="list_b" class="vista_comercios"></div>
+                      <hr>
+                    </div>
+                    <div id="espac_comunes" class="display_none">
+                      <div class="logo_espc" >LOGO Baul </div>  
+                      <h6>Espacios comunes</h6>
+                      <div id="list_esp" class="vista_comercios"></div>
+                      <hr>
+                    </div>
                   </div>
-                  <div class="dato_input top_20">
-                    <span class="orange">*</span> Localidad
-                    <select id="localidad_consorcio">
-                      <option value=""></option>
-                      <option value="Buenos Aires">Buenos Aires</option>
-                      <option value="Cordoba">Cordoba</option>
-                      <option value="Neuquen">Neuquen</option>
-                      <option value="Viedma">Viedma</option>
-                    </select>
+                    
+             </div> <!-- form_edificios -->
+
+             <!-- Dialogs -->
+             <div id="dialog"  class="dibujo"></div>
+             <div id="nombre_dpto" class="top_dialog">
+               <header id="title-1">Selecciona el tipo de denominacion para las unidades funcionales</header>
+               <div id="content_nombre" class="content_grey">
+                 <div class="content_whitegrey">
+                  <input type="radio" name="denominacion" value="letras" id="alfa" checked/>Alfanetico. A partir de:
+                  <input type="radio" name="denominacion" value="nro" id="num"/>Numerico. A partir de:
+                  <input type="radio" name="denominacion" value="personalizado" id="person" />Personalizada   
+                  <select id="sel_alfa">
+                  </select>    
+                  <select id="sel_num" disabled>
+                  </select>  
+                  <div id="ingr_pers">
                   </div>
-                  <div class="dato_input top_20">
-                    <span class="orange">*</span> Provincia
-                    <select id="provincia_consorcio">
-                      <option value=""></option>
-                      <option value="Buenos Aires">Buenos Aires</option>
-                      <option value="Cordoba">Cordoba</option>
-                      <option value="Neuquen">Neuquen</option>
-                      <option value="Rio Negro">Rio Negro</option>
-                    </select>
+                </div> 
+             </div>
+             <header id="title-2" class="display_none">Ingresa la cantidad de Unidades Funcionales por piso</header>
+            </div>
+            <div id="denominacion_dpto" class="top_dialog">
+              <header id="title-1">Selecciona el tipo de denominacion para las unidades funcionales</header>
+              <div id="content_nombre" class="content_grey">
+               <div class="content_whitegrey">
+                  <input type="radio" name="denom" value="letras" id="alfa_d2" checked/>Alfanetico. A partir de:
+                  <input type="radio" name="denom" value="nro" id="num_d2"/>Numerico. A partir de:
+                  <input type="radio" name="denom" value="personalizado" id="person_d2" />Personalizada   
+                  <select id="sel_alfa_d2">
+                  </select>    
+                  <select id="sel_num_d2" disabled>
+                  </select>  
+                  <div id="ingr_pers_d2">
+                      <input type="text" name="per" class="personal"/>
                   </div>
-                  <div class="dato_input">
-                    Codigo Postal
-                    <input type="text" name="cp_consorcio">
-                  </div>
-                  <div class="dato_input">
-                    <span class="orange">*</span>
-                    <span class="blue">**</span> Cuit
-                    <input type="text" name="Cuit">
-                  </div>
-                  <div class="dato_mail">
-                    <span class="orange">*</span>IVA
-                    <select id="iva">
-                      <option value=""></option>
-                      <option value=""></option>
-                    </select>
-                    <span class="grey left">A efecto de la facturacion de CA</span>
-                  </div>
-                  <div class="dato_input large_input button_50">
-                    <span class="blue">**</span>Matricula F.A.T.E.R.Y.H.
-                    <input type="text" name="mat_fat">
-                  </div>
-                  <div class="dato_input large_input button_50">
-                    <span class="blue">**</span>Matricula S.U.T.E.R.H.
-                    <input type="text" name="mat_sut">
-                  </div>
-                </div>
+               </div> 
+               <div id="checked">
+                  <!-- <img src=""/> -->
+               </div>  
+              </div>
+        </div>
+ 
+                  
        
 	<script type="text/javascript" src="js/jquery-ui/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="js/jquery-ui/ui/jquery-ui.js"></script>
