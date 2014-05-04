@@ -15,10 +15,11 @@
         <link rel="stylesheet" href="css/demo.css"> 
         <link rel="stylesheet" href="css/bootstrap.css"> 
         <link rel="stylesheet" type="text/css" href="js/jquery-ui/themes/base/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="js/qtip/jquery.qtip.min.css">
 
 	</head>
 
-    <body>  
+    <body class="body_class">  
 		<header>
             <img src=""/> <!-- Aca iria el logo del Consorcio Abierto -->
             <div id="titulo_header" class="header">
@@ -154,7 +155,7 @@
                   Matricula RPA
                   <input type="text" name="mat_rpa">
                 </div>
-              </div>
+              </div><!-- form_1-->
               
               <!-- Footer -->
               </div><!-- body_form -->
@@ -169,6 +170,7 @@
                 <div id="confirmar_paso1" class="confirmar" title="Confirmar"></div>
                 <div id="confirmar_paso2" class="confirmar display_none" title="Seguir con la estructura física del edificio"></div>
                 <div id="confirmar_paso3" class="confirmar display_none" title="Seguir"></div>
+                <div id="confirmar_paso4" class="confirmar display_none" title="Finalizar"></div>
                 <div class="legales">
                  <div class="left">
                   Términos y condiciones | Políticas de privacidad | Preguntas frecuentes (FAQ)
@@ -177,7 +179,7 @@
                   Copyright © 2013 ConsorcioAbierto. Todos los derechos reservados.
                  </div>
                 </div>
-              </div>
+              </div><!-- footer-->
 		</div> <!-- main-content --> 
     
               <!-- Formulario Alta consorcio -->
@@ -258,7 +260,7 @@
                   <span class="blue">**</span>Matricula S.U.T.E.R.H.
                   <input type="text" name="mat_sut">
                 </div>
-              </div>
+              </div><!-- Formulario Alta consorcio-->
 
               <!-- Configuracion del edificio -->
               <div id="form_edificios" class="display_none">
@@ -400,12 +402,10 @@
                     </div> <!-- torre 1 -->
                     
                    
-                    <div id="ver_todas">
-                     
-                    </div>
+                    <div id="ver_todas"></div>
                   </div>
-                
-                </div>
+                 </div>
+               
                 <!--*********************************Area de dibujo****************************-->
                 <div class="column_dibujo">
                  <div class="encabezado_dibujo">
@@ -464,8 +464,30 @@
                       <hr>
                     </div>
                   </div>
-                    
-             </div> <!-- form_edificios -->
+                </div> <!-- column_dibujo -->
+              </div> <!-- form_edificios -->
+
+              <div id="form_agrupacion" class="display_none">
+                <h4 class="orange">Agrup&aacute; las UF secundarias arrastr&aacute;ndolas hasta las principales.</h4>
+                <p>Para desasociar una UF secundaria de una principal, simplemente arrastras el ícono hacia afuera de la UF primaria, o bien, hacés doble click sobre el ícono en el cuadro de las UF secundarias.</p>
+                <div>
+                <form class="left">
+                  <input type="checkbox" name="agrupacion">Habilitar agrupaci&oacute; de UF cruzadas
+                </form>
+                <div class="icono" title="Esta opci&oacute;n permite agrupar UFs secundarias configuradas en una torre, con UFs principales configuradas en otra.">i</div>
+                </div>
+                <div class="columna_izquierda">
+                  <div class="encabezado">
+                    Uf secundarias
+                  </div>  
+                </div>
+                <div class="columna_derecha">
+                  <div class="encabezado">
+                    Uf primarias
+                  </div>
+                </div>
+              </div><!-- form agripacion------------> 
+
 
              <!-- Dialogs -->
              <div id="dialog"  class="dibujo"></div>
@@ -511,7 +533,8 @@
        
 	<script type="text/javascript" src="js/jquery-ui/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="js/jquery-ui/ui/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/funciones.js"></script>
+  <script type="text/javascript" src="js/qtip/jquery.qtip.min.js"></script>
+  <script type="text/javascript" src="js/funciones.js"></script>
 
     </body>
 </html>      
