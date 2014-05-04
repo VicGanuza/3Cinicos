@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+    /*---------- tooltip--------------------------*/
+    $('#paso_1').tooltip();
+
     /* Ingreso de formulario*/
     $('#razon_social').on('click',function(){
         if ($('input:checkbox[name=razon_social]:checked').val()){
