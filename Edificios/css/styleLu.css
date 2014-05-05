@@ -16,6 +16,10 @@ header{
 	background-color: #F7F7F7;
 	height: 10%;
 }
+.body_class{
+	color: #808080;
+	font-family: "Lucida Grande", sans-serif;
+}
 
 /*--------------------------------Helpers------------------------------------------------------*/
 .margin-top_20{
@@ -62,6 +66,12 @@ header{
 	text-transform: uppercase;
 	font-style: italic;
 }
+.qtip.tooltip_style{
+	background-color: #000000;
+	color: #FFFFFF;
+	padding-top: 2px;
+	border-radius: 4px;
+}
 /*------------------------------------------ Inputs & Selects----------------------------------------------*/
 input[name="raz_social"]{
 	width: 100%;
@@ -70,9 +80,17 @@ input[name="raz_social"]{
 	margin: -3px 5px 0 6px;
 	-webkit-appearance: checkbox;
 }
-.dato_input input[type="text"],.dato_mail input[type="text"]{
+.dato_input input[type="text"],.dato_mail input[type="text"], .dato_mail input[type="password"]{
 	height: 30px;
-	margin-bottom: 0px; 	
+	margin-bottom: 0px; 
+	border-radius: 0px;
+	border-color: #57ACCE;	
+	color: #808080;
+}
+.dato_input input[type="text"]:focus, .dato_mail input[type="text"]:focus, .dato_mail input[type="password"]:focus{
+	border-color: #E68C28;
+	color: #57ACCE;
+	background-color: #FFFFFF;
 }
 .dato_input input[type="checkbox"]{
 	-webkit-appearance: radio;
@@ -80,9 +98,11 @@ input[name="raz_social"]{
 	width: 14px;
 	height: 30px;
 }
-.dato_mail input[type="password"]{
+ #form_agrupacion input[type="checkbox"]{
+	margin-right: 10px;
+	width: 19px;
 	height: 30px;
-	margin-bottom: 0px;
+	margin-top: 0px;
 }
 .terminos input[type="checkbox"]{
 	margin-top: -1px;
@@ -98,6 +118,9 @@ input[name="raz_social"]{
 	-webkit-appearance: checkbox;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+#form_edificios input[type="checkbox"]:checked{
+	color:red;
 }
 .div_input input[type="radio"], #nombre_dpto input[type="radio"], #denominacion_dpto input[type="radio"]{
 	margin: -3px 5px 0 6px;
@@ -503,6 +526,13 @@ form.carga_dptos{
 	height: 30px;
 	background-color: #ffffff;
 }
+.icono{
+	width: 50px;
+	height: 30px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 4px;
+}
 
 /*Style Edificio*/
 #dialog.demo{
@@ -546,6 +576,21 @@ form.carga_dptos{
 	float: right;
 	border: none;
 }
+.columna_izquierda{
+	float: left;
+	width: 45%;
+	background-color: #E6E6E6;
+}
+.columna_derecha{
+	width: 45%;
+	float: left;
+}
+.encabezado{
+	width: 100%;
+	float:left;
+	border-bottom: 1px dashed #808080;
+}
+
 /* Style pisos*/
 @media only screen and (min-width: 768px) {
 .dpto-12 {
