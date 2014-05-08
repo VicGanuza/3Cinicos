@@ -1,7 +1,11 @@
 $(document).ready(function(){
 
     /*---------- tooltip--------------------------*/
-    $('#paso_1').tooltip();
+$('div[title]').qtip({
+        style: {
+          classes: 'tooltip_style'
+        }
+    });
 
     /* Ingreso de formulario*/
     $('#razon_social').on('click',function(){
@@ -31,6 +35,7 @@ $(document).ready(function(){
 
     });
 
+
     $('#confirmar_paso2').on('click',function(){
         $('#titulo_header').html('ALTA DE CONSORCIO');
         $('#paso_2').addClass('paso_done');
@@ -40,15 +45,31 @@ $(document).ready(function(){
         $('#encabezado_consorcio').removeClass('display_none');
         $('#title_torres').removeClass('display_none');
         $('.terminos').addClass('display_none');
-        $('#confirmar_paso1').addClass('display_none');
-        $('#confirmar_paso2').removeClass('display_none');
+        $('#confirmar_paso2').addClass('display_none');
+        $('#confirmar_paso3').removeClass('display_none');
         /*Falta validar formulario dos*/
         $('#body_form').html($('#form_edificios'));
         $('#form_2').addClass('display_none');
         $('#form_edificios').removeClass('display_none');
+        $('#draw_column').removeClass('display_none');
     });
 
     $('#torres_tabs').tabs();
+
+    $('#confirmar_paso3').on('click',function(){
+        $('#titulo_header').html('AGRUPACIÓN E IDENTIFICACIÓN DE UNIDADES FUNCIONALES');
+        $('#paso_3').addClass('paso_done');
+        $('#paso_4').removeClass('paso_grey');
+        $('#titulo').html('<h1 class="titles">Agrup&aacute; e identific&aacute; las UF con sus consorcistas</h1>');
+        $('#encabezado_consorcio').addClass('display_none');
+        $('#title_torres').addClass('display_none');
+        $('#confirmar_paso3').addClass('display_none');
+        $('#confirmar_paso4').removeClass('display_none');
+        $('#body_form').html($('#form_agrupacion'));
+        $('#form_edificios').addClass('display_none');
+        $('#form_agrupacion').removeClass('display_none');
+    });
+
 
     
     
