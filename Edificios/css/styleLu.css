@@ -20,6 +20,11 @@ header{
 	color: #808080;
 	font-family: "Lucida Grande", sans-serif;
 }
+hr{
+	border-top: 1px solid #CCCCCC !important;
+	border-bottom: 1px solid #FFFFFF !important;
+	margin-left: -30px !important;
+}
 
 /*--------------------------------Helpers------------------------------------------------------*/
 .margin-top_20{
@@ -291,8 +296,9 @@ header img{
 }
 .footer{
 	bottom: 0;
-	position: relative;
+	position: fixed;
 	left: 0;
+	width: 100%;
 }
 .legales{
 	background-color: #4D4D4D;
@@ -578,17 +584,22 @@ form.carga_dptos{
 }
 .columna_izquierda{
 	float: left;
-	width: 45%;
-	background-color: #E6E6E6;
+	width: 49%;
+	border: 1px solid #CCCCCC;
+	padding-left: 30px;
 }
 .columna_derecha{
-	width: 45%;
+	width: 49%;
 	float: left;
+	border: 1px solid #CCCCCC;
+	padding-left: 30px;
 }
 .encabezado{
 	width: 100%;
 	float:left;
-	border-bottom: 1px dashed #808080;
+	text-transform: uppercase;
+	height: 35px;
+	margin-top: 10px;
 }
 
 /* Style pisos*/
@@ -688,6 +699,10 @@ form.carga_dptos{
 .icono_bau{
 	width: 20px;
 	height: 20px;
+	float: left;
+}
+.cuerpo{
+	width: 90%;
 	float: left;
 }
 }

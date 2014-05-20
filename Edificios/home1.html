@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -16,17 +15,16 @@
         <link rel="stylesheet" href="css/demo.css"> 
         <link rel="stylesheet" href="css/bootstrap.css"> 
         <link rel="stylesheet" type="text/css" href="js/jquery-ui/themes/base/jquery-ui.css">
-        <link rel="stylesheet" type="text/css" href="js/qtip/jquery.qtip.min.css">
 
-  </head>
+	</head>
 
-    <body class="body_class">  
-    <header>
+    <body>  
+		<header>
             <img src=""/> <!-- Aca iria el logo del Consorcio Abierto -->
             <div id="titulo_header" class="header">
                 Alta de Administrador
             </div>      
-        </header>    
+        </header>		 
         <div class="main-content" id="main-content"> 
             <div class="menu_pasos">
                 <div id="paso_1" class="pasos" title="Alta de administrador">
@@ -156,7 +154,7 @@
                   Matricula RPA
                   <input type="text" name="mat_rpa">
                 </div>
-              </div><!-- form_1-->
+              </div>
               
               <!-- Footer -->
               </div><!-- body_form -->
@@ -171,7 +169,6 @@
                 <div id="confirmar_paso1" class="confirmar" title="Confirmar"></div>
                 <div id="confirmar_paso2" class="confirmar display_none" title="Seguir con la estructura física del edificio"></div>
                 <div id="confirmar_paso3" class="confirmar display_none" title="Seguir"></div>
-                <div id="confirmar_paso4" class="confirmar display_none" title="Finalizar"></div>
                 <div class="legales">
                  <div class="left">
                   Términos y condiciones | Políticas de privacidad | Preguntas frecuentes (FAQ)
@@ -180,8 +177,8 @@
                   Copyright © 2013 ConsorcioAbierto. Todos los derechos reservados.
                  </div>
                 </div>
-              </div><!-- footer-->
-    </div> <!-- main-content --> 
+              </div>
+		</div> <!-- main-content --> 
     
               <!-- Formulario Alta consorcio -->
               <div id="form_2" class="display_none">
@@ -261,7 +258,7 @@
                   <span class="blue">**</span>Matricula S.U.T.E.R.H.
                   <input type="text" name="mat_sut">
                 </div>
-              </div><!-- Formulario Alta consorcio-->
+              </div>
 
               <!-- Configuracion del edificio -->
               <div id="form_edificios" class="display_none">
@@ -403,10 +400,13 @@
                     </div> <!-- torre 1 -->
                     
                    
-                    <div id="ver_todas"></div>
+                    <div id="ver_todas">
+                     
+                    </div>
                   </div>
-                 </div>
-               
+                
+                </div>
+
                 <!--*********************************Area de dibujo****************************-->
                 <div class="column_dibujo">
                  <div class="encabezado_dibujo">
@@ -465,10 +465,10 @@
                       <hr>
                     </div>
                   </div>
-                </div> <!-- column_dibujo -->
-              </div> <!-- form_edificios -->
+                </div>    
+             </div> <!-- form_edificios -->
 
-              <div id="form_agrupacion" class="display_none">
+             <div id="form_agrupacion" class="display_none">
                 <h4 class="orange">Agrup&aacute; las UF secundarias arrastr&aacute;ndolas hasta las principales.</h4>
                 <p>Para desasociar una UF secundaria de una principal, simplemente arrastras el ícono hacia afuera de la UF primaria, o bien, hacés doble click sobre el ícono en el cuadro de las UF secundarias.</p>
                 <div>
@@ -483,25 +483,7 @@
                     Uf secundarias
                   </div>
                   <hr>
-                  <div id="uf_secundarias">      
-                   <div id="cochera_cub" class="display_none">
-                      <div class="logo_cc" >LOGO CCub</div>
-                      <h6>Cocheras Cubiertas</h6>
-                      <div id="list_cc" class="vista_comercios"></div>
-                      <hr>
-                    </div>
-                    <div id="coch_desc" class="display_none">
-                      <div class="logo_cd" >LOGO CDesc</div>
-                      <h6>Cocheras Descubiertas</h6>
-                      <div id="list_dc" class="vista_comercios"></div>
-                      <hr>
-                    </div>
-                    <div id="baulera" class="display_none">
-                      <div class="logo_bau" >LOGO Baul </div>  
-                      <h6>Bauleras</h6>
-                      <div id="list_b" class="vista_comercios"></div>
-                      <hr>
-                    </div>              
+                  <div id="uf_secundarias">                    
                   </div>  
                 </div>
                 <div class="columna_derecha">
@@ -514,7 +496,6 @@
                 </div>
                 </div>
               </div><!-- form agrupacion--> 
-
 
              <!-- Dialogs -->
              <div id="dialog"  class="dibujo"></div>
@@ -554,12 +535,13 @@
                   <!-- <img src=""/> -->
                </div>  
               </div>
-        </div>
+             </div>
+ 
+                  
        
-  <script type="text/javascript" src="js/jquery-ui/jquery-1.9.1.js"></script>
-  <script type="text/javascript" src="js/jquery-ui/ui/jquery-ui.js"></script>
-  <script type="text/javascript" src="js/funciones.js"></script>
-  <script type="text/javascript" src="js/qtip/jquery.qtip.min.js"></script>
-  <script type="text/javascript" src="js/funciones.js"></script>
- </body>
-</html>    
+	<script type="text/javascript" src="js/jquery-ui/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery-ui/ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
+
+    </body>
+</html>      

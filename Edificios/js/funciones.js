@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
     /*---------- tooltip--------------------------*/
-$('div[title]').qtip({
+/*$('div[title]').qtip({
         style: {
           classes: 'tooltip_style'
         }
     });
-
+*/
     /* Ingreso de formulario*/
     $('#razon_social').on('click',function(){
         if ($('input:checkbox[name=razon_social]:checked').val()){
@@ -68,6 +68,10 @@ $('div[title]').qtip({
         $('#body_form').html($('#form_agrupacion'));
         $('#form_edificios').addClass('display_none');
         $('#form_agrupacion').removeClass('display_none');
+
+        if ($('#coch_cub').is('checked')) {
+            
+        }
     });
 
 
@@ -509,5 +513,10 @@ $('div[title]').qtip({
                                 '<div class="nonbre_espacio">'+espacio+'</div>' );
         }
     });
+
+
+    /************************************---Paso 4--- **************************************************/
+
+
 });
  
