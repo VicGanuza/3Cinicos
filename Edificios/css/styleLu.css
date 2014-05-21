@@ -558,7 +558,7 @@ form.carga_dptos{
 	margin: 0;
 	padding: 0;
 }
-#edificio, #uf_cant, #pisos_num {
+#edificio, #uf_cant, #pisos_num, #edificio_uf_prim, #pisos_num_uf_prim {
 	padding: 0;
 }
 #dialog {
@@ -572,12 +572,12 @@ form.carga_dptos{
 #uf.row.demo{
 	margin-left: 0px;
 }
-#edif_dibujo{
+#edif_dibujo, #edif_dibujo_uf_prim{
 	margin-left: 35px;
 	width: 72%;
 	float:left;
 }
-#numeracion{
+#numeracion, #numeracion_uf_prim{
 	width: 10%;
 	float: right;
 	border: none;
