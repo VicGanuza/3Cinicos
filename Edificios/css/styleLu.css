@@ -25,6 +25,9 @@ hr{
 	border-bottom: 1px solid #FFFFFF !important;
 	margin-left: -30px !important;
 }
+h6{
+	margin-bottom: 3px !important;
+}
 
 /*--------------------------------Helpers------------------------------------------------------*/
 .margin-top_20{
@@ -670,6 +673,7 @@ form.carga_dptos{
 	width: 50px;
 	height: 50px;
 	float: left;
+
 }
 .logo_cd{
 	width: 50px;
@@ -690,6 +694,26 @@ form.carga_dptos{
 	width: 20px;
 	height: 20px;
 	float: left;
+	background-color: #57ACCE;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	color:#ffffff;
+	margin-left: 10px;
+	padding-left: 6px;
+}
+.icono_cc_done{
+	width: 20px;
+	height: 20px;
+	float: left;
+	background-color: #F7F7F7;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	border:1px solid #000000;
+	color:#000;
+	margin-left: -21px;
+	padding-left: 6px;
 }
 .icono_dc{
 	width: 20px;

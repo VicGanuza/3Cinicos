@@ -170,7 +170,35 @@ $(document).ready(function(){
     		$('#piso_nro_'+i).empty();
     		for (k=cant_deptos;k>0;k--){
     			$('#piso_nro_'+i).append('<div id="dpto_nro_'+i+'_'+k+'" class="dpto-'+cant_deptos+' column dpto"></div>');
-                $('#uf_prim_piso_nro_'+i).append('<div id="uf_prim_dpto_nro_'+i+'_'+k+'" class="dpto-'+cant_deptos+' column dpto"></div>');
+                nuevo_elem = $('<div id="uf_prim_dpto_nro_'+i+'_'+k+'" class="dpto-'+cant_deptos+' column dpto droppable"></div>')
+                nuevo_elem.droppable({ 
+                   drop: function( event, ui ) { 
+                        value=ui.draggable.html();
+                        $("#hidden_"+value).prop('hidden',false);
+                        pertenece=this.id().toString();
+                        $('#hidden_'+value).attr( "title", pertenece );
+
+                      /*if (!ui.draggable.data("soltado")){ 
+                         ui.draggable.data("soltado", true); 
+                         var elem = $(this); 
+                         elem.data("numsoltar", elem.data("numsoltar") + 1) 
+                         elem.html("Llevo " + elem.data("numsoltar") + " elementos soltados"); */
+                         alert("soltado");
+                     
+                   }, 
+                   out: function( event, ui ) { 
+                    /*if (ui.draggable.data("soltado")){ 
+                         ui.draggable.data("soltado", false); 
+                         var elem = $(this); 
+                         elem.data("numsoltar", elem.data("numsoltar") - 1); 
+                         elem.html("Llevo " + elem.data("numsoltar") + " elementos soltados"); 
+                      } */
+                      alert("devuelto");
+
+                   } 
+                                   });
+                $('#uf_prim_piso_nro_'+i).append(nuevo_elem);
+
     		}
     	}
    });
@@ -491,6 +519,7 @@ $(document).ready(function(){
         nuevo_elem = $('<div class="icono_cc">'+i+'</div>');
         nuevo_elem.draggable();
         $('#uf_secundarias #list_cc').append(nuevo_elem);
+        $('#uf_secundarias #list_cc').append('<div id="hidden_'+i+'" class="icono_cc_done" hidden=true>'+i+'</div>')
        }
     });
 
