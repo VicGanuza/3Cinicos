@@ -119,8 +119,10 @@ $(document).ready(function(){
     /*Cuando cambia la cantidad de pisos del edificio los dibuja*/
 	$('#cant_pisos').on('change',function(){
 		$('#edificio').empty();
+        $('#edificio_uf_prim').empty();
         $('#uf_cant').empty();
         $('#pisos_num').empty();
+        $('#pisos_num_uf_prim').empty();
         var tiene_unidades = $('input:radio[name=unidades_PB]:checked').val();
         var cant_uni = $('#unidades_pb').val();
         var cantidad_pisos= this.value;
@@ -150,7 +152,7 @@ $(document).ready(function(){
         /* Agrega las unidades funcionales de la planta baja */
         unidades = cant_uni;
         if (tiene_unidades=='Si') {
-            for (i=cant_uni; i>0; i--){
+            for (i=1; i<=cant_uni; i++){
                 $("#pb").append('<div id="local_'+i+'" class="dpto-'+unidades+' column  dpto">local '+i+'</div>');
                 $( "#pb_uf_prim" ).append('<div id="local_'+i+'" class="dpto-'+unidades+' column  dpto">local '+i+'</div>');
             }
@@ -166,37 +168,22 @@ $(document).ready(function(){
     	var cant_deptos= this.value;
     	
         /* Agrega los departamentos por piso */
-    	for (i=cant_pisos;i>0;i--){
+    	for (i=1;i<=cant_pisos;i++){
     		$('#piso_nro_'+i).empty();
-    		for (k=cant_deptos;k>0;k--){
+    		for (k=1;k<=cant_deptos;k++){
     			$('#piso_nro_'+i).append('<div id="dpto_nro_'+i+'_'+k+'" class="dpto-'+cant_deptos+' column dpto"></div>');
-                nuevo_elem = $('<div id="uf_prim_dpto_nro_'+i+'_'+k+'" class="dpto-'+cant_deptos+' column dpto droppable"></div>')
+                nuevo_elem = $('<div id="uf_prim_dpto_nro_'+i+'_'+k+'" class="dpto-'+cant_deptos+' column dpto droppable" data-name="'+i+'_'+k+'"></div>')
                 nuevo_elem.droppable({ 
                    drop: function( event, ui ) { 
                         value=ui.draggable.html();
                         $("#hidden_"+value).prop('hidden',false);
-                        pertenece=this.id().toString();
-                        $('#hidden_'+value).attr( "title", pertenece );
-
-                      /*if (!ui.draggable.data("soltado")){ 
-                         ui.draggable.data("soltado", true); 
-                         var elem = $(this); 
-                         elem.data("numsoltar", elem.data("numsoltar") + 1) 
-                         elem.html("Llevo " + elem.data("numsoltar") + " elementos soltados"); */
-                         alert("soltado");
-                     
+                        pertenece = this.dataset.name;
+                        $('#hidden_'+value).attr( "title", '"'+pertenece+'"' );
                    }, 
                    out: function( event, ui ) { 
-                    /*if (ui.draggable.data("soltado")){ 
-                         ui.draggable.data("soltado", false); 
-                         var elem = $(this); 
-                         elem.data("numsoltar", elem.data("numsoltar") - 1); 
-                         elem.html("Llevo " + elem.data("numsoltar") + " elementos soltados"); 
-                      } */
-                      alert("devuelto");
-
+                   
                    } 
-                                   });
+                });
                 $('#uf_prim_piso_nro_'+i).append(nuevo_elem);
 
     		}

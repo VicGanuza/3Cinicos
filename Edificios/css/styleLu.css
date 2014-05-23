@@ -29,6 +29,10 @@ h6{
 	margin-bottom: 3px !important;
 }
 
+div h4{
+	width: 100%;
+}
+
 /*--------------------------------Helpers------------------------------------------------------*/
 .margin-top_20{
 	margin-top: 20px;
@@ -727,6 +731,67 @@ form.carga_dptos{
 }
 .cuerpo{
 	width: 90%;
+	float: left;
+}
+.opciones{
+	width: 25px;
+	height: 25px;
+	padding-left: 7px;
+	padding-top: 1px;
+	border: 1px solid;
+	float: left;
+	margin-right: 20px;
+}
+.mitad{
+	width: 50%;
+	float: left;
+}
+.full{
+	width: 100%;
+	float: left;
+}
+.principales{
+	width: 18%;
+	float: left;
+	border-top: 2px solid #E68C28;
+	margin-right: 13px;
+}
+#tabla_torre{
+	width: 22%;
+	float: left;
+}
+#tabla_uf_principales{
+	width: 75%;
+	float: left;
+}
+.secundarias{
+	width: 25%;
+	float: left;
+	border-top: 2px solid #808080;
+	margin-right: 9px;
+}
+.fila_30{
+	width: 30%;
+	float: left;
+}
+.propietarios{
+	width: 28%;
+	float: left;
+	border-top: 2px solid;
+	margin-right: 5px;
+}
+.fila_25{
+	float: left;
+	width: 25%;
+}
+.inquilinos{
+	width: 25%;
+	float: left;
+	border-top: 2px solid;
+	margin-left: 5px;
+}
+.fila_33{
+	width: 33%;
 	float: left;
 }
 }
