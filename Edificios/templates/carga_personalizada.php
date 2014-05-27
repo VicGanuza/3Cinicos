@@ -14,10 +14,15 @@
    </div> 
   </div>
  <header id="title-2" class="display_none">Ingresa la cantidad de Unidades Funcionales por piso</header>
- <div id="person_torres">
- <ul>
-   <li class="torre_activa">Torre 1</li>
-   <li>Torre 2</li>
- </ul>
+ <div id="caga_body" class="cuerpo_dialog">
+   <div id="person_torres">
+   <ul>
+     <li class="torre_activa">Torre 1</li>
+     <li>Torre 2</li>
+   </ul>
+   </div>
+ </div>
+ <div class="confirmar_person">
+  <img src="images/icon-confirmar.png">
  </div>
 </div>

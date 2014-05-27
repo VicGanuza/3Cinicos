@@ -211,8 +211,6 @@ $(document).ready(function(){
                 $( "#pb_uf_prim" ).append('<div id="local_'+i+'" class="dpto-'+unidades+' column  dpto">'+Abc.charAt(i-1)+'</div>');
             }
         }
-    }).on('blur', '.cant_deptos', function() {
-       alert('hello');
     });
 
     /*En el caso de que todos tengan la misma cantidad de dptos por piso, cuando cambia el select los va dibujando*/
@@ -306,9 +304,9 @@ $(document).ready(function(){
         $('#carga_personalizada').css('top',posY);
         $('#carga_personalizada').css('left',posX);
 
-        $('#carga_personalizada').append($('#uf'));
-        $('#carga_personalizada').append($('#edif_dibujo'));
-        $('#carga_personalizada').append($('#numeracion'));
+        $('#caga_body').append($('#uf'));
+        $('#caga_body').append($('#edif_dibujo'));
+        $('#caga_body').append($('#numeracion'));
 
         /*$('#dialog').append($('#nombre_dpto'));
         $('#dialog').append($('#uf'));
@@ -396,6 +394,62 @@ $(document).ready(function(){
         for(i=0;i<26;i++){
             $('#sel_alfa').append('<option value="'+i+'">'+Abc.charAt(i)+'</option>');
         }
+    });
+    
+    $('#uf_cant').on('blur','.cant_deptos',function(){
+        var cp=$('#cant_pisos').val();
+                    var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                    for (p=cp;p>0;p--){
+                        $('#piso_nro_'+p).empty();
+                        dptos = $('[name=piso_'+p+']').val();
+                        if ($('#alfa').is(':checked')){
+                        tipo = 1;
+                        inicio = parseInt($('#sel_alfa').val());
+                        fin = inicio + parseInt(dptos);
+                    }
+                    else 
+                        {
+                            if ($('#num').is(':checked')){
+                                tipo = 2;
+                                inicio = parseInt($('#sel_num').val());
+                                fin = inicio + parseInt(dptos-1);
+                            }
+                            else {
+                                if ($('#person').is(':checked')){
+                                    tipo = 3;
+                                }
+                        }
+                    }
+                        for (d=1;d<=dptos;d++){
+                            if (tipo!=3){
+                                if (tipo==1) {
+                                    nombre=Abc.charAt(inicio);
+                                }
+                                else{
+                                    if (tipo==2) {
+                                        nombre=inicio;
+                                    }
+                                }
+                                $('#piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" >'+nombre+'</div>');
+                                $('#uf_prim_piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" >'+nombre+'</div>');
+                                inicio++;
+                            }
+                            else {
+                                $('#piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" contenteditable="true"></div>');
+                                $('#uf_prim_piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" contenteditable="true"></div>');
+                            }
+                        }
+                    }
+    });
+   
+    $('.confirmar_person').on('click',function(){
+        $('#dib_edif').append('<div id="inner_draw" class="dibujo"></div>');
+        $('#inner_draw').append($('#uf'));
+        $('#inner_draw').append($('#edif_dibujo'));
+        $('#inner_draw').append($('#numeracion'));
+        $('#uf').css({'display' : 'none'});
+        $('.content_whitegrey').css({'background-color':'#F7F7F7', 'width' : 'width: 550px;'});
+        $('#carga_personalizada').hide();
     });
 
     /*Configuracion personalizada*/

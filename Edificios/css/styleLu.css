@@ -203,6 +203,7 @@ input[name="raz_social"]{
 }
 #uf_cant input[type="text"]{
 	border-radius: 0px;
+	text-align: center;
 }
 /*-----------------------------------------------------------------------------------------------*/
 header img{
@@ -661,6 +662,9 @@ form.carga_dptos{
 	margin:0;
 	padding: 0;
 }
+#carga_personalizada .gutter-large .column.piso .column.dpto{
+	border:1px solid #A0A0A0;
+}
 .gutter-large .column.piso .column.dpto{
 	margin: 0;
 	padding: 0;
@@ -724,7 +728,7 @@ form.carga_dptos{
 } 
 #edif_dibujo, #edif_dibujo_uf_prim{
 	margin-left: 24px;
-	width: 400px;
+	width: 65%;
 	float:left;
 }
 #numeracion, #numeracion_uf_prim{
@@ -987,5 +991,17 @@ form.carga_dptos{
 }
 .impar_inq{
 	background-color: #E6E6E6; 
+}
+.cuerpo_dialog{
+	width: 100%;
+	float: left;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #A0A0A0;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-bottom: 20px;
+}
+.confirmar_person{
+	margin-left: 30px;
 }
 }
