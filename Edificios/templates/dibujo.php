@@ -26,7 +26,9 @@
   <div id="dib_otras_uni">
     <div id="comercios" class="display_none">
       <hr>
-      <div class="logo_com" >LOGO Com</div>
+      <div class="logo_com" >
+      <img src="images/Logo_comerciales.png">
+      </div>
       <h6>Locales Comerciales</h6>
       <div id="list_com" class="vista_comercios"></div>
       <hr>

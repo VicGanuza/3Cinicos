@@ -25,9 +25,9 @@ header{
 	position: relative;
 }
 hr{
-	border-top: 1px solid #CCCCCC !important;
+	border-top: 1px dashed #a0a0a0 !important;
 	border-bottom: 1px solid #FFFFFF !important;
-	margin-left: -30px !important;
+	margin-left: -20px !important;
 }
 h6{
 	margin-bottom: 3px !important;
@@ -535,7 +535,7 @@ form.carga_dptos{
 	min-height: 740px;
 	padding-top: 20px;
 	padding-left: 20px;
-	background-color: #F7F7F7;
+	background-color: #FAFAFA;
 	-webkit-box-shadow: -3px 0px 11px 0px #E6E6E6;
 	-moz-box-shadow: -3px 0px 11px 0px #E6E6E6;
 	box-shadow: -3px 0px 11px 0px #E6E6E6;
@@ -653,7 +653,7 @@ form.carga_dptos{
 	background-color: white;
 }
 .demo .gutter-large.columns .column{
-	color:#dcdcdc;
+	color:#A0A0A0;
 }
 #carga_personalizada .demo .gutter-large.columns .column.piso{
 	border: 1px solid #A0A0A0;
@@ -722,6 +722,15 @@ form.carga_dptos{
 	margin-bottom: 5px;
 	margin-top: 5px;
 	text-align: center;
+	padding-top: 2px;
+}
+.piso_listo{
+	background-color: #E68C28;
+	color: #F7F7F7;
+}
+.cant_listo{
+	border:2px solid #E68C28 !important;
+	color: #E68C28 !important;
 }
 #pisos_num .demo .columns{
 	border:none;
@@ -841,6 +850,7 @@ form.carga_dptos{
 	width: 20px;
 	height: 20px;
 	float: left;
+	background:url('images/Logo_local.png');
 }
 .icono_cc{
 	width: 20px;

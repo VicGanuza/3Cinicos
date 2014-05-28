@@ -192,7 +192,7 @@ $(document).ready(function(){
             $('#uf_cant').append('<input type="text" name="piso_'+i+'" size="5" maxlength="50" class="largo-total column piso cant_deptos"></div>');
 			$('#edificio').append('<div id="piso_nro_'+i+'" class="largo-total column piso"></div>');
             $('#edificio_uf_prim').append('<div id="uf_prim_piso_nro_'+i+'" class="largo-total column piso"></div>');
-            $('#pisos_num').append('<div class="nro_piso">'+i+'</div>');
+            $('#pisos_num').append('<div id="piso_'+i+'" class="nro_piso">'+i+'</div>');
             $('#pisos_num_uf_prim').append('<div class="largo-total column piso">'+i+'</div>');
 		}
 
@@ -308,82 +308,12 @@ $(document).ready(function(){
         $('#caga_body').append($('#edif_dibujo'));
         $('#caga_body').append($('#numeracion'));
 
-        /*$('#dialog').append($('#nombre_dpto'));
-        $('#dialog').append($('#uf'));
-        $('#dialog').append($('#edif_dibujo'));
-        $('#dialog').append($('#numeracion'));*/
         $('#uf').css({'display' : 'block'});
         $('.content_whitegrey').css({'background-color':'#FFFFFF', 'width' :'598'});
         $('#title-2').removeClass('display_none');
 
         $('#carga_personalizada').fadeIn(200);
 
-        $('#dialog').dialog({ 
-            width: 611,
-            modal:true,
-            close: function (){
-                $('#dib_edif').append('<div id="inner_draw" class="dibujo"></div>');
-                $('#inner_draw').append($('#uf'));
-                $('#inner_draw').append($('#edif_dibujo'));
-                $('#inner_draw').append($('#numeracion'));
-                $('#uf').css({'display' : 'none'});
-                $('.content_whitegrey').css({'background-color':'#F7F7F7', 'width' : 'width: 550px;'});
-                $(this).dialog("close");
-            },
-            buttons: {
-                "Ver": function () {
-                    var cp=$('#cant_pisos').val();
-                    var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-                    for (p=cp;p>0;p--){
-                        $('#piso_nro_'+p).empty();
-                        dptos = $('[name=piso_'+p+']').val();
-                        if ($('#alfa').is(':checked')){
-                        tipo = 1;
-                        inicio = parseInt($('#sel_alfa').val());
-                        fin = inicio + parseInt(dptos);
-                    }
-                    else 
-                        {
-                            if ($('#num').is(':checked')){
-                                tipo = 2;
-                                inicio = parseInt($('#sel_num').val());
-                                fin = inicio + parseInt(dptos-1);
-                            }
-                            else {
-                                if ($('#person').is(':checked')){
-                                    tipo = 3;
-                                }
-                        }
-                    }
-                        for (d=1;d<=dptos;d++){
-                            if (tipo!=3){
-                                if (tipo==1) {
-                                    nombre=Abc.charAt(inicio);
-                                }
-                                else{
-                                    if (tipo==2) {
-                                        nombre=inicio;
-                                    }
-                                }
-                                $('#piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" >'+nombre+'</div>');
-                                $('#uf_prim_piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" >'+nombre+'</div>');
-                                inicio++;
-                            }
-                            else {
-                                $('#piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" contenteditable="true"></div>');
-                                $('#uf_prim_piso_nro_'+p).append('<div id="dpto_nro_'+p+'_'+d+'" class="dpto-'+dptos+' column dpto" contenteditable="true"></div>');
-                            }
-                        }
-                    }
-                },
-                "Aceptar": function () {
-                    $(this).dialog('close');
-                },
-                "Cerrar": function () {
-                   $(this).dialog('close');
-                }
-            }
-        });
         $('#nombre_dpto').css({'display':'block'});
         $('.ui-draggable .ui-dialog-titlebar').css({'display':'none'});
         $('#sel_num').empty();
@@ -397,6 +327,9 @@ $(document).ready(function(){
     });
     
     $('#uf_cant').on('blur','.cant_deptos',function(){
+        $(this).addClass('cant_listo');
+        var nombre = $(this).attr('name');
+        $('#'+nombre).addClass('piso_listo');
         var cp=$('#cant_pisos').val();
                     var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
                     for (p=cp;p>0;p--){
