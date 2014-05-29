@@ -78,13 +78,13 @@ $(document).ready(function(){
         $('#paso_3').addClass('paso_done');
         $('#paso_4').removeClass('paso_grey');
         $('#titulo').html('<h1 class="titles">Agrup&aacute; e identific&aacute; las UF con sus consorcistas</h1>');
-        $('#encabezado_consorcio').addClass('display_none');
-        $('#title_torres').addClass('display_none');
         $('#confirmar_paso3').addClass('display_none');
         $('#confirmar_paso4').removeClass('display_none');
-        $('#body_form').html($('#form_agrupacion'));
-        $('#form_edificios').addClass('display_none');
+        $('#estructura_edificio').addClass('display_none');
         $('#form_agrupacion').removeClass('display_none');
+       /* $('#body_form').html($('#form_agrupacion'));
+        $('#form_edificios').addClass('display_none');
+        $('#form_agrupacion').removeClass('display_none');*/
 
         $('#uf_secundarias #cochera_cub').removeClass('display_none');
         $('#uf_secundarias #coch_desc').removeClass('display_none');
@@ -301,8 +301,8 @@ $(document).ready(function(){
 
         posY=e.pageY - 90;
         posX=e.pageX - 30;
-        $('#carga_personalizada').css('top',posY);
-        $('#carga_personalizada').css('left',posX);
+        $('#carga_personalizada').css('top','50%');
+        $('#carga_personalizada').css('left','30%');
 
         $('#caga_body').append($('#uf'));
         $('#caga_body').append($('#edif_dibujo'));
@@ -409,8 +409,8 @@ $(document).ready(function(){
         var Abc = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         posY=e.pageY - 90;
         posX=e.pageX - 30;
-        $('#denominacion_dpto').css('top',posY);
-        $('#denominacion_dpto').css('left',posX);
+        $('#denominacion_dpto').css('top','50%');
+        $('#denominacion_dpto').css('left','30%');
         $('#denominacion_dpto').fadeIn(200);
         $('#sel_num_d2').empty();
         $('#sel_alfa_d2').empty();

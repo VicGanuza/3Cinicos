@@ -1,4 +1,4 @@
-<div id="estructura_edificio">
+<div id="estructura_edificio"  class="display_none">
   <div id="encabezado_consorcio">
     <div class="icono"> cd </div> 
     <div id="nombre_edif" class="nombre_edificio">Coronel dias 438</div>

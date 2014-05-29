@@ -821,36 +821,44 @@ form.carga_dptos{
   width: 100%; 
 }
 .vista_comercios {
-	width: 80%;
-	padding-left: 50px;
+	width: 85%;
+	float: right;
+}
+#form_agrupacion{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.tabsecundaria ul{
+	height: 32px;
+	border-bottom:2px solid #57ACCE;
+}
+.tabsecundaria li{
+	padding: 5px;
+}
+.tabsec_activa{
+	background-color: #57ACCE !important;
+	color: #f7f7f7 !important;
+	padding: 10px !important;
+	margin-top: -10px;
 }
 /*----------Iconos y Logos---------------------*/
-.logo_com{
+.logo{
 	width: 50px;
 	height: 50px;
 	float: left;
-}
-.logo_cc{
-	width: 50px;
-	height: 50px;
-	float: left;
-
-}
-.logo_cd{
-	width: 50px;
-	height: 50px;
-	float: left;
-}
-.logo_bau{
-	width: 50px;
-	height: 50px;
-	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
 }
 .icono_com{
-	width: 20px;
-	height: 20px;
+	width: 50px;
+	height: 29px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 	float: left;
-	background:url('images/Logo_local.png');
+	background: url('../images/Logo_local.png');
+	text-align: center;
+	padding-top: 5px;
+	color: #f7f7f7;
 }
 .icono_cc{
 	width: 20px;
@@ -862,7 +870,8 @@ form.carga_dptos{
 	border-radius: 100%;
 	color:#ffffff;
 	margin-left: 10px;
-	padding-left: 6px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 .icono_cc_done{
 	width: 24px;
@@ -879,14 +888,38 @@ form.carga_dptos{
 	text-align: center;
 }
 .icono_dc{
-	width: 20px;
+	width: 35px;
 	height: 20px;
 	float: left;
+	border-right: 2px solid #57ACCE;
+	border-left: 2px solid #57ACCE;
+	border-bottom: 2px solid #57ACCE;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	color: #57ACCE;
 }
 .icono_bau{
-	width: 20px;
+	width: 35px;
 	height: 20px;
 	float: left;
+	background-color: #57ACCE;
+	color: #f7f7f7;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+.icono_info{
+	background: url('../images/info.png');
+	width: 25px;
+	height: 25px;
+	float: left;
+	margin-left: 10px;
+}
+.otras_unidades{
+	margin-top: 20px;
+	float: left;
+	width: 95%;
 }
 .cuerpo{
 	width: 90%;

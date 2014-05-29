@@ -53,6 +53,7 @@
                 include_once("templates/formulario_personas.php");
                 include_once("templates/formulario_consorcio.php");
                 include_once('templates/estructura_edificio.php');
+                include_once('templates/form_agrupacion.php');
               ?>
             </div>
             <div class="dialogs">
