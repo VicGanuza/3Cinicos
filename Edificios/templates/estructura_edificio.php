@@ -82,7 +82,7 @@
              </form>
            </div>
            <div class="franja_gris_claro">
-             <img src="">
+             <img src="images/icon_otras-unidades.png">
              Otras unidades
            </div>
            <div class='div_input clearfix border_bottom'>
@@ -145,6 +145,29 @@
                 <input type="checkbox" name="denominacion_b" id="denom_b">Personalizar denominacion
               </form>
            </div>
+           <div class="franja_gris_claro">
+             <img src="images/icon_esp-comunes.png">
+             Espacios Comunes
+           </div>
+                <div id="espacio_comun">
+                    <div class="div_input" >
+                        <div class="logo_close"></div>
+                        <input type="text" id="espacio_comun_name" class="espacio_comun" value="Ingrese un espacio comun...">
+                        <input type="checkbox" name="con_reserva" id="con_reserva"> Uso con reserva
+                    </div>
+                                   
+                </div>
+                <div class="franja_gris_claro">
+                 <img src="images/icon_otros-elementos.png">
+                 Otros elementos del edificio
+               </div>
+                <div id="otros_espacios">
+                    <div class="div_input" >
+                        <div class="logo_close"></div>
+                        <input type="text" class="otros_espacios" value="Ingrese un espacio comun...">
+                        <input type="checkbox" name="con_reserva" id="con_reserva"> Uso con reserva
+                    </div>
+                </div>
 
       </div> <!-- torre 1 -->
       <div id="ver_todas"></div>
@@ -152,7 +175,6 @@
   </div>
   <?php
     include('templates/dibujo.php');
-    //include_once('templates/dialog_cargaDenominacion.php')
   ?>
 
 

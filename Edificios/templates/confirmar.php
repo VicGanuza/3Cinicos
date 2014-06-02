@@ -13,6 +13,7 @@
  	<img src="images/icon-confirmar.png">
  </div>
  <div id="confirmar_paso4" class="confirmar display_none" title="Finalizar">
- 	<img src="images/icon-confirmar.png">
+ 	<h1 class="finalizar">comenz&aacute; a utilizar consorcioabierto</h1>
+ 	<img class="icono_finalizar" src="images/icono-finalizar.png">
  </div>
 </div>

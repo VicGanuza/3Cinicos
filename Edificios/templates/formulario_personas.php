@@ -1,4 +1,4 @@
-<div id="formulario_persona" class="display_none">
+<div id="formulario_persona">
    <div class="notes">
      <div class="coment1">
        <div><span class="orange">*</span>
@@ -105,4 +105,4 @@
    <div class="error display_none">
      Faltan completar datos
    </div>
- </div >
+</div> <!-- formulario-personas-->

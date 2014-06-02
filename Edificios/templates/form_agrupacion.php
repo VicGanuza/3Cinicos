@@ -7,7 +7,7 @@
        </form>
        <div class="icono_info" title="Esta opci&oacute;n permite agrupar UFs secundarias configuradas en una torre, con UFs principales configuradas en otra."></div>
     </div>
-<div class="cuerpo">
+  <div class="cuerpo">
    <div class="columna_izquierda">
      <div class="encabezado">
        Uf secundarias
@@ -44,15 +44,15 @@
       </div>     
      </div>           
     </div>  
-  </div>
-  <div class="columna_derecha">
+    </div>
+    <div class="columna_derecha">
     <div class="encabezado">
       Uf primarias
     </div>
     <hr>
-    <div id="uf_primarias" class="tabs">   
+    <div id="uf_primarias" class="tabs tabprimaria">   
        <ul >
-         <li class="activa"><a href="#prim_torre-1">Torre 1</a></li>
+         <li class="tabprim_activa"><a href="#prim_torre-1">Torre 1</a></li>
          <li><a href="#prim_torre2">Torre 2</a></li>
       </ul> 
       <div id="#prim_torre-1">          
@@ -64,9 +64,9 @@
       </div> 
       </div>        
     </div> 
+    </div>
   </div>
-</div>
-<div>
+  <div>
   <h4 class="orange left">Ya agrupastes las UF, Ahora asocialas con sus consorcistas</h4>
   <p class="left">Eleg&iacute; una de las opciones.</p>
   <hr>
@@ -76,8 +76,16 @@
   </div>
   <div class="mitad">
     <div class="opciones">2</div>
-    <span class="blue">¿Ya ten&eacute;s estos datos en Excel?</span>
-    <p>Aprovech&aacute;.Baj&aacute; esta tabla, editala, guardala en tu computadora y subila.</p>
+    <div class="blue">¿Ya ten&eacute;s estos datos en Excel?</div>
+    <div class="texto">Aprovech&aacute;.Baj&aacute; esta tabla, editala, guardala en tu computadora y subila.</div>
+    <div class="excel">
+      <img src="images/bajar_excel.png">
+      Bajar excel
+    </div>
+    <div class="excel">
+      <img src="images/subir_excel.png">
+      Subir excel
+    </div>
   </div>
   <div class="full">
     <div class="principales">
@@ -136,4 +144,5 @@
       </div>
    </div>
    <p>*El consorcista completar&aacute; el resto de sus datoa cuando ingrese a su perfil (Ej: Celular, Tel&eacute;fono del trabajo, DNI)</p>
+  </div>
 </div><!-- form agrupacion--> 

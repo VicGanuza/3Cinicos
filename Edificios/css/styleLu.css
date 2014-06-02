@@ -188,6 +188,12 @@ input[name="raz_social"]{
 	margin-left: 18px;
 	width: 100px;sx
 }
+#espacio_comun input[type="text"], #otros_espacios input[type="text"]{
+	width: 50%;
+	height: 40px;
+	margin-top: 19px;
+	margin-right: 20px;
+}
 .top_dialog select{
 	width:70px;
 	margin-top: 10px;
@@ -264,7 +270,7 @@ header img{
 }
 .contactenos{
 	float: right;
-	margin-right: 100px;
+	margin-right: 1%;
 	margin-top: -25px;
 	margin-bottom: 20px;
 }
@@ -300,7 +306,7 @@ header img{
 	width: 100%;
 	float: left;
 	padding-left: 30px;
-	/*margin-bottom: 20px*/
+	margin-bottom: 20px;
 }
 .confirmacion{
 	height: 139px;
@@ -745,6 +751,7 @@ form.carga_dptos{
 	float: right;
 	border: none;
 	margin-right: 30px;
+	margin-top: 30px;
 }
 .columna_izquierda{
 	float: left;
@@ -821,7 +828,7 @@ form.carga_dptos{
   width: 100%; 
 }
 .vista_comercios {
-	width: 85%;
+	width: 82%;
 	float: right;
 }
 #form_agrupacion{
@@ -841,6 +848,19 @@ form.carga_dptos{
 	padding: 10px !important;
 	margin-top: -10px;
 }
+.tabprimaria ul{
+	border-bottom: 2px solid #E68C28;
+	height:32px;
+}
+.tabprim_activa{
+	background-color: #E68C28 !important;
+	color: #f7f7f7 !important;
+	padding: 10px !important;
+	margin-top: -10px;
+}
+.tabprimaria li{
+	padding:5px;
+}
 /*----------Iconos y Logos---------------------*/
 .logo{
 	width: 50px;
@@ -848,6 +868,22 @@ form.carga_dptos{
 	float: left;
 	margin-right: 20px;
 	margin-bottom: 20px;
+}
+.logo_close{
+	background:url('../images/close.png');
+	width:30px;
+	height:30px;
+	margin-right: 20px;
+	float:left;
+	margin-top: 23px;
+}
+.logo_close_done{
+	background:url('../images/close_done.png');
+	width:30px;
+	height:30px;
+	margin-right: 20px;
+	float:left;
+	margin-top: 23px;
 }
 .icono_com{
 	width: 50px;
@@ -883,8 +919,7 @@ form.carga_dptos{
 	border-radius: 100%;
 	border:1px solid #000000;
 	color:#000;
-	margin-left: -33px;
-	padding-top: 2px;
+	margin-left: -30px;
 	text-align: center;
 }
 .icono_dc{
@@ -910,6 +945,7 @@ form.carga_dptos{
 	margin-bottom: 10px;
 	text-align: center;
 	color: #000000;
+	margin-left:-45px; 
 }
 .icono_bau{
 	width: 35px;
@@ -930,6 +966,7 @@ form.carga_dptos{
 	margin-right: 10px;
 	margin-bottom: 10px;
 	text-align: center;
+	margin-left: -45px;
 }
 .icono_info{
 	background: url('../images/info.png');
@@ -1049,10 +1086,10 @@ form.carga_dptos{
 
 }
 .impar_sec{
-	background-color: #E6E6E6;
+	background-color: #eef4f7;
 }
 .par_sec{
-	background-color: #57ACCE;
+	background-color: #f2f8fb;
 }
 .impar_inq{
 	background-color: #E6E6E6; 
@@ -1069,4 +1106,25 @@ form.carga_dptos{
 .confirmar_person{
 	margin-left: 30px;
 }
+.excel{
+	width: 60px;
+	margin-right: 20px;
+	margin-top: -16px;
+	float:left;
+}
+.texto{
+	width: 300px;
+	float: left;
+	margin-bottom: 30px;
+}
+.finalizar{
+	text-transform: uppercase;
+	color:#57ACCE;
+	font-style: italic;
+}
+.icono_finalizar{
+	width:80px;
+	margin-bottom: 90px;
+}
+
 }

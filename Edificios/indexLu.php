@@ -48,7 +48,7 @@
             <div class="contactenos">
                 <img src="images/icon_contact.png">
             </div>
-        	  <div class="formulario">
+        	<div class="formulario">
               <?php
                 include_once("templates/formulario_personas.php");
                 include_once("templates/formulario_consorcio.php");
@@ -67,8 +67,7 @@
                     include_once('templates/confirmar.php');
                 ?>
             </div>
-            
-            
+                     
             <footer>
                 <?php
                     include_once('templates/footer.php');
