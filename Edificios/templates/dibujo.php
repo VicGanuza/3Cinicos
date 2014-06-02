@@ -58,7 +58,7 @@
       <hr>
     </div>
     <div id="espac_comunes" class="display_none">
-      <div class="logo_espc" >LOGO Baul </div>  
+      <div class="logo" >LOGO Baul </div>  
       <h6>Espacios comunes</h6>
       <div id="list_esp" class="vista_comercios"></div>
       <hr>

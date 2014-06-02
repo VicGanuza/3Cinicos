@@ -608,6 +608,8 @@ $(document).ready(function(){
         nuevo_elem = $('<div class="icono_dc">'+i+'</div>');
         nuevo_elem.draggable();
         $('#uf_secundarias #list_dc').append(nuevo_elem);
+        $('#uf_secundarias #list_dc').append('<div id="hidden_'+i+'" class="icono_dc_done" >'+i+'</div>') /*hidden=true*/
+
        }
     });
     $('#bauleras').on('change',function(){
@@ -619,6 +621,8 @@ $(document).ready(function(){
         nuevo_elem = $('<div class="icono_bau">'+i+'</div>');
         nuevo_elem.draggable();
         $('#uf_secundarias #list_b').append(nuevo_elem);
+        $('#uf_secundarias #list_b').append('<div id="hidden_'+i+'" class="icono_bau_done" >'+i+'</div>') /*hidden=true*/
+
        }
     });
     $('.logo_close').on('click',function(){

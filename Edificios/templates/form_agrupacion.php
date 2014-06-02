@@ -1,4 +1,4 @@
-<div id="form_agrupacion">
+<div id="form_agrupacion" class="display_none">
    <h4 class="orange">Agrup&aacute; las UF secundarias arrastr&aacute;ndolas hasta las principales.</h4>
    <p>Para desasociar una UF secundaria de una principal, simplemente arrastras el ícono hacia afuera de la UF primaria, o bien, hacés doble click sobre el ícono en el cuadro de las UF secundarias.</p>
    <div>
@@ -20,7 +20,7 @@
       </ul>   
       <div id="sec_torre1">
         <div id="cochera_cub" class="display_none">
-        <div class="logo_cc">
+        <div class="logo">
           <img src="images/Logo_techadas.png">
         </div>
           <h6>Cocheras Cubiertas</h6>
@@ -28,15 +28,15 @@
         <hr>
        </div>
        <div id="coch_desc" class="display_none">
-         <div class="logo_cd">
+         <div class="logo">
           <img src="images/Logo_Destechadas.png">
-         c</div>
+         </div>
           <h6>Cocheras Descubiertas</h6>
          <div id="list_dc" class="vista_comercios"></div>
          <hr>
        </div>
        <div id="baulera" class="display_none">
-        <div class="logo_bau">
+        <div class="logo">
           <img src="images/Logo_baulera.png">
          </div>  
         <h6>Bauleras</h6>
@@ -50,13 +50,19 @@
       Uf primarias
     </div>
     <hr>
-    <div id="uf_primarias">           
+    <div id="uf_primarias" class="tabs">   
+       <ul >
+         <li class="activa"><a href="#prim_torre-1">Torre 1</a></li>
+         <li><a href="#prim_torre2">Torre 2</a></li>
+      </ul> 
+      <div id="#prim_torre-1">          
       <div id="edif_dibujo_uf_prim" class="row demo dibujo_edif display_none">
         <div id="edificio_uf_prim" class='largo-total gutter-large columns'></div>
       </div>
       <div id="numeracion_uf_prim" class="row demo display_none">
         <div id="pisos_num_uf_prim" class="largo-total gutter-large columns"></div>
-      </div>         
+      </div> 
+      </div>        
     </div> 
   </div>
 </div>
